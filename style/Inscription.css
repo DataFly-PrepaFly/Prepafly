@@ -1,0 +1,65 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+.texte {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+input {
+    letter-spacing: 1px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.25);
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+/* --- ZONE D'INSCRIPTION --- */
+.zoneinscri {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.end a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.end a:hover {
+    color: #4ea3fc;
+    border-color: #4ea3fc;
+}
+
+.end #reinit {
+    margin-right: 1.5rem;
+}
+
+select {
+    background-color: white; 
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+    border-radius: 6px;
+    padding: 0.1rem 1rem;
+    margin-top: 0.6rem;
+}
+
+textarea {
+    margin-top: 0.6rem;
+}

@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+    margin: 0
+}
+
+h3 {
+    text-align: center;
+}
+
+.texte {
+    clear: none;
+    width: 60%;
+    margin: auto;
+    padding: 1%;
+    text-align: left;
+}
+
+.texte a {
+    color: #131479;
+}
+
+.texte a:hover {
+    color: #4ea3fc;
+}
+
+.texte span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.texte li, p {
+    font-size: 1rem;
+}
+
+.lien {
+    clear: none;
+    width: 65%;
+    margin: auto;
+    padding: 1%;
+    text-align: left;
+}
+

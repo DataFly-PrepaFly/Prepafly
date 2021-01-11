@@ -1,0 +1,75 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+* {
+    font-family: 'Cantarell', sans-serif;
+    letter-spacing: 2px;
+}
+
+body {
+    margin: 0;
+}
+
+.login {
+    text-align: center;
+    padding-top: 5%;
+}
+
+input {
+    letter-spacing: 1px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.25);
+    border: none;
+    border-radius: 6px;
+}
+
+#Identifiant, #MdP {
+    margin-top: 0.5rem;
+}
+
+.connexion {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.connexion input {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.25);
+    border-radius: 8px;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem;
+}
+
+.connexion input {
+    font-weight: bold;
+}
+
+
+body {
+    background-image: url("../images/img_connexion.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 1080px)
+{
+    .connexion {
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+
+    .connexion div {
+    margin:1rem;
+}
+}

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/Accueil_Mng.css" />
+    <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
+    <link rel="stylesheet" href="style/nav_simple.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <title>PrepaFly</title>
+</head>
+
+<body>
+    <?php include("bandeau_profil.php"); ?>
+    <?php include("nav_simple.php"); ?>
+
+    <div class="choix">
+
+        <?php
+            $username = $_SESSION['mail'];
+            echo "<div><br><br>Bonjour $username ! Que souhaitez-vous faire aujourd'hui ? </div>";
+        ?>
+
+        
+        <div class="num" id="un" onclick="Barre()"><a href="#">Rechercher un pilote et ses informations</a></div>
+
+        <div id="barre" style="display: none;">
+            <input type="search" name="search" size="35"><a href="#" id="recherche">Rechercher</a>
+        </div> 
+
+        <div class="num"><a href="#">Programmer des tests à venir</a></div>
+
+        <div class="num"><a href="#">Consulter l'ensemble des résultats</a></div><br><br>
+    </div>
+
+
+    <?php include("footer.php"); ?>
+
+
+    <script>
+        function Barre() {
+            var x = document.getElementById("barre");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }     
+    </script> 
+
+
+</body>
+</html>

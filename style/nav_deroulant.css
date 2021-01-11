@@ -1,0 +1,125 @@
+
+/* --- DEBUT MENU DEROULANT ---*/
+
+#nav_deroulant {
+    background-color: #131479;
+    width: 100%;
+}
+
+#nav_deroulant .menu {
+    margin:0;
+}
+
+#nav_deroulant .deroulant, #nav_deroulant #propos, #nav_deroulant #accueil {
+    width: 33.33%;
+}
+
+#nav_deroulant ul {
+    padding-left: 0;
+}
+
+#nav_deroulant ul li {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+#nav_deroulant::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#nav_deroulant a {
+    display: block;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+}
+
+#nav_deroulant a:hover {
+    color: #4ea3fc;
+}
+
+#nav_deroulant .sous_menu {
+    display: none;
+    z-index: 1000;
+    left: 15%;
+    width: 70%;
+    position: absolute;
+    background-color: #131479;
+}
+
+#nav_deroulant .deroulant:hover .sous_menu {
+    display: block;
+}
+
+#nav_deroulant .deroulant:hover .sous_sous_menu {
+    display: none; /* pour annuler la condition précédente qui s'applique en cascade à tout ce su'il y a dans le sous sous menu*/
+}
+
+#nav_deroulant .deroulant2 {
+    max-height: 2.25rem;
+}
+
+#nav_deroulant .sous_menu li {
+    float: none;
+    text-align: center;
+    width: 100%;
+}
+
+#nav_deroulant .sous_menu a {
+    font-size: 0.9rem;
+    border-bottom: none;
+    padding: 8px;
+}
+
+#nav_deroulant .sous_menu a:hover {
+    background-color: rgb(197, 227, 245);
+    color: #131479;
+    border-bottom: none;
+}
+
+#nav_deroulant .sous_sous_menu {
+    display: none;
+    z-index: 1000;
+    position: relative;
+    left: 100%;
+    bottom: 2.25rem;
+    width: 75%;
+    background-color: #131479;
+}
+
+#nav_deroulant .deroulant2:hover .sous_sous_menu {
+    display: block;
+}
+
+#nav_deroulant .sous_sous_menu li {
+    float: none;
+    text-align: center;
+    width: 100%;
+    background-color: #131479;
+}
+
+#nav_deroulant .sous_sous_menu a {
+    font-size: 0.9rem;
+    border-bottom: none;
+    padding: 8px;
+}
+
+#nav_deroulant .sous_sous_menu a:hover {
+    background-color: rgb(197, 227, 245);
+    color: #131479;
+    border-bottom: none;
+}
+
+#nav_deroulant .deroulant span {
+    margin-left: 0.4rem;
+    font-size: 0.6rem;
+}
+
+

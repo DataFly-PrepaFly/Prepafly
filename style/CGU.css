@@ -1,0 +1,51 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+
+body {
+	margin: 0;
+}
+
+.all {
+	margin: 3%;
+}
+
+.all p {
+	text-align: justify;
+	color: black;
+	letter-spacing: 1px;
+}
+
+.intro {
+	color: black; 
+	font-weight: bold; 
+} 
+
+h3 {
+	text-align: center;
+	color: black;
+}
+
+.lien, h4 {
+	text-align: justify;
+	font-size: 1rem;
+}
+
+h2
+{
+	font-size: 1.1rem;
+}
+
+.lien a, h2 a  {
+	text-decoration-style: none;
+	color: black;
+
+}
+
+#lien {
+	color: black;
+}
+
+
+

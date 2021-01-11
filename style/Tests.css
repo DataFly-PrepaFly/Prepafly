@@ -1,0 +1,48 @@
+﻿
+#texte p, .blocs_haut p, .blocs_bas p {
+	color: black;
+}
+
+#texte {
+	text-align: center;
+	margin-top: 3rem;
+	font-size: 1.1rem;
+}
+
+.blocs_bas, .blocs_haut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocs_haut {
+	margin-top: 2rem;
+}
+
+
+.blocs_bas {
+	margin-bottom: 2rem;
+}
+
+.blocs_bas p, .blocs_haut p {
+	margin: 1rem 2rem;
+	font-size: 1rem;
+}
+
+.blocs_bas div, .blocs_haut div {
+    box-shadow: 0 0 15px #4ea3fc;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.un, .deux, .trois, .quatre {
+	width: 35%;
+	margin: 2rem;
+}
+
+h4 {
+    text-align: center;
+}
+
+

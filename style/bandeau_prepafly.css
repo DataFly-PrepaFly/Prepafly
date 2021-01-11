@@ -1,0 +1,88 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+
+*{
+    font-family: 'Cantarell', sans-serif;
+    letter-spacing: 2px;
+}
+
+/*Totalité de la bande */
+.bandeau_prepafly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.bandeau_prepafly .gauche, .bandeau_prepafly .centre, .bandeau_prepafly .droite {
+    width: 33.33%;
+}
+
+.bandeau_prepafly a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.bandeau_prepafly .gauche a {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+.bandeau_prepafly .gauche img {
+    width: 4rem;
+}
+
+/* -- PREPAFLY -- */
+.bandeau_prepafly .centre {
+	text-align: center;
+}
+
+.bandeau_prepafly .centre a {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0.15em 0.05em 0.35em #4ea3fc;
+}
+
+/* -- Partie droite -- */
+.bandeau_prepafly .droite a:hover {
+    color: #4ea3fc;
+}
+
+.bandeau_prepafly .droite {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 0 3%;
+}
+
+.bandeau_prepafly .droite div {
+	margin-left: 10%;
+}
+
+
+.bandeau_prepafly .droite span {
+    margin-left: 0.4rem;
+    font-size: 0.5rem;
+}
+
+
+@media screen and (max-width: 850px)
+{
+    .bandeau_prepafly .droite {
+    flex-direction: column;
+    align-items: center;
+	}
+
+	.bandeau_prepafly .droite div {
+	margin:0;
+}
+}

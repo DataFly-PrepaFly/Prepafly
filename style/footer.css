@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+* {
+    font-family: 'Cantarell', sans-serif;
+    letter-spacing: 2px;
+}
+
+body {
+    margin: 0;
+}
+
+.bas{
+    background-color: #131479;
+    font-size: 1rem;
+}
+
+.bas div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 4%;
+}
+
+.bas a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.bas a:hover {
+    color: #95D0FF;
+}
+
+.bas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bas .reseaux {
+    display: flex;
+    align-items: center;
+}
+
+.bas .reseaux span {
+    margin-right: 0.2rem;
+}
+
+.bas .reseaux a {
+    max-height: 1.7rem;
+}
+
+.bas .reseaux img {
+    max-height: 1.5rem;
+    margin: 0.1rem;
+}
+
+.bas .centre {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.bas .droite, .bas .gauche {
+    width: 18%;
+}
+
+.bas .gauche span, .bas .centre li, .bas .gauche a:visited, .bas .centre a:visited, .bas .droite a:visited {
+    color: white;
+}
+
+.bas .gauche, .bas .centre, .bas .droite {
+    text-align: center;
+}
+

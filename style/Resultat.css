@@ -1,0 +1,42 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    font-family: 'Cantarell';
+    letter-spacing: 1px;
+}
+
+body {
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+/*成绩表样式*/
+.table {
+    text-align: center;
+    margin: auto;
+    color: black;
+    border: 1px solid #5a5858;
+    border-collapse: collapse;
+    width: 60%;
+    table-layout:fixed;
+}
+
+.table th {
+    padding: 8px;
+    border: 1px solid #5a5858;
+    background-color: #DCDCDC;
+    font-size: 1rem;
+}
+
+.table td {
+    border: 1px solid #5a5858;
+    padding: 8px;
+    background-color: white;
+    font-size: 1rem;
+}
+
