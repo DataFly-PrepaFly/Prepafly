@@ -6,6 +6,12 @@ body {
     margin: 0;
 }
 
+.bonjour {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 .choix {
     display: flex;
     flex-direction: column;

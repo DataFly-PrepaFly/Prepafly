@@ -12,17 +12,14 @@
 </head>
 
 <body>
-    <?php include("bandeau_profil.php"); ?>
-    <?php include("nav_simple.php"); ?>
+    <?php 
+    include("bandeau_profil.php");
+    include("nav_simple.php"); 
+
+    echo "<div class=\"bonjour\">Bonjour $prenom ! Que souhaitez-vous faire aujourd'hui ?</div>";
+    ?>
 
     <div class="choix">
-
-        <?php
-            $username = $_SESSION['mail'];
-            echo "<div><br><br>Bonjour $username ! Que souhaitez-vous faire aujourd'hui ? </div>";
-        ?>
-
-        
         <div class="num" id="un" onclick="Barre()"><a href="#">Rechercher un pilote et ses informations</a></div>
 
         <div id="barre" style="display: none;">

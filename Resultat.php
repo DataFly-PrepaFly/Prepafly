@@ -1,23 +1,19 @@
 
-<?php 
-    session_start();
-?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
-    <link rel="stylesheet" href="../style/Resultat.css" />
-    <link rel="stylesheet" href="../style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="../style/nav_simple.css" />
-    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="style/Resultat.css" />
+    <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
+    <link rel="stylesheet" href="style/nav_simple.css" />
+    <link rel="stylesheet" href="style/footer.css" />
 <title>PrepaFly</title>
 
 <meta charset="UTF-8">
 
 <body>
 
-    <?php include("bandeau_profil.php"); ?>
-    <?php include("nav_simple.php"); ?>
+    <?php include("vues/bandeau_profil.php"); ?>
+    <?php include("vues/nav_simple.php"); ?>
 
     <br /><h3>RÉSULTATS</h3><br />
 
@@ -54,7 +50,7 @@
         </tr>
     </table><br><br><br>
 
-    <?php include("footer.php"); ?>
+    <?php include("vues/footer.php"); ?>
 
 
 </body>

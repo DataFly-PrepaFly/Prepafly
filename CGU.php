@@ -1,25 +1,20 @@
 ﻿
 
-<?php
-    session_start();
-?>
-
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="../style/CGU.css">
-            <link rel="stylesheet" href="../style/bandeau_prepafly.css"/>
-            <link rel="stylesheet" href="../style/nav_simple.css" />
-            <link rel="stylesheet" href="../style/footer.css" />
+		<link rel="stylesheet" href="style/CGU.css">
+            <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
+            <link rel="stylesheet" href="style/nav_simple.css" />
+            <link rel="stylesheet" href="style/footer.css" />
 		<title>PrepaFly</title>
 	</head>
 
 	<body>
 
-            <?php include("bandeau_prepafly.php"); ?>
-            <?php include("nav_simple.php"); ?>
+            <?php include("vues/bandeau_prepafly.php"); ?>
+            <?php include("vues/nav_simple.php"); ?>
 		
 		<br><h3 id="cgu"> CONDITIONS GÉNÉRALES D'UTILISATION</h3>
 
@@ -128,7 +123,7 @@
             <p>Les présentes Conditions Générales sont soumises au droit français, sans préjudice des dispositions impératives de la loi du pays du domicile du consommateur.</p>
         </div>
 
-      <?php include("footer.php"); ?>
+      <?php include("vues/footer.php"); ?>
 
 	</body>
 </html>

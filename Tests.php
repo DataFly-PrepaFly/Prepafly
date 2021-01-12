@@ -6,15 +6,15 @@
 <head>
     <meta charset="utf-8" />
     <title>PrepaFly</title>
-    <link rel="stylesheet" media="screen and (max-width: 1450px)" href="../style/Tests.css" />
-    <link rel="stylesheet" href="../style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="../style/nav_simple.css" />
-    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" media="screen and (max-width: 1450px)" href="style/Tests.css" />
+    <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
+    <link rel="stylesheet" href="style/nav_simple.css" />
+    <link rel="stylesheet" href="style/footer.css" />
 </head>
 
 <header>
-    <?php include("bandeau_prepafly.php"); ?>
-    <?php include("nav_simple.php"); ?>
+    <?php include("vues/bandeau_prepafly.php"); ?>
+    <?php include("vues/nav_simple.php"); ?>
 </header>
 
 <body>
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <?php include("footer.php"); ?>
+    <?php include("vues/footer.php"); ?>
 
 </body>
 </html>

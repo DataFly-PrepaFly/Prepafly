@@ -54,6 +54,10 @@ input {
     font-weight: bold;
 }
 
+.connexion #mdp_oublie {
+    font-size: 0.9rem;
+    opacity: 75%;
+}
 
 body {
     background-image: url("../images/img_connexion.jpg");

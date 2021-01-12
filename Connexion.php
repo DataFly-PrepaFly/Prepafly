@@ -17,25 +17,11 @@ if(isset($_POST['mail']) && isset($_POST['password']))
         if (BonId($bdd, $mail, $password)) {
 
             require 'modele/req_infos_user.php';
-            //on récupère le prenom de l'utilisateur qui se connecte
-            $prenom_user=InfosUser($bdd, $mail)['prenom'];
 
             //on crée une session pour l'utilisateur qui se connecte
-            $_SESSION['prenom_user']=$prenom_user;
+            $_SESSION['mail']=$mail;
 
-            $type_compte=$prenom_user=InfosUser($bdd, $mail)['type_utilisateur_id_type'];
-
-            switch ($type_compte) {
-                case 'p':
-                    require 'vues/Accueil_Pilote.php';
-                    break;
-                case 'a':
-                    require 'vues/Accueil_Admin.php';
-                    break;
-                case 'm':
-                    require 'vues/Accueil_Mng.php';
-                    break;
-            }
+            header('Location: Accueil.php');
         }
 
         else 

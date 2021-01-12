@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/Inscription.css" />
-    <link rel="stylesheet" href="../style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="../style/nav_simple.css" />
-    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="style/Inscription.css" />
+    <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
+    <link rel="stylesheet" href="style/nav_simple.css" />
+    <link rel="stylesheet" href="style/footer.css" />
 <head>
 <title>S'inscrire</title>
 
@@ -20,8 +20,8 @@
 </head>
 
 <header>
-    <?php include("bandeau_prepafly.php"); ?>
-    <?php include("nav_simple.php"); ?>
+    <?php include("vues/bandeau_prepafly.php"); ?>
+    <?php include("vues/nav_simple.php"); ?>
 
 </header>
 
@@ -86,6 +86,6 @@
     }
 </script>
 
-<?php include("footer.php"); ?>
+<?php include("vues/footer.php"); ?>
 
 </body>
