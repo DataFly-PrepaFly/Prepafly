@@ -59,6 +59,21 @@ input {
     opacity: 75%;
 }
 
+#msg_erreur {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#msg_erreur p {
+    color: red;
+    font-weight: bold;
+    border: none;
+    margin-top: 0;
+    letter-spacing: 3px;
+ }
+
+
 body {
     background-image: url("../images/img_connexion.jpg");
     background-repeat: no-repeat;

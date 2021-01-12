@@ -16,7 +16,16 @@
 <section>
 	<div class="login">
 		<br /><h3>CONNEXION</h3><br>
-        
+        <?php
+            if($erreur==1 || $erreur==2) {
+        ?>
+                <div id="msg_erreur">
+                    <p>Identifiant ou mot de passe incorrect</p><br>
+                </div>
+        <?php
+            }
+        ?>
+
         <form action="Connexion.php" method="POST">
             
             <label for="Identifiant">Identifiant :</label> <br>
@@ -29,13 +38,6 @@
                 <input id="mdp_oublie" type="text" value='Mot de passe oublié'>
                 <input type="submit" id="submit" value='Se Connecter'>
             </div>
-
-            <?php
-
-                if($erreur==1 || $erreur==2) {
-                    echo "<p style='color:red'>Identifiant ou mot de passe incorrect</p>";
-                }
-            ?>
 
         </form>
 		<br>
