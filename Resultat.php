@@ -4,7 +4,7 @@
 <html lang="fr">
     <link rel="stylesheet" href="style/Resultat.css" />
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="style/nav_simple.css" />
+    <link rel="stylesheet" href="style/nav_deroulant.css" />
     <link rel="stylesheet" href="style/footer.css" />
 <title>PrepaFly</title>
 
@@ -13,7 +13,7 @@
 <body>
 
     <?php include("vues/bandeau_profil.php"); ?>
-    <?php include("vues/nav_simple.php"); ?>
+    <?php include("vues/nav_deroulant.php"); ?>
 
     <br /><h3>RÉSULTATS</h3><br />
 
