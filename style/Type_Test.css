@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+h3 {
+	text-align: center;
+}
+
+#durée {
+	margin: 0 8rem 3rem 8rem;
+}
+
+#durée p {
+	text-align: center;
+	margin-top: 0;
+}
+
+#durée img {
+	margin-top: 2rem;
+	max-width: 100%;
+}
+
+#bouton {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+/*features du bouton*/
+#bouton #lancer_test {
+	font-size: 1.3rem;
+	text-align: center;
+	width: 12rem;
+	color: white;
+	text-decoration: none;
+	background-color: #4ea3fc;
+	border-radius: 12px;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+	padding: 1rem 1rem;
+	margin-bottom: 3rem;
+}
+
+#bouton #lancer_test:hover {
+	border: none;
+	background-color: #1785f8; /*couleur un peu + foncée*/
+}

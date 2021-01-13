@@ -82,6 +82,8 @@
     background-color: rgb(197, 227, 245);
     color: #131479;
     border-bottom: none;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
 }
 
 #nav_deroulant .sous_sous_menu {
@@ -96,6 +98,8 @@
 
 #nav_deroulant .deroulant2:hover .sous_sous_menu {
     display: block;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
 }
 
 #nav_deroulant .sous_sous_menu li {
