@@ -12,6 +12,7 @@ h3 {
 }
 
 #durée p {
+	font-size: 1.1rem;
 	text-align: center;
 	margin-top: 0;
 }
@@ -30,20 +31,25 @@ h3 {
 
 /*features du bouton*/
 #bouton #lancer_test {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	text-align: center;
 	width: 12rem;
-	color: white;
+	color: black;
 	text-decoration: none;
-	background-color: #4ea3fc;
+	background-color: white; /*#b1dbfd*/
 	border-radius: 12px;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
+	/*transition-duration: 0.2s;
+	transition-timing-function: ease-out;*/
 	padding: 1rem 1rem;
 	margin-bottom: 3rem;
+	box-shadow: 0 0 15px #4ea3fc; /*4ea3fc*/
+
 }
 
 #bouton #lancer_test:hover {
 	border: none;
-	background-color: #1785f8; /*couleur un peu + foncée*/
+	color: #4ea3fc;
+	font-weight: bold;
+	box-shadow: 0 0 20px #4ea3fc; /*4ea3fc*/
+
 }
