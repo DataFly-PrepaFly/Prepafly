@@ -17,7 +17,7 @@
             </div>
             <div class="droite">
                 <div style="margin-left: 0;"><a id="langue" href="#Langue">Langue<span>▼</span></a></div>
-                <div><a id="profil" href="#">Profil</a></div>
+                <div><a id="profil" href="Profil.php">Profil</a></div>
                 <div><a id="déconnexion" href="deconnexion.php">Déconnexion</a></style></div>
 
             </div>

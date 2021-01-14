@@ -1,30 +1,39 @@
 <?php
 session_start();
 
-include 'modele/connexion_bdd.php';
-include 'modele/req_infos_user.php';
+require 'modele/connexion_bdd.php';
+require 'modele/req_infos_user.php';
 
+//on récupère les données de la personne connectée
 $mail=$_SESSION['mail'];
 $nom=InfosUser($bdd, $mail)['nom'];
 $prenom=InfosUser($bdd, $mail)['prenom'];
-$daten=InfosUser($bdd, $mail)['date_naissance'];
+$date_naissance=InfosUser($bdd, $mail)['date_naissance'];
 $compagnie=NomCompagnie($bdd, $mail)['nom'];
 $adresse=InfosUser($bdd, $mail)['adresse'];
 $ville=InfosUser($bdd,$mail)['ville'];
 $mdp=InfosUser($bdd,$mail)['mdp'];
+$code_postal=InfosUser($bdd,$mail)['code_postal'];
+$sexe = InfosUser($bdd,$mail)['sexe'];
+$type = InfosUser($bdd,$mail)['type_utilisateur_id_type'];
 
-//Je met une fonction pour récupérer le nom de la compagnie aérienne, vu que infosuser récupère que des infos dans la table utilisateur. Jsp si tu veux la mettre sur un autre fichier ou la rajouter sur req_infos_user.php, donc dans le doute je la rédige ici et je te laisse bouger les trucs comme tu veux ^^
-
-function NomCompagnie ($bdd, $mail)
-{
-    $req = $bdd->prepare("SELECT société. nom FROM société, utilisateur WHERE utilisateur. société_id_societe
-= société. id_societe AND utilisateur. mail = ? ");
-    $req->execute(array($mail));
-    $NomCompagnie = $req->fetch();
-    return $NomCompagnie;
+//on récupère son statut
+switch ($type) {
+    case 'p':
+        $statut = "Pilote";
+        break;
+    case 'a':
+        $statut = "Administrateur";
+        break;
+    case 'm':
+        $statut = "Manager";
+        break;
 }
 
+if (empty($sexe)) {
+    $sexe="Non indiqué";
+}
 
-include 'profil_infos.php';
+require 'profil_infos.php';
 
 ?>

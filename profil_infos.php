@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style/profil.css" />
+    <link rel="stylesheet" href="style/Profil.css" />
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="style/nav_simple.css" />
+    <link rel="stylesheet" href="style/nav_deroulant.css" />
     <link rel="stylesheet" href="style/footer.css" />
     <title>PrepaFly</title>
 </head>
 
-
 <body>
     
-    <?php include("vues/bandeau_profil.php");
-    include("vues/nav_simple.php"); 
+    <?php 
+    include("vues/bandeau_profil.php");
+    include("vues/nav_deroulant.php"); 
     ?>
-    <div class="profil">
-        <h1>Profil</h1>
-        <?php echo "<p>Nom : $nom </p>";
-        echo "<p>Prénom : $prenom </p>";
-        echo "<p>Mot de passe : $mdp </p>";
-        echo "<p>E-mail : $mail </p>";
-        echo "<p>Adresse : $adresse , $ville  </p>";
-        echo "<p>Compagnie aérienne : $compagnie </p>";
+
+    <br><h3>PROFIL</h3>
+
+    <div id="infos_profil">
+
+        <?php echo "<p><span>Nom</span> : $nom</p>";
+        echo "<p><span>Prénom</span> : $prenom</p>";
+        echo "<p><span>Sexe</span> : $sexe</p>";
+        echo "<p><span>Date de naissance</span> : $date_naissance</p>";
+        echo "<p><span>Adresse mail</span> : $mail</p>";
+        echo "<p><span>Adresse</span> : $adresse, $code_postal $ville</p>";
+        echo "<p><span>Compagnie aérienne</span> : $compagnie</p>";
+        echo "<p><span>Statut</span> : $statut</p>";
         ?>
     </div>
     <?php include("vues/footer.php"); ?>

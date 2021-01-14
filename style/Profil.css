@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+h3 {
+	text-align: center;
+}
+
+#infos_profil {
+	margin-left: 8rem;
+	margin-bottom: 3rem;
+}
+
+#infos_profil span {
+	font-weight: bold;
+}
