@@ -30,6 +30,7 @@ switch ($type) {
         break;
 }
 
+
 if (empty($sexe)) {
     $sexe="Non indiqué";
 }
