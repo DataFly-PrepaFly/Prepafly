@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 14 jan. 2021 à 11:28
+-- Généré le : jeu. 14 jan. 2021 à 16:54
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -93,21 +93,21 @@ INSERT INTO `mesure` (`id_mesure`, `valeur`, `Test_id_test`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `société`
+-- Structure de la table `societe`
 --
 
-DROP TABLE IF EXISTS `société`;
-CREATE TABLE IF NOT EXISTS `société` (
+DROP TABLE IF EXISTS `societe`;
+CREATE TABLE IF NOT EXISTS `societe` (
   `id_societe` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_societe`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `société`
+-- Déchargement des données de la table `societe`
 --
 
-INSERT INTO `société` (`id_societe`, `nom`) VALUES
+INSERT INTO `societe` (`id_societe`, `nom`) VALUES
 (1, 'Infinite Measures'),
 (2, 'Air France');
 
@@ -196,6 +196,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `nom` varchar(45) DEFAULT NULL,
   `prenom` varchar(45) DEFAULT NULL,
   `date_naissance` date DEFAULT NULL,
+  `Sexe` varchar(10) NOT NULL,
   `mail` varchar(100) DEFAULT NULL,
   `adresse` varchar(200) DEFAULT NULL,
   `ville` varchar(50) DEFAULT NULL,
@@ -212,13 +213,13 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `mail`, `adresse`, `ville`, `code_postal`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
-(12345, 'FALLOUH', 'Tatiana', '2000-05-12', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 59420, 'tf123!', 'p', 2),
-(24680, 'GUESSOUM', 'Sérine', NULL, 'sg@gmail.com', '10 rue du Dragon', 'Paris', 75000, 'sg123!', 'a', 1),
-(67890, 'MERAH', 'Nadir', '2000-12-22', 'nm@gmail.com', NULL, NULL, 0, 'nm123!', 'm', 2),
-(135790, 'LU', 'Yihong', NULL, 'yl@gmail.com', NULL, NULL, 0, 'yl123!', 'p', 2),
-(1245780, 'DUBOIS', 'Paul', NULL, 'pd@gmail.com', NULL, NULL, 0, 'pd123!', 'p', 2),
-(2356890, 'ARMAND', 'Jean', NULL, 'ja@gmail.com', NULL, NULL, 0, 'ja123!', 'p', 2);
+INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `Sexe`, `mail`, `adresse`, `ville`, `code_postal`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
+(12345, 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 59420, '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
+(24680, 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', '10 rue du Dragon', 'Paris', 75000, '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
+(67890, 'MERAH', 'Nadir', '2000-12-22', 'Homme', 'nm@gmail.com', NULL, NULL, 0, '$2y$10$4qBPY.1Fw0qwpUkF.G5/ZOl6a8kd2D0kavuyvCWGQD6NKSoOT07fq', 'm', 2),
+(135790, 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 0, '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
+(1245780, 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 0, '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
+(2356890, 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 0, '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2);
 
 --
 -- Contraintes pour les tables déchargées
@@ -242,7 +243,7 @@ ALTER TABLE `test`
 --
 ALTER TABLE `utilisateur`
   ADD CONSTRAINT `fk_Utilisateur_Type Utilisateur1` FOREIGN KEY (`type_utilisateur_id_type`) REFERENCES `type utilisateur` (`id_type`),
-  ADD CONSTRAINT `fk_utilisateur_société1` FOREIGN KEY (`société_id_societe`) REFERENCES `société` (`id_societe`);
+  ADD CONSTRAINT `fk_utilisateur_société1` FOREIGN KEY (`société_id_societe`) REFERENCES `societe` (`id_societe`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
