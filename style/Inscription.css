@@ -33,6 +33,10 @@ input {
 
 }
 
+.end {
+    margin-bottom: 4rem;
+}
+
 .end a {
     text-decoration: none;
     color: black;

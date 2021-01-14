@@ -30,7 +30,7 @@
 <section>
     <br><h3>INSCRIPTION</h3>
     <div class="texte">
-        <p>Remplissez vos coordonnées dans ce formulaire si vous êtes intéressé et souhaitez être recontacté par nos équipes.</p>
+        <p>Si vous êtes intéressé et souhaitez être recontacté par nos équipes, il vous suffit de remplir ce formulaire.</p>
     </div>
     
     <div class="zoneinscri">
@@ -73,7 +73,7 @@
 
             <div class="end">
                 <a href="#" onclick="resetForm();" id="reinit" type="reset">Réinitialiser</a>
-                <a href="#" id="valider" type="submit">Envoyer</a><br><br><br><br>
+                <a href="#" id="valider" type="submit">Envoyer</a><br>
             </div>
             
         </form>
