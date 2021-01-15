@@ -16,7 +16,7 @@
                     <div class="reseaux">
                         <span>Rejoignez-nous</span>
                         <div id="icons">
-                            <a href="https://www.instagram.com/infinite_measures/">
+                            <a id="insta" href="https://www.instagram.com/infinite_measures/">
                             <img src="images/icone_insta.png"></a>
                             <a href="https://www.facebook.com/InfiniteMeasuresFr">
                             <img src="images/icone_fb.png"></a>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 14 jan. 2021 à 16:54
+-- Généré le : ven. 15 jan. 2021 à 17:12
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -193,11 +193,11 @@ INSERT INTO `type utilisateur` (`id_type`, `type`) VALUES
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `nSS` int(11) NOT NULL,
-  `nom` varchar(45) DEFAULT NULL,
-  `prenom` varchar(45) DEFAULT NULL,
+  `nom` varchar(45) NOT NULL,
+  `prenom` varchar(45) NOT NULL,
   `date_naissance` date DEFAULT NULL,
-  `Sexe` varchar(10) NOT NULL,
-  `mail` varchar(100) DEFAULT NULL,
+  `sexe` varchar(10) DEFAULT NULL,
+  `mail` varchar(100) NOT NULL,
   `adresse` varchar(200) DEFAULT NULL,
   `ville` varchar(50) DEFAULT NULL,
   `code_postal` int(5) NOT NULL,
@@ -213,7 +213,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `Sexe`, `mail`, `adresse`, `ville`, `code_postal`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
+INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `mail`, `adresse`, `ville`, `code_postal`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
 (12345, 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 59420, '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
 (24680, 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', '10 rue du Dragon', 'Paris', 75000, '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
 (67890, 'MERAH', 'Nadir', '2000-12-22', 'Homme', 'nm@gmail.com', NULL, NULL, 0, '$2y$10$4qBPY.1Fw0qwpUkF.G5/ZOl6a8kd2D0kavuyvCWGQD6NKSoOT07fq', 'm', 2),

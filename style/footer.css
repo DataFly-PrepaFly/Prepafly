@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-.bas{
+.bas {
     background-color: #131479;
     font-size: 1rem;
 }
@@ -44,6 +44,10 @@ body {
     width: 100%;
 }
 
+.bas .reseaux #insta {
+    margin-right: 5%;
+}
+
 .bas .reseaux span {
     margin-right: 0.1rem;
 }
@@ -66,14 +70,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .bas .gauche li {
     width: 100%;
 }
 
+.bas .gauche #icons {
+    margin-left: 0;
+}
+
 .bas .droite, .bas .gauche {
-    width: 20%;
+    width: 15%;
 }
 
 .bas .gauche span, .bas .centre li, .bas .gauche a:visited, .bas .centre a:visited, .bas .droite a:visited {
@@ -84,16 +93,15 @@ body {
     text-align: center;
 }
 
+/*adaptation du bloc de gauche en fonction de la largeur de la fenêtre*/
 @media screen and (max-width: 1000px)
 {
     .bas .gauche .reseaux {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    }
     .bas .reseaux #icons {
     margin-top: 0.3rem;
+    }
 }
-
-}
-

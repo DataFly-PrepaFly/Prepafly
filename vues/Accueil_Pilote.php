@@ -14,7 +14,7 @@
     include("bandeau_profil.php");
     include("nav_simple.php"); 
 
-    echo "<div class=\"bonjour\">Bonjour $prenom ! Que souhaitez-vous faire aujourd'hui ?</div>";
+    echo "<div class=\"bonjour\">Bienvenue $prenom ! Que souhaitez-vous faire aujourd'hui ?</div>";
     ?>
 
     <div class="choix">
