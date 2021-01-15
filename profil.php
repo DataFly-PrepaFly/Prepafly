@@ -9,19 +9,11 @@ require 'modele/req_infos_user.php';
 $mail=$_SESSION['mail'];
 
 $infos= InfosUser($bdd, $mail);
-
-$nom=$infos['nom'];
-$prenom=$infos['prenom'];
-$date_naissance=$infos['date_naissance'];
 $societe=NomCompagnie($bdd, $mail)['nom'];
-$adresse=$infos['adresse'];
-$ville=$infos['ville'];
-$mdp=$infos['mdp'];
-$code_postal=$infos['code_postal'];
-$sexe = $infos['sexe'];
+
 $type = $infos['type_utilisateur_id_type'];
 
-//on récupère son statut
+//on récupère le statut de la personne connectée
 switch ($type) {
     case 'p':
         $statut = "Pilote";
@@ -34,15 +26,37 @@ switch ($type) {
         break;
 }
 
-$tableau_infos = array($nom, $prenom, $date_naissance, $societe, $adresse, $ville, $code_postal, $sexe, $type);
-for ($i=0; $i < 9; $i++) { 
-    if (empty($tableau_infos[$i])) {
-    $tableau_infos[$i] == "Non indiqué";
-    }
-    elseif ($tableau_infos[$i] == 0) {
-        $tableau_infos[$i] == "Non indiqué";
+//on attribue "non indiqué" à nom, prénom ou sexe s'ils sont vides 
+$variables = array('nom', 'prenom', 'sexe');
+foreach ($variables as $nom_donnee) {
+    if (empty($infos[$nom_donnee])) {
+        $infos[$nom_donnee] = "Non indiqué";
     }
 }
+
+//on attribue "non indiquée" à date de naissance si elle est vide
+$variables_bis = array('date_naissance');
+foreach ($variables_bis as $nom_donnee_bis) {
+    if (empty($infos[$nom_donnee_bis])) {
+        $infos[$nom_donnee_bis] = "Non indiquée";
+    }
+}
+
+//on récupère les valeurs des attributs issues de la bdd
+$nom=$infos['nom'];
+$prenom=$infos['prenom'];
+$date_naissance=$infos['date_naissance'];
+$mdp=$infos['mdp'];
+$sexe = $infos['sexe'];
+
+//on attribue "non indiquée" à l'adresse si elle est vide
+if ( (empty($infos['adresse']) AND (empty($infos['code_postal'])) AND (empty($infos['ville']))) ) {
+    $adresse = "Non indiquée";
+}
+else {
+    $adresse = $infos['adresse'] .', '. $infos['code_postal'] .', '. $infos['ville'];
+}
+
 
 require 'profil_infos.php';
 
