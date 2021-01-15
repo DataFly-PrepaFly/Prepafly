@@ -11,13 +11,15 @@ body {
     margin: 0;
 }
 
-/*F.A.Q.*/
 h3 {
     text-align: center;
 }
 
 .container {
-    width : 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width : 75%;
     margin : auto;
     padding : 1rem;
 }
@@ -29,9 +31,18 @@ h3 {
     left: 85%;
 }
 
+.container .reponse img {
+    height: 2rem;
+    position: absolute;
+    left: 85%;
+}
+
+.container .question {
+    width: 100%;
+}
 
 /*questions visibles*/
-.visible {
+.container .visible {
     display: inline-block;
     width: 100%;
     background-color: #ececec;
@@ -41,7 +52,8 @@ h3 {
     text-align: center;
 }
 
-.visible a {
+.container .visible a {
+    text-align: center;
     text-decoration: none;
     color: black;
     width: 95%;
@@ -51,7 +63,8 @@ h3 {
     vertical-align: middle;
 }
 
-#deroulant p{
+#deroulant1 p, #deroulant2 p, 
+#deroulant3 p, #deroulant4 p, #deroulant5 p{
     width: 95%;
     overflow: hidden;
     text-align: justify;
@@ -59,56 +72,6 @@ h3 {
     margin: 1.5rem;
     margin-top: 0.2rem;
 }
-
-
-#deroulant1 p{
-    width: 95%;
-    overflow: hidden;
-    text-align: justify;
-    font-size: 1rem;
-    margin: 1.5rem;
-    margin-top: 0.2rem;
-}
-
-
-#deroulant2 p{
-    width: 95%;
-    overflow: hidden;
-    text-align: justify;
-    font-size: 1rem;
-    margin: 1.5rem;
-    margin-top: 0.2rem;
-}
-
-
-#deroulant3 p{
-    width: 95%;
-    overflow: hidden;
-    text-align: justify;
-    font-size: 1rem;
-    margin: 1.5rem;
-    margin-top: 0.2rem;
-}
-
-#deroulant4 p{
-    width: 95%;
-    overflow: hidden;
-    text-align: justify;
-    font-size: 1rem;
-    margin: 1.5rem;
-    margin-top: 0.2rem;
-}
-
-#deroulant5 p{
-    width: 95%;
-    overflow: hidden;
-    text-align: justify;
-    font-size: 1rem;
-    margin: 1.5rem;
-    margin-top: 0.2rem;
-}
-
-
 
 
 

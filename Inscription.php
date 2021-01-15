@@ -45,10 +45,10 @@
             <input type="date" id="date" name="date" required><br><br>
 
             <label for="mail">Adresse e-mail personnelle : </label><br>
-            <input type="text" name="mail" size="60"><br><br>
+            <input type="text" name="mail" size="50"><br><br>
 
             <label for="mailpro">Adresse e-mail professionnelle : </label><br>
-            <input type="text" name="mailpro" size="60"><br><br>
+            <input type="text" name="mailpro" size="50"><br><br>
 
             <label for="cpgn">Compagnie aérienne : </label><br>
             <select>
@@ -64,6 +64,9 @@
                 <option value="ryanair">Ryanair</option>
                 <option value="united">United</option>
             </select><br><br>
+
+            <label for="mailpro">Autre : </label><br>
+            <input type="text" name="mailpro" size="40"><br><br>
 
             <label for="fonction">Fonction ou poste occupé</label><br>
             <input type="text" name="fonction" size="60"><br><br>

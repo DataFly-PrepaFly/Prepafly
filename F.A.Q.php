@@ -14,6 +14,7 @@
 
         <!-- Début du Java Script -->
     <script>
+
         function Reponse1() {
             var x = document.getElementById("deroulant1");
             if (x.style.display === "none") {
@@ -86,44 +87,48 @@
                 <div class="question">
                     <div class="visible" onclick="Reponse1()">
 
-                        <a href="#">Comment récupérer un mot de passe oublié ? <img class="icone_plus" src="images/icons8_plus"></a>
+                        <a href="#">Comment récupérer un mot de passe oublié ? <img class="icone_plus" src="images/icons8_plus.png"></a>
                         
                     </div>
-                    <div id="deroulant1" style="display: none;">
+                    <div id="deroulant1" class="reponse" style="display: none;">
                         <p>Pour obtenir un nouveau mot de passe, il vous suffit d'aller sur l'onglet "S'identifier" et de cliquer sur "Mot de passe oublié". Nous serons alors en mesure de vous envoyer par mail un nouveau mot de passe associé à votre identifiant.</p>
-                        <img class="icone_moins" src="images/icons8_moins" style="display: none;"></a>
+                        <img class="icone_moins" src="images/icons8_moins.png">
                     </div>
                 </div>
                 <div class="question">
                     <div class="visible" onclick="Reponse2()">
-                        <a href="#">Comment récupérer un identifiant perdu ? <img class="deroulant" src="images/icons8_plus"></a>
+                        <a href="#">Comment récupérer un identifiant perdu ? <img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
-                    <div id="deroulant2" style="display: none;">
+                    <div id="deroulant2" class="reponse" style="display: none;">
                         <p>Pour récupérer votre identifiant, allez sur la page "Contactez-nous" et envoyez un mail à DataFly indiquant vos coordonnées. Nous pourrons alors vous renvoyer votre identifiant d'origine.</p>
+                        <img class="icone_moins" src="images/icons8_moins.png">
                     </div>
                 </div>
                 <div class="question">
                     <div class="visible" onclick="Reponse3()">
-                        <a href="#">Question 3 <img class="deroulant" src="images/icons8_plus"></a>
+                        <a href="#">Question 3 <img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
-                    <div id="deroulant3" style="display: none;">
+                    <div id="deroulant3" class="reponse" style="display: none;">
                         <p>Réponse 3</p>
+                        <img class="icone_moins" src="images/icons8_moins.png">
                     </div>
                 </div>
                 <div class="question">
                     <div class="visible" onclick="Reponse4()">
-                        <a href="#">Question 4 <img class="deroulant" src="images/icons8_plus"></a>
+                        <a href="#">Question 4 <img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
-                    <div id="deroulant4" style="display: none;">
+                    <div id="deroulant4" class="reponse" style="display: none;">
                         <p>Réponse 4</p>
+                        <img class="icone_moins" src="images/icons8_moins.png">
                     </div>
                 </div>
                 <div class="question">
                     <div class="visible" onclick="Reponse5()">
-                        <a href="#">Question 5 <img class="deroulant" src="images/icons8_plus"></a>
+                        <a href="#">Question 5 <img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
-                    <div id="deroulant5" style="display: none;">
+                    <div id="deroulant5" class="reponse" style="display: none;">
                         <p>Réponse 5</p>
+                        <img class="icone_moins" src="images/icons8_moins.png">
                     </div>    
                 </div>
             </div>
