@@ -18,7 +18,7 @@
             var x = document.getElementById("deroulant1");
             if (x.style.display === "none") {
                 x.style.display = "block";
-            } else {
+            } else { 
                 x.style.display = "none";
             }
         }  
@@ -86,7 +86,7 @@
                 <div class="question">
                     <div class="visible" onclick="Reponse1()">
 
-                        <a href="#">Comment récupérer un mot de passe oublié ? <img class="icone_plus" src="images/icons8_plus"></a>
+                        <a href="#">Comment récupérer un mot de passe oublié ? <img class="icone_plus" src="Applications/MAMP/htdocs/APP-DATAFLY/Prepafly/images/icons8_plus"></a>
                         
                     </div>
                     <div id="deroulant1" style="display: none;">

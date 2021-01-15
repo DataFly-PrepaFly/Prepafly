@@ -84,7 +84,7 @@ h3 {
 #deroulant3 p{
     width: 95%;
     overflow: hidden;
-    text-align: justify;
+    text-align: center;
     font-size: 1rem;
     margin: 1.5rem;
     margin-top: 0.2rem;
