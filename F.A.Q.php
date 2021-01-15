@@ -78,7 +78,14 @@
                         <p>Réponse 4</p>
                     </div>
                 </div>
-
+                <div class="question">
+                    <div class="visible" onclick="Reponse()">
+                        <a href="#">Question 5 <img class="deroulant" src="images/icons8_plus"></a>
+                    </div>
+                    <div id="deroulant" style="display: none;">
+                        <p>Réponse 5</p>
+                    </div>    
+                </div>
             </div>
     </body>
 
