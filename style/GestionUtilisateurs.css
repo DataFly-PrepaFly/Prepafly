@@ -1,7 +1,67 @@
-select {
+h3 {
+	text-align: center;
+}
+
+#formulaire {
+	display: flex;
+	flex-direction: row;
+	align-items: left;
+	justify-content: space-between;
+	margin-left: 10rem;
+	margin-bottom: 3rem;
+}
+
+#formulaire #form_part1, #formulaire #form_part2 {
+	text-align: left;
+	width: 50%;
+}
+
+#formulaire #form_part2 {
+	margin-top: 1rem;
+}
+
+#formulaire #form_part1 .champs1, #formulaire #form_part2 .champs2 {
+	width: 90%;
+	margin-bottom: 0.5rem;
+}
+
+#formulaire #form_part1 select, #formulaire #form_part2 select {
     background-color: white; 
-    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+    box-shadow: 0 0 15px rgb(0,0,0,0.1);
     border-radius: 6px;
     padding: 0.1rem 1rem;
     margin-top: 0.6rem;
+}
+
+#formulaire #form_part1 input, #formulaire #form_part2 input  {
+    letter-spacing: 1px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.1);
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.end {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.end a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.end a:hover {
+    color: #4ea3fc;
+    border-color: #4ea3fc;
+}
+
+.end #reinit {
+    margin-right: 3rem;
 }
