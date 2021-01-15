@@ -6,16 +6,19 @@ require 'modele/req_infos_user.php';
 
 //on récupère les données de la personne connectée
 $mail=$_SESSION['mail'];
-$nom=InfosUser($bdd, $mail)['nom'];
-$prenom=InfosUser($bdd, $mail)['prenom'];
-$date_naissance=InfosUser($bdd, $mail)['date_naissance'];
-$compagnie=NomCompagnie($bdd, $mail)['nom'];
-$adresse=InfosUser($bdd, $mail)['adresse'];
-$ville=InfosUser($bdd,$mail)['ville'];
-$mdp=InfosUser($bdd,$mail)['mdp'];
-$code_postal=InfosUser($bdd,$mail)['code_postal'];
-$sexe = InfosUser($bdd,$mail)['sexe'];
-$type = InfosUser($bdd,$mail)['type_utilisateur_id_type'];
+
+$infos= InfosUser($bdd, $mail);
+
+$nom=$infos['nom'];
+$prenom=$infos['prenom'];
+$date_naissance=$infos['date_naissance'];
+$societe=NomCompagnie($bdd, $mail)['nom'];
+$adresse=$infos['adresse'];
+$ville=$infos['ville'];
+$mdp=$infos['mdp'];
+$code_postal=$infos['code_postal'];
+$sexe = $infos['sexe'];
+$type = $infos['type_utilisateur_id_type'];
 
 //on récupère son statut
 switch ($type) {
@@ -30,9 +33,14 @@ switch ($type) {
         break;
 }
 
-
-if (empty($sexe)) {
-    $sexe="Non indiqué";
+$tableau_infos = array($nom, $prenom, $date_naissance, $societe, $adresse, $ville, $code_postal, $sexe, $type);
+for ($i=0; $i < 9; $i++) { 
+    if (empty($tableau_infos[$i])) {
+    $tableau_infos[$i] == "Non indiqué";
+    }
+    elseif ($tableau_infos[$i] == 0) {
+        $tableau_infos[$i] == "Non indiqué";
+    }
 }
 
 require 'profil_infos.php';
