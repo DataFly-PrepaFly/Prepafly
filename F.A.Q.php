@@ -14,14 +14,54 @@
 
         <!-- Début du Java Script -->
     <script>
-        function Reponse() {
-            var x = document.getElementById("deroulant");
+        function Reponse1() {
+            var x = document.getElementById("deroulant1");
             if (x.style.display === "none") {
                 x.style.display = "block";
             } else {
                 x.style.display = "none";
             }
         }  
+
+        
+        function Reponse2() {
+            var x = document.getElementById("deroulant2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }  
+
+        function Reponse3() {
+            var x = document.getElementById("deroulant3");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }  
+
+
+        function Reponse4() {
+            var x = document.getElementById("deroulant4");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }  
+
+        
+        function Reponse5() {
+            var x = document.getElementById("deroulant5");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }  
+
 
         function Inverse() {
             var y = document.getElementById("fermer");
@@ -44,41 +84,48 @@
 
             <div class="container">
                 <div class="question">
-                    <div class="visible" onclick="Reponse()">
+                    <div class="visible" onclick="Reponse1()">
 
                         <a href="#">Comment récupérer un mot de passe oublié ? <img class="icone_plus" src="images/icons8_plus"></a>
                         
                     </div>
-                    <div id="deroulant" style="display: none;">
+                    <div id="deroulant1" style="display: none;">
                         <p>Pour obtenir un nouveau mot de passe, il vous suffit d'aller sur l'onglet "S'identifier" et de cliquer sur "Mot de passe oublié". Nous serons alors en mesure de vous envoyer par mail un nouveau mot de passe associé à votre identifiant.</p>
                         <img class="icone_moins" src="images/icons8_moins" style="display: none;"></a>
                     </div>
                 </div>
                 <div class="question">
-                    <div class="visible" onclick="Reponse()">
+                    <div class="visible" onclick="Reponse2()">
                         <a href="#">Comment récupérer un identifiant perdu ? <img class="deroulant" src="images/icons8_plus"></a>
                     </div>
-                    <div id="deroulant" style="display: none;">
+                    <div id="deroulant2" style="display: none;">
                         <p>Pour récupérer votre identifiant, allez sur la page "Contactez-nous" et envoyez un mail à DataFly indiquant vos coordonnées. Nous pourrons alors vous renvoyer votre identifiant d'origine.</p>
                     </div>
                 </div>
                 <div class="question">
-                    <div class="visible" onclick="Reponse()">
+                    <div class="visible" onclick="Reponse3()">
                         <a href="#">Question 3 <img class="deroulant" src="images/icons8_plus"></a>
                     </div>
-                    <div id="deroulant" style="display: none;">
+                    <div id="deroulant3" style="display: none;">
                         <p>Réponse 3</p>
                     </div>
                 </div>
                 <div class="question">
-                    <div class="visible" onclick="Reponse()">
+                    <div class="visible" onclick="Reponse4()">
                         <a href="#">Question 4 <img class="deroulant" src="images/icons8_plus"></a>
                     </div>
-                    <div id="deroulant" style="display: none;">
+                    <div id="deroulant4" style="display: none;">
                         <p>Réponse 4</p>
                     </div>
                 </div>
-
+                <div class="question">
+                    <div class="visible" onclick="Reponse5()">
+                        <a href="#">Question 5 <img class="deroulant" src="images/icons8_plus"></a>
+                    </div>
+                    <div id="deroulant5" style="display: none;">
+                        <p>Réponse 5</p>
+                    </div>    
+                </div>
             </div>
     </body>
 
