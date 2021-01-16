@@ -54,7 +54,7 @@ if ( (empty($infos['adresse']) AND (empty($infos['code_postal'])) AND (empty($in
     $adresse = "Non indiquée";
 }
 else {
-    $adresse = $infos['adresse'] .', '. $infos['code_postal'] .', '. $infos['ville'];
+    $adresse = $infos['adresse'] .', '. $infos['code_postal'] .' '. $infos['ville'];
 }
 
 

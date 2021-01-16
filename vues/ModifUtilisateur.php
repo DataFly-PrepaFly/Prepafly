@@ -11,9 +11,6 @@
 <link rel="stylesheet" href="style/footer.css" />
 <title>PrepaFly</title>
 </head>
-
-</head>
-
 <body>
 
 <header>
@@ -23,7 +20,7 @@
     ?>
 </header>
 
-	<br><h3>AJOUT D'UN UTILISATEUR</h3><br>
+	<br><h3>MISE À JOUR DU PROFIL</h3><br>
 
 		<form action="NewUser.php" method="post" id="form"> 
 			<div id="formulaire">
@@ -111,7 +108,7 @@
 
 			<div class="end">
                 <a href="#" onclick="resetForm();" id="reinit" type="reset">Réinitialiser</a>
-                <a href="#" id="valider" type="submit">Enregistrer</a><br>
+                <a href="#" id="valider" type="submit">Mettre à jour</a><br>
             </div>
 		</form>
 	</div>

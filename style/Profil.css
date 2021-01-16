@@ -5,10 +5,32 @@ h3 {
 }
 
 #infos_profil {
-	margin-left: 10rem;
-	margin-bottom: 4rem;
+	margin-left: 20rem;
+	margin-bottom: 3rem;
 }
 
 #infos_profil span {
 	font-weight: bold;
+}
+
+#end {
+	text-align: center;
+    margin-bottom: 4rem;
+}
+
+#end a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.10);
+}
+
+#end a:hover {
+    color: #4ea3fc;
+    border-color: #4ea3fc;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+
 }

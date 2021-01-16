@@ -5,12 +5,10 @@
 <head>
 <title>PrepaFly</title> 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style/AjoutUtilisateur.css" />
+<link rel="stylesheet" href="style/GestionUtilisateurs.css" />
 <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
 <link rel="stylesheet" href="style/nav_simple.css" />
 <link rel="stylesheet" href="style/footer.css" />
-<title>PrepaFly</title>
-</head>
 
 </head>
 
@@ -18,7 +16,7 @@
 
 <header>
     <?php 
-    include("vues/bandeau_profil.php");
+    include("vues/bandeau_prepafly.php");
     include("vues/nav_simple.php"); 
     ?>
 </header>

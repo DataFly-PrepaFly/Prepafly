@@ -17,11 +17,11 @@
     include("vues/nav_deroulant.php"); 
     ?>
 
-    <br><h3>PROFIL</h3>
+    <br><h3>PROFIL</h3><br>
 
     <div id="infos_profil">
-
-        <?php echo "<p><span>Nom</span> : $nom</p>";
+        <?php 
+        echo "<p><span>Nom</span> : $nom</p>";
         echo "<p><span>Prénom</span> : $prenom</p>";
         echo "<p><span>Sexe</span> : $sexe</p>";
         echo "<p><span>Date de naissance</span> : $date_naissance</p>";
@@ -31,6 +31,11 @@
         echo "<p><span>Statut</span> : $statut</p>";
         ?>
     </div>
+
+    <div id="end">
+        <a href="ModifUser.php" id="valider" type="submit">Modifer mes informations</a><br>
+    </div>
+
     <?php include("vues/footer.php"); ?>
 
 </body>
