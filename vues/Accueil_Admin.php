@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" media="screen and (max-width: 1450px)" href="style/Accueil_Admin.css" />
+    <link rel="stylesheet" media="screen and (max-width: 1450px)" href="style/Accueil_Profil.css" />
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
     <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />

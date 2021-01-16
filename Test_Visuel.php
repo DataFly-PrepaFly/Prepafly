@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style/Type_Test.css" />
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="style/nav_deroulant.css" />
+    <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />
 
     <title>PrepaFly - Test</title>
@@ -14,7 +14,7 @@
 <body>
     <?php 
     include("vues/bandeau_profil.php");
-    include("vues/nav_deroulant.php"); 
+    include("vues/nav_simple.php"); 
     ?>
 
     <br /><h3> TEST VISUEL </h3><br>

@@ -1,0 +1,124 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+    margin: 0;
+}
+
+.bonjour {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#listes_tests {
+    width: 20%;
+}
+
+#ligne1, #ligne2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+#visuel, #auditif, #regulier, #complet {
+    width: 20%;
+    margin-bottom: 2rem;
+}
+
+#visuel, #regulier {
+    margin-right: 1rem;
+}
+
+#auditif, #complet {
+    margin-left: 1rem;
+}
+#ligne1 div, #ligne2 div {
+    box-shadow: 0 0 10px #4ea3fc;
+    border-radius: 12px;
+    width: 10rem;
+    padding: 0.3rem 1rem;
+    text-align: center;
+}
+
+#clic_tests {
+    margin-bottom: 0;
+}
+
+#recherche {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+#barre a:hover {
+    color: #4ea3fc;
+    border-color: #4ea3fc;
+}
+
+#barre, #recherche {
+    margin-top: -1.2rem;
+}
+
+#barre input {
+    letter-spacing: 1px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.2);
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.choix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.choix div {
+    margin-bottom: 3.5rem;
+    width: 45%;
+}
+
+.choix a {
+    text-decoration: none;
+    color: black;
+}
+
+.choix a:hover {
+    color: #4ea3fc
+}
+
+.choix a:active {
+    color: #4ea3fc
+}
+
+.choix .num a {
+    border: 1px solid white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.25);
+    border-radius: 10px;
+    padding: 0.5rem 15%;
+}
+
+
+@media screen and (max-width: 1450px) {
+    .choix .num a {
+        padding: 0.5rem 8%;
+    }
+
+    .choix div {
+        width: 100%;
+    }
+}
+

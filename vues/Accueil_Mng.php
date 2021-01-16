@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style/Accueil_Mng.css" />
+    <link rel="stylesheet" href="style/Accueil_Profil.css" />
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
     <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />

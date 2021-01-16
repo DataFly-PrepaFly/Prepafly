@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +20,7 @@
     <header>
         <?php 
         //on vérifie s'il existe une session ou non
-        if (!(isset($_SESSION['mail']))) {
+        if (isset($_SESSION['mail'])) {
             require 'vues/bandeau_profil.php';
         }
         else {
