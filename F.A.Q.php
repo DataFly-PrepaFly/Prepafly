@@ -78,10 +78,18 @@
 
     <body>
 
-        <?php include("vues/bandeau_prepafly.php"); ?>
-        <?php include("vues/nav_simple.php"); ?>
+        <?php 
+        //on vérifie s'il existe une session ou non
+        if (!(isset($_SESSION['mail']))) {
+            require 'vues/bandeau_profil.php';
+        }
+        else {
+            require 'vues/bandeau_prepafly.php';
+        }
 
-        <h3><br />F.A.Q.</h3>
+        include("vues/nav_simple.php"); ?>
+
+        <h3><br>F.A.Q.</h3>
 
             <div class="container">
                 <div class="question">

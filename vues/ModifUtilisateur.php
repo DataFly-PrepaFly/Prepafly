@@ -20,7 +20,9 @@
     ?>
 </header>
 
-	<br><h3>MISE À JOUR DU PROFIL</h3><br>
+	<br><h3>MISE À JOUR DU PROFIL</h3>
+
+	<p>Merci de compléter uniquement les champs à mettre à jour.</p><br>
 
 		<form action="NewUser.php" method="post" id="form"> 
 			<div id="formulaire">

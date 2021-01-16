@@ -13,8 +13,16 @@
 
 	<body>
 
-            <?php include("vues/bandeau_prepafly.php"); ?>
-            <?php include("vues/nav_simple.php"); ?>
+            <?php 
+            if (!(isset($_SESSION['mail']))) {
+                  require 'vues/bandeau_profil.php';
+            }
+            else {
+                  require 'vues/bandeau_prepafly.php';
+            }
+
+            include("vues/nav_simple.php"); 
+            ?>
 		
 		<br><h3 id="cgu"> CONDITIONS GÉNÉRALES D'UTILISATION</h3>
 

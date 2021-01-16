@@ -14,8 +14,17 @@
 <body>
     
     <header>
-        <?php include("vues/bandeau_prepafly.php"); ?>
-        <?php include("vues/nav_simple.php"); ?>
+        <?php 
+        //on vérifie s'il existe une session ou non
+        if (!(isset($_SESSION['mail']))) {
+            require 'vues/bandeau_profil.php';
+        }
+        else {
+            require 'vues/bandeau_prepafly.php';
+        }
+
+        include("vues/nav_simple.php"); 
+        ?>
     </header>
 
 
