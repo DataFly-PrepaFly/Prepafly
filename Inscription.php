@@ -11,8 +11,10 @@
 </head>
 
 <header>
-    <?php include("vues/bandeau_prepafly.php"); ?>
-    <?php include("vues/nav_simple.php"); ?>
+    <?php 
+    include("vues/bandeau_prepafly.php"); 
+    include("vues/nav_simple.php"); 
+    ?>
 
 </header>
 

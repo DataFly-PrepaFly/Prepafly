@@ -2,14 +2,15 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="style/CGU.css">
-            <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
-            <link rel="stylesheet" href="style/nav_simple.css" />
-            <link rel="stylesheet" href="style/footer.css" />
-		<title>PrepaFly</title>
-	</head>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style/CGU.css">
+      <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
+      <link rel="stylesheet" href="style/bandeau_profil.css"/>
+      <link rel="stylesheet" href="style/nav_simple.css" />
+      <link rel="stylesheet" href="style/footer.css" />
+	<title>PrepaFly - C.G.U.</title>
+</head>
 
 	<body>
 

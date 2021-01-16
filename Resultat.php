@@ -3,17 +3,26 @@
 <!DOCTYPE html>
 <html lang="fr">
     <link rel="stylesheet" href="style/Resultat.css" />
+    <link rel="stylesheet" href="style/bandeau_profil.css"/>
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="style/nav_deroulant.css" />
+    <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />
-<title>PrepaFly</title>
+<title>PrepaFly - Résultats</title>
 
 <meta charset="UTF-8">
 
 <body>
 
-    <?php include("vues/bandeau_profil.php"); ?>
-    <?php include("vues/nav_deroulant.php"); ?>
+    <?php 
+    if (!(isset($_SESSION['mail']))) {
+          require 'vues/bandeau_profil.php';
+    }
+    else {
+          require 'vues/bandeau_prepafly.php';
+    }
+
+    include("vues/nav_simple.php"); 
+    ?>
 
     <br /><h3>RÉSULTATS</h3><br />
 

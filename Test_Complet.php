@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/nav_deroulant.css" />
     <link rel="stylesheet" href="style/footer.css" />
 
-    <title>PrepaFly</title>
+    <title>PrepaFly - Test</title>
 </head>
 
 <body>

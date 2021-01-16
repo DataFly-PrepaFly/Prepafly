@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>PrepaFly</title>
+    <title>PrepaFly - Tests</title>
     <link rel="stylesheet" media="screen and (max-width: 1450px)" href="style/Tests.css" />
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
     <link rel="stylesheet" href="style/nav_simple.css" />

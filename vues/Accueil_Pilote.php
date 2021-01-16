@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
     <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />
-    <title>PrepaFly</title>
+    <title>PrepaFly - Accueil</title>
 </head>
 <body>
     <?php 
