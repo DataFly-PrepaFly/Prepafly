@@ -28,7 +28,7 @@ session_start();
       include("vues/nav_simple.php"); 
       ?>
 		
-		<br><h3 id="cgu"> CONDITIONS GÉNÉRALES D'UTILISATION</h3>
+	<br><h3 id="cgu"> CONDITIONS GÉNÉRALES D'UTILISATION</h3>
 
       <div class="all">
 		    <span class="lien"><a href="#Article1">Article 1 : Qui sommes-nous ?</a></span> 

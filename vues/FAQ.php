@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,55 +24,14 @@
         }*/
 
 
-        function Reponse1() {
-            var x = document.getElementById("deroulant1");
+        function Reponse(N) {
+            var x = document.getElementById("deroulant"+N);
             if (x.style.display === "none") {
                 x.style.display = "block";
             } else { 
                 x.style.display = "none";
             }
         }  
-
-        
-        function Reponse2() {
-            var x = document.getElementById("deroulant2");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }  
-
-        function Reponse3() {
-            var x = document.getElementById("deroulant3");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }  
-
-
-        function Reponse4() {
-            var x = document.getElementById("deroulant4");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }  
-
-        
-        function Reponse5() {
-            var x = document.getElementById("deroulant5");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }  
-        
-
 
         function Inverse() {
             var y = document.getElementById("fermer");
@@ -81,7 +42,19 @@
             }
         }   
 
-    </script> 
+    </script>
+
+    <?php 
+    if (isset($_SESSION['mail'])) {
+    require 'vues/bandeau_profil.php';
+    }
+    else {
+        require 'vues/bandeau_prepafly.php';
+    }
+
+    require 'vues/nav_simple.php';
+    ?>
+
         <!-- Fin du Java Script -->
 
     <body>
@@ -90,7 +63,10 @@
 
             <div class="container">
                 <div class="question">
-                    <div class="visible" onclick="Reponse1()">
+                    <div class="visible" onclick="Reponse(1)">
+
+<!-- Pour afficher la question n, écrire echo $infos[n-1][1]
+Pour afficher la réponse n, écrire echo $infos[n-1][2] -->
 
                         <a href="#"><?php echo $infos[0][1];?><img class="deroulant" src="images/icons8_plus.png"></a>
                         
@@ -100,7 +76,7 @@
                     </div>
                 </div>
                 <div class="question">
-                    <div class="visible" onclick="Reponse2()">
+                    <div class="visible" onclick="Reponse(2)">
                         <a href="#"><?php echo $infos[1][1];?><img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
                     <div id="deroulant2" class="reponse" style="display: none;">
@@ -108,7 +84,7 @@
                     </div>
                 </div>
                 <div class="question">
-                    <div class="visible" onclick="Reponse3()">
+                    <div class="visible" onclick="Reponse(3)">
                         <a href="#">Question 3 <img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
                     <div id="deroulant3" class="reponse" style="display: none;">
@@ -116,7 +92,7 @@
                     </div>
                 </div>
                 <div class="question">
-                    <div class="visible" onclick="Reponse4()">
+                    <div class="visible" onclick="Reponse(4)">
                         <a href="#">Question 4 <img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
                     <div id="deroulant4" class="reponse" style="display: none;">
@@ -124,7 +100,7 @@
                     </div>
                 </div>
                 <div class="question">
-                    <div class="visible" onclick="Reponse5()">
+                    <div class="visible" onclick="Reponse(5)">
                         <a href="#">Question 5 <img class="deroulant" src="images/icons8_plus.png"></a>
                     </div>
                     <div id="deroulant5" class="reponse" style="display: none;">
@@ -133,5 +109,7 @@
                 </div>
             </div>
     </body>
+
+    <?php require 'vues/footer.php';?>
 
 </html>
