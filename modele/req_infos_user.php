@@ -22,9 +22,27 @@ function NomCompagnie ($bdd, $mail)
 function SearchResults ($bdd, $recherche)
 {
 	$req_result = $bdd->prepare("SELECT date_test, resultat, Type Test_id_type, nom 
-		FROM test JOIN utilisateur 
-		ON test.Utilisateur_nSS = utilisateur.nSS 
-		WHERE nom LIKE '?%'");
+		FROM test /*JOIN utilisateur 
+		ON test. Utilisateur_nSS = utilisateur. nSS 
+		WHERE nom LIKE '%?%'");
 	$req_result->execute(array($recherche));
+	return $req_result->fetchAll();
+}
+
+function Test ($bdd)
+{
+	$req = $bdd->prepare("SELECT * FROM test");
+	$req->execute(array());
+	$InfosUser = $req->fetch();
+	return $InfosUser;
+}
+
+
+function AllResults ($bdd)
+{
+	$req_result = $bdd->prepare("SELECT id_test, date_test, resultat, Type Test_id_type
+		FROM test /*JOIN utilisateur 
+		ON test. Utilisateur_nSS = utilisateur. nSS*/");
+	$req_result->execute(array());
 	return $req_result->fetchAll();
 }

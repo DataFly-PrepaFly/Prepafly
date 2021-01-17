@@ -9,6 +9,9 @@ if (isset($_POST['recherche'])) {
 
     $array_results = SearchResults($bdd, $key_letter);
 
+    $test = Test($bdd);
+    //var_dump($test);
+
     //Contenu de sortie
 /*
     echo "<table class='table' border=1 cellspacing=0 cellpadding=3><tr>";
@@ -26,6 +29,13 @@ if (isset($_POST['recherche'])) {
     }
     echo "</table>";
     */
+}
+
+else {
+    $array_all_results = AllResults($bdd);
+    //var_dump($array_all_results);
+    $test = Test($bdd);
+    var_dump($array_all_results);
 }
 
 

@@ -1,106 +1,26 @@
-<!DOCTYPE html>
-<html lang="fr">
-<meta charset="UTF-8">
-    <link rel="stylesheet" href="style/Inscription.css" />
-    <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
-    <link rel="stylesheet" href="style/nav_simple.css" />
-    <link rel="stylesheet" href="style/footer.css" />
-<head>
-<title>PrepaFly - Inscription</title>
+<?php 
 
-</head>
+if (isset($_POST['nom'], 
+	$_POST['prenom'], 
+	$_POST['date'], 
+	$_POST['mail'], 
+	$_POST['mailpro'], 
+	$_POST['num'], 
+	$_POST['cpgn'], 
+	$_POST['fonction'], 
+	$_POST['demande'])) {
 
-<header>
-    <?php 
-    include("vues/bandeau_prepafly.php"); 
-    include("vues/nav_simple.php"); 
-    ?>
+	$nom = $_POST['nom'];
+	$prenom = $_POST['prenom'];
+	$date = $_POST['date'];
+	$mail = $_POST['mail'];
+	$mailpro = $_POST['mailpro'];
+	$num = $_POST['num'];
+	$cpgn = $_POST['cpgn'];
+	$fonction = $_POST['fonction'];
+	$demande = $_POST['demande'];
 
-</header>
 
-<body>
+}
 
-<section>
-    <br><h3>INSCRIPTION</h3>
-    <div class="texte">
-        <p>Si vous êtes intéressé et souhaitez être recontacté par nos équipes, il vous suffit de remplir ce formulaire.</p><br>
-    </div>
-    
-        <form action="traitement_inscri.php" method="post" enctype="multipart/form-data" id="form">
-            <div id="formulaire">
-                <div id="form_part1">
-                    <div class="champs1">
-                        <label for="nfam">Nom : </label>
-                        <input type="text" id="nom" name="nom" required size="30"><br><br>
-                    </div>
-                    <div class="champs1">
-                        <label for="pren">Prénom : </label>
-                        <input type="text" id="prenom" name="prenom" required size="30"><br><br>
-                    </div>
-                    <div class="champs1">
-                        <label for="pren">Date de naissance : </label>
-                        <input type="date" id="date" name="date" required><br><br>
-                    </div>
-                    <div class="champs1">
-                        <label for="mail">Mail personnel : </label>
-                        <input type="text" name="mail" size="50"><br><br>
-                    </div>
-                    <div class="champs1">
-                        <label for="mailpro">Mail professionnel : </label><br>
-                        <input type="text" name="mailpro" size="50"><br><br>
-                    </div>
-                    <div class="champs1">
-                        <label for="num">Numéro de téléphone : </label>
-                        <input type="text" name="num" size="20"><br><br>
-                    </div>
-                </div>
-
-                <div id="form_part2">
-                    <div class="champs2">
-                        <label for="cpgn">Compagnie aérienne : </label>
-                        <select>
-                            <option value="airchina">Air China</option>
-                            <option value="aircorse">Air Corsica</option>
-                            <option value="airfrance">Air France</option>
-                            <option value="american">American Airlines</option>
-                            <option value="easy">Easy Jet</option>
-                            <option value="emirates">Emirates</option>
-                            <option value="iberia">Iberia</option>
-                            <option value="klm">KLM</option>
-                            <option value="lufthansa">Lufthansa</option>
-                            <option value="ryanair">Ryanair</option>
-                            <option value="united">United</option>
-                        </select><br><br>
-                    </div>
-
-                    <div class="champs2">
-                        <label for="mailpro">Autre : </label>
-                        <input type="text" name="mailpro" size="30"><br><br>
-                    </div>
-                    <div class="champs2">
-                        <label for="fonction">Fonction ou poste occupé : </label><br>
-                        <input type="text" name="fonction" size="40"><br><br>
-                    </div>
-                    <div class="champs2">
-                        <label for="demande">Formulez votre demande ici : </label><br /><br>
-                        <textarea name="demande" id="demande" rows="5" cols="60"></textarea><br>
-                    </div>
-                </div>
-            </div>
-            <div class="end">
-                <a href="#" onclick="resetForm();" id="reinit" type="reset">Réinitialiser</a>
-                <a href="#" id="valider" type="submit">Envoyer</a><br>
-            </div>
-            
-        </form>
-</section>
-
-<script type="text/javascript">
-    function resetForm() {
-        document.getElementById("form").reset();
-    }
-</script>
-
-<?php include("vues/footer.php"); ?>
-
-</body>
+require 'vues/Inscription.php';

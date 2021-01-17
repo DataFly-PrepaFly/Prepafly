@@ -7,6 +7,11 @@ h3, p {
     text-align: center;
 }
 
+.texte {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
 #formulaire {
     display: flex;
     flex-direction: row;
@@ -70,4 +75,41 @@ h3, p {
 
 .end #reinit {
     margin-right: 3rem;
+}
+
+@media screen and (max-width: 1200px)
+{
+    #formulaire {
+        margin-left: 6rem;
+    }
+
+}
+
+@media screen and (max-width: 950px)
+{
+    #formulaire {
+        margin-left: 4rem;
+    }
+
+    #formulaire #form_part2 {
+        margin-left: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 800px)
+{
+    #formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    }
+
+    #formulaire #form_part1, #formulaire #form_part2 {
+    text-align: center;
+    width: 90%;
+    }
+
 }

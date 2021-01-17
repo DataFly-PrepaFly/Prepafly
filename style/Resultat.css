@@ -15,6 +15,12 @@ h3 {
     text-align: center;
 }
 
+#barre_recherche {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 #tableau {
     text-align: center;
     margin: auto;

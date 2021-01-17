@@ -23,9 +23,9 @@
     <p>Entrez le nom du pilote dont vous souhaitez connaître le résultat. Validez sans entrer de nom si vous souhaitez afficher tous les résultats.</p>
 </div>
 
-<form action="Resultats.php" method="POST" class="barre_recherche">
+<form action="Resultats.php" method="POST" id="barre_recherche">
     <input type="text" id="recherche" name="recherche">
-    <input type="submit" id="bouton_recherche" value="Valider"><br><br>
+    <input type="submit" id="valider" value="Valider"><br><br>
 </form>
 
 <table id="tableau">
@@ -36,13 +36,9 @@
 		<td>Durée du test</td>
 		<td>Résultat obtenu</td>
 	</tr>
-
-	<?php
-	echo "<tr class='table' border=1 cellspacing=0 cellpadding=3></tr>";
-    while($column = array_column($array_results, '')){
-        echo "<th>{$column->name}</th>";
-    }
-    ?>
+	<tr>
+		
+	</tr>
 
 </table><br>
 
