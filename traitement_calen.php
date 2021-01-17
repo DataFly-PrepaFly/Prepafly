@@ -5,7 +5,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=prepafly;charset=utf8', 'root', 'roo
 session_start();
 	$nom_pilote_calen=$_POST["nom"];
 	$prenom_pilote_calen=$_POST["prenom"]; //Toute les variables récupérés par le formulaire//
-    $prenom=$_POST["prenom"];
+    
     $jour=$_POST["jour"];
     $mois=$_POST["mois"];
     $annee=$_POST["annee"];
