@@ -15,8 +15,7 @@ h3 {
     text-align: center;
 }
 
-/*成绩表样式*/
-.table {
+#tableau {
     text-align: center;
     margin: auto;
     color: black;
@@ -26,14 +25,14 @@ h3 {
     table-layout:fixed;
 }
 
-.table th {
+#tableau th, #tableau #titres td {
     padding: 8px;
     border: 1px solid #5a5858;
     background-color: #DCDCDC;
     font-size: 1rem;
 }
 
-.table td {
+#tableau td {
     border: 1px solid #5a5858;
     padding: 8px;
     background-color: white;

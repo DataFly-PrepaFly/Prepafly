@@ -26,14 +26,12 @@
             <input type="search" name="search" size="35"><a href="#" id="recherche">Rechercher</a>
         </div> 
 
-        <div class="num"><a href="#">Programmer des tests à venir</a></div>
+        <div class="num" id="deux"><a href="#">Programmer des tests à venir</a></div>
 
-        <div class="num"><a href="#">Consulter l'ensemble des résultats</a></div><br><br>
+        <div class="num" id="trois"><a href="#">Consulter l'ensemble des résultats</a></div><br><br>
     </div>
 
-
     <?php include("footer.php"); ?>
-
 
     <script>
         function Barre() {
@@ -43,6 +41,13 @@
             } else {
                 x.style.display = "none";
             }
+            /*var y = document.getElementById("a"+N);
+            console.log(y.style.color);
+            if (y.style.color = "black") {
+                y.style.color = "#4ea3fc";
+            } else {
+                y.style.color = "black";
+            }*/
         }     
     </script> 
 

@@ -18,3 +18,13 @@ function NomCompagnie ($bdd, $mail)
     $NomCompagnie = $req->fetch();
     return $NomCompagnie;
 }
+
+function SearchResults ($bdd, $recherche)
+{
+	$req_result = $bdd->prepare("SELECT date_test, resultat, Type Test_id_type, nom 
+		FROM test JOIN utilisateur 
+		ON test.Utilisateur_nSS = utilisateur.nSS 
+		WHERE nom LIKE '?%'");
+	$req_result->execute(array($recherche));
+	return $req_result->fetchAll();
+}

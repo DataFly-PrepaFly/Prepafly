@@ -29,7 +29,7 @@ session_start();
 
     <br /><h3>RÉSULTATS</h3><br />
 
-    <table class="table">
+    <table id="tableau">
         <tr>
             <th>Test</th>
             <th>Date du test</th>

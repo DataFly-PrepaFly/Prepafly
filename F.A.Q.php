@@ -25,7 +25,6 @@ session_start();
             }
         }*/
 
-
         function Reponse1() {
             var x = document.getElementById("deroulant1");
             if (x.style.display === "none") {
@@ -35,7 +34,6 @@ session_start();
             }
         }  
 
-        
         function Reponse2() {
             var x = document.getElementById("deroulant2");
             if (x.style.display === "none") {

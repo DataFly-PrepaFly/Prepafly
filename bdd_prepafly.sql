@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 15 jan. 2021 à 17:12
+-- Généré le : Dim 17 jan. 2021 à 10:54
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -120,7 +120,7 @@ INSERT INTO `societe` (`id_societe`, `nom`) VALUES
 DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
   `id_test` int(11) NOT NULL,
-  `date` datetime DEFAULT NULL,
+  `date_test` datetime NOT NULL,
   `resultat` varchar(20) DEFAULT NULL,
   `Type Test_id_type` varchar(50) NOT NULL,
   `Utilisateur_nSS` int(11) NOT NULL,
@@ -133,11 +133,11 @@ CREATE TABLE IF NOT EXISTS `test` (
 -- Déchargement des données de la table `test`
 --
 
-INSERT INTO `test` (`id_test`, `date`, `resultat`, `Type Test_id_type`, `Utilisateur_nSS`) VALUES
-(234567890, NULL, 'A', 'visuel', 135790),
-(345678901, NULL, 'C', 'regulier', 1245780),
-(456789012, NULL, 'A', 'auditif', 2356890),
-(1234567890, NULL, 'B', 'complet', 12345);
+INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `Type Test_id_type`, `Utilisateur_nSS`) VALUES
+(234567890, '2021-01-05 11:52:38', 'A', 'visuel', 135790),
+(345678901, '2021-01-12 16:12:38', 'C', 'regulier', 1245780),
+(456789012, '2020-12-09 13:46:38', 'A', 'auditif', 2356890),
+(1234567890, '2021-01-16 10:11:38', 'B', 'complet', 12345);
 
 -- --------------------------------------------------------
 
