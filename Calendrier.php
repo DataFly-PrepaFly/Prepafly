@@ -16,7 +16,7 @@ if (isset($_POST["nom"], $_POST["prenom"], $_POST["date"], $_POST['type_test_cal
 	               //Variable pour l'envoi du mail, il faudra changer le mail 
 	$sujet = "Test programmé";	//plus tard et en fonction de l'entreprise
 	$message = "Vous avez un test programmé à la date du ".$date.". Vous pouvez contacter votre manager pour plus d'informations.";
-	$headers_mail ="From:". $from;
+	$headers_mail ="From:". $email_from. ;
 
 	//appel à la fonction de vérif du nom et prénom
 	$valid_ids = InfosUserCal($bdd, $nom_calen, $prenom_calen);
