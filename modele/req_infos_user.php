@@ -10,31 +10,6 @@ function InfosUser ($bdd, $mail)
 	return $InfosUser;
 }
 
-//récupère les informations à partir du nom et prenom
-function InfosUserCal ($bdd, $nom, $prenom)
-{
-	$req=$bdd->prepare("SELECT * FROM utilisateur WHERE nom = ? AND prenom = ? AND type_utilisateur_id_type = p");
-	$req->execute(array($nom,$prenom));
-	$count = $req->rowCount();
-	return $count;
-}
-
-//modifie les informations de l'utilisateur selon son mail
-function ModifUser($bdd, $mail, $colonne, $champ){
-    $update = $bdd->prepare("UPDATE utilisateur SET ?=? WHERE mail=?");
-    $update->execute(array($colonne,$champ,$mail));
-}
-
-//recupère le mail à partir du nom et prenom
-function SendEmail ($bdd, $nom, $prenom)
-{
-	$req=$bdd->prepare("SELECT mail FROM utilsateur WHERE nom = ? AND prenom = ?");
-	$req->execute(array($nom, $prenom));
-	$email_to= $req->fetch();
-	return $email_to;
-}
-
-
 function NomCompagnie ($bdd, $mail)
 {
     $req = $bdd->prepare("SELECT societe. nom FROM societe, utilisateur WHERE utilisateur. société_id_societe
@@ -44,33 +19,27 @@ function NomCompagnie ($bdd, $mail)
     return $NomCompagnie;
 }
 
+function UserList ($bdd)
+{
+	$req = $bdd->prepare("SELECT nom FROM utilisateur");
+	$req->execute();
+	return $req->fetchAll();
+
+}
 
 function SearchResults ($bdd, $recherche)
 {
-	$req_result = $bdd->prepare("SELECT date_test, resultat, Type Test_id_type, nom 
-		FROM test /*JOIN utilisateur 
-		ON test. Utilisateur_nSS = utilisateur. nSS 
-		WHERE nom LIKE '%?%'");
+	$req_result = $bdd->prepare("SELECT nom, date, Test_id_type, resultat FROM test JOIN utilisateur 
+		ON test.Utilisateur_nSS = utilisateur.nSS WHERE nom = ?");
 	$req_result->execute(array($recherche));
 	return $req_result->fetchAll();
 }
 
-
-function Test ($bdd)
-{
-	$req = $bdd->prepare("SELECT * FROM test");
-	$req->execute(array());
-	$InfosUser = $req->fetch();
-	return $InfosUser;
-}
-
-/*
 function AllResults ($bdd)
 {
-	$req_result = $bdd->prepare("SELECT id_test, date_test, resultat, Type Test_id_type
-		FROM test /*JOIN utilisateur 
-		ON test. Utilisateur_nSS = utilisateur. nSS");
-	$req_result->execute(array());
+	$req_result = $bdd->prepare("SELECT nom, date, Test_id_type, resultat
+		FROM test JOIN utilisateur 
+		ON test.Utilisateur_nSS = utilisateur.nSS");
+	$req_result->execute();
 	return $req_result->fetchAll();
 }
-*/
