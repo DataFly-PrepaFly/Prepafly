@@ -41,10 +41,6 @@
                     <input type="date" id="date" name="date" required><br><br>
                 </div>
                 <div class="champs1">
-                    <label for="mail">Mail personnel : </label>
-                    <input type="email" name="mail" size="50"><br><br>
-                </div>
-                <div class="champs1">
                     <label for="mailpro">Mail professionnel : </label><br>
                     <input type="email" name="mailpro" size="50"><br><br>
                 </div>
@@ -82,11 +78,14 @@
                 </div>
                 <div class="champs2">
                     <label for="demande">Formulez votre demande ici : </label><br /><br>
-                    <textarea name="demande" id="demande" rows="5" cols="60"></textarea><br>
+                    <textarea name="demande" id="demande" rows="5" cols="60"></textarea><br><br>
                 </div>
             </div>
         </div>
         <div class="end">
+
+            <?=$confirmation?>
+
             <a href="#" onclick="resetForm();" id="reinit" type="reset">Réinitialiser</a>
             <a href="#" id="valider" type="submit">Envoyer</a><br>
         </div>
