@@ -3,41 +3,24 @@
 require 'modele/connexion_bdd.php';
 require 'modele/req_infos_user.php';
 
-if (isset($_POST['recherche'])) {
 
-    $key_letter = $_POST['recherche'];
+//Liste déroulante
+$List = UserList($bdd);
 
-    $array_results = SearchResults($bdd, $key_letter);
 
-    $test = Test($bdd);
-    //var_dump($test);
+//Choix de l'affichage dans le tableau
 
-    //Contenu de sortie
-/*
-    echo "<table class='table' border=1 cellspacing=0 cellpadding=3><tr>";
-    while($column = array_column($array_results, '')){
-        echo "<th>{$column->name}</th>";
-    }
-    echo "</tr>";
-    
-    while($row = array)){
-        echo "<tr>";
-        for($i=0;$i<$colums;$i++){
-            echo "<td>$row[$i]</td>";
-        }
-        echo "</tr>";
-    }
-    echo "</table>";
-    */
+if (isset($_POST['recherche']) and $_POST['recherche'] !=='Liste complète' and $_POST['recherche'] !=='') { 
+
+    $user = $_POST['recherche'];
+
+    $results = SearchResults($bdd, $user);
+
 }
 
-else {
-    $array_all_results = AllResults($bdd);
-    //var_dump($array_all_results);
-    $test = Test($bdd);
-    var_dump($array_all_results);
+else { //sinon
+    $results = AllResults($bdd);
 }
-
 
 require 'vues/Resultats_Mng.php';
 
