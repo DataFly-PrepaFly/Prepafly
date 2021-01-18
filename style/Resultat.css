@@ -19,6 +19,7 @@ h3 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
+
 }
 
 #tableau {
@@ -45,3 +46,33 @@ h3 {
     font-size: 1rem;
 }
 
+form input {
+    letter-spacing: 1px;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.2);
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    padding: 0.2rem 1rem;
+    padding-bottom: 0.2rem;
+}
+
+input[type=submit] {
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+input[type=submit]:hover {
+    color: #4ea3fc;
+    border-color: #4ea3fc;
+    box-shadow: 0 0 10px #4ea3fc;
+
+}

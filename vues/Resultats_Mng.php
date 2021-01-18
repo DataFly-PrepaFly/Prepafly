@@ -53,7 +53,7 @@
 		echo "</tr>";
 	}
 	?>
-</table><br>
+</table><br><br>
 
 
 <?php include("vues/footer.php"); ?>

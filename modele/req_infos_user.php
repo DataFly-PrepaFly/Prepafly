@@ -21,7 +21,7 @@ function NomCompagnie ($bdd, $mail)
 
 function UserList ($bdd)
 {
-	$req = $bdd->prepare("SELECT nom FROM utilisateur");
+	$req = $bdd->prepare("SELECT nom FROM utilisateur WHERE type_utilisateur_id_type LIKE 'p' ");
 	$req->execute();
 	return $req->fetchAll();
 

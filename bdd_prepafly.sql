@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : lun. 18 jan. 2021 à 15:30
--- Version du serveur :  5.7.30
--- Version de PHP : 7.4.9
+-- Hôte : 127.0.0.1:3306
+-- Généré le : lun. 18 jan. 2021 à 17:50
+-- Version du serveur :  5.7.31
+-- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,7 +27,8 @@ SET time_zone = "+00:00";
 -- Structure de la table `cgu`
 --
 
-CREATE TABLE `cgu` (
+DROP TABLE IF EXISTS `cgu`;
+CREATE TABLE IF NOT EXISTS `cgu` (
   `id_article` int(11) NOT NULL,
   `titre` varchar(100) NOT NULL,
   `article` longtext NOT NULL
@@ -55,10 +55,12 @@ INSERT INTO `cgu` (`id_article`, `titre`, `article`) VALUES
 -- Structure de la table `faq`
 --
 
-CREATE TABLE `faq` (
+DROP TABLE IF EXISTS `faq`;
+CREATE TABLE IF NOT EXISTS `faq` (
   `id_question` int(11) NOT NULL,
   `question` varchar(5000) DEFAULT NULL,
-  `reponse` varchar(10000) DEFAULT NULL
+  `reponse` varchar(10000) DEFAULT NULL,
+  PRIMARY KEY (`id_question`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -75,10 +77,13 @@ INSERT INTO `faq` (`id_question`, `question`, `reponse`) VALUES
 -- Structure de la table `mesure`
 --
 
-CREATE TABLE `mesure` (
+DROP TABLE IF EXISTS `mesure`;
+CREATE TABLE IF NOT EXISTS `mesure` (
   `id_mesure` int(11) NOT NULL,
   `valeur` decimal(10,0) DEFAULT NULL,
-  `Test_id_test` int(11) NOT NULL
+  `Test_id_test` int(11) NOT NULL,
+  PRIMARY KEY (`id_mesure`,`Test_id_test`),
+  KEY `fk_Mesure_Test1_idx` (`Test_id_test`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -99,10 +104,12 @@ INSERT INTO `mesure` (`id_mesure`, `valeur`, `Test_id_test`) VALUES
 -- Structure de la table `societe`
 --
 
-CREATE TABLE `societe` (
-  `id_societe` int(11) NOT NULL,
-  `nom` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `societe`;
+CREATE TABLE IF NOT EXISTS `societe` (
+  `id_societe` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_societe`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `societe`
@@ -118,23 +125,28 @@ INSERT INTO `societe` (`id_societe`, `nom`) VALUES
 -- Structure de la table `test`
 --
 
-CREATE TABLE `test` (
+DROP TABLE IF EXISTS `test`;
+CREATE TABLE IF NOT EXISTS `test` (
   `id_test` int(11) NOT NULL,
   `date` datetime DEFAULT NULL,
   `resultat` varchar(20) DEFAULT NULL,
-  `Type Test_id_type` varchar(50) NOT NULL,
-  `Utilisateur_nSS` int(11) NOT NULL
+  `test_id_type` varchar(50) NOT NULL,
+  `Utilisateur_nSS` int(11) NOT NULL,
+  PRIMARY KEY (`id_test`,`test_id_type`,`Utilisateur_nSS`),
+  KEY `fk_Test_Type Test1_idx` (`test_id_type`),
+  KEY `fk_Test_Utilisateur1_idx` (`Utilisateur_nSS`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `test`
 --
 
-INSERT INTO `test` (`id_test`, `date`, `resultat`, `Type Test_id_type`, `Utilisateur_nSS`) VALUES
-(234567890, NULL, 'A', 'visuel', 135790),
-(345678901, NULL, 'C', 'regulier', 1245780),
-(456789012, NULL, 'A', 'auditif', 2356890),
-(1234567890, NULL, 'B', 'complet', 12345);
+INSERT INTO `test` (`id_test`, `date`, `resultat`, `test_id_type`, `Utilisateur_nSS`) VALUES
+(234567890, '2021-01-04 18:47:48', 'A', 'visuel', 135790),
+(345678901, '2021-01-14 12:20:48', 'C', 'regulier', 1245780),
+(456789012, '2021-01-02 10:56:48', 'A', 'auditif', 2356890),
+(526284919, '2021-01-07 15:27:53', 'B', 'complet', 1245780),
+(1234567890, '2020-12-15 16:47:48', 'B', 'complet', 12345);
 
 -- --------------------------------------------------------
 
@@ -142,8 +154,10 @@ INSERT INTO `test` (`id_test`, `date`, `resultat`, `Type Test_id_type`, `Utilisa
 -- Structure de la table `type test`
 --
 
-CREATE TABLE `type test` (
-  `id_type` varchar(50) NOT NULL
+DROP TABLE IF EXISTS `type test`;
+CREATE TABLE IF NOT EXISTS `type test` (
+  `id_type` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -162,9 +176,12 @@ INSERT INTO `type test` (`id_type`) VALUES
 -- Structure de la table `type utilisateur`
 --
 
-CREATE TABLE `type utilisateur` (
+DROP TABLE IF EXISTS `type utilisateur`;
+CREATE TABLE IF NOT EXISTS `type utilisateur` (
   `id_type` varchar(2) NOT NULL,
-  `type` varchar(20) NOT NULL
+  `type` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_type`),
+  UNIQUE KEY `id_type_UNIQUE` (`id_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -182,7 +199,8 @@ INSERT INTO `type utilisateur` (`id_type`, `type`) VALUES
 -- Structure de la table `utilisateur`
 --
 
-CREATE TABLE `utilisateur` (
+DROP TABLE IF EXISTS `utilisateur`;
+CREATE TABLE IF NOT EXISTS `utilisateur` (
   `nSS` int(11) NOT NULL,
   `nom` varchar(45) NOT NULL,
   `prenom` varchar(45) NOT NULL,
@@ -194,7 +212,10 @@ CREATE TABLE `utilisateur` (
   `code_postal` int(5) NOT NULL,
   `mdp` varchar(60) NOT NULL,
   `type_utilisateur_id_type` varchar(2) NOT NULL,
-  `société_id_societe` int(11) NOT NULL
+  `société_id_societe` int(11) NOT NULL,
+  PRIMARY KEY (`nSS`,`type_utilisateur_id_type`,`société_id_societe`),
+  KEY `fk_Utilisateur_Type Utilisateur1_idx` (`type_utilisateur_id_type`),
+  KEY `fk_utilisateur_société1_idx` (`société_id_societe`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -210,68 +231,6 @@ INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `ma
 (2356890, 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 0, '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2);
 
 --
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `faq`
---
-ALTER TABLE `faq`
-  ADD PRIMARY KEY (`id_question`);
-
---
--- Index pour la table `mesure`
---
-ALTER TABLE `mesure`
-  ADD PRIMARY KEY (`id_mesure`,`Test_id_test`),
-  ADD KEY `fk_Mesure_Test1_idx` (`Test_id_test`);
-
---
--- Index pour la table `societe`
---
-ALTER TABLE `societe`
-  ADD PRIMARY KEY (`id_societe`);
-
---
--- Index pour la table `test`
---
-ALTER TABLE `test`
-  ADD PRIMARY KEY (`id_test`,`Type Test_id_type`,`Utilisateur_nSS`),
-  ADD KEY `fk_Test_Type Test1_idx` (`Type Test_id_type`),
-  ADD KEY `fk_Test_Utilisateur1_idx` (`Utilisateur_nSS`);
-
---
--- Index pour la table `type test`
---
-ALTER TABLE `type test`
-  ADD PRIMARY KEY (`id_type`);
-
---
--- Index pour la table `type utilisateur`
---
-ALTER TABLE `type utilisateur`
-  ADD PRIMARY KEY (`id_type`),
-  ADD UNIQUE KEY `id_type_UNIQUE` (`id_type`);
-
---
--- Index pour la table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`nSS`,`type_utilisateur_id_type`,`société_id_societe`),
-  ADD KEY `fk_Utilisateur_Type Utilisateur1_idx` (`type_utilisateur_id_type`),
-  ADD KEY `fk_utilisateur_société1_idx` (`société_id_societe`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `societe`
---
-ALTER TABLE `societe`
-  MODIFY `id_societe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- Contraintes pour les tables déchargées
 --
 
@@ -285,7 +244,7 @@ ALTER TABLE `mesure`
 -- Contraintes pour la table `test`
 --
 ALTER TABLE `test`
-  ADD CONSTRAINT `fk_Test_Type Test1` FOREIGN KEY (`Type Test_id_type`) REFERENCES `type test` (`id_type`),
+  ADD CONSTRAINT `fk_Test_Type Test1` FOREIGN KEY (`test_id_type`) REFERENCES `type test` (`id_type`),
   ADD CONSTRAINT `fk_Test_Utilisateur1` FOREIGN KEY (`Utilisateur_nSS`) REFERENCES `utilisateur` (`nSS`);
 
 --
