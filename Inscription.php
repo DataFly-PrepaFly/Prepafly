@@ -19,8 +19,13 @@ if (isset($_POST['nom'],
 	$cpgn = $_POST['cpgn'];
 	$fonction = $_POST['fonction'];
 	$demande = $_POST['demande'];
+	
+	$message = 'M./Mme '.$nom.' '.$prenom.', '.$fonction.' au sein de la société '.$cpgn.' est intéressé et souhaiterait être recontacté(e). Sa demande est la suivante : '.$demande.'';
 
-
+	require 'vues/Inscription.php';
+}
+else {
+	require 'vues/Inscription.php';
 }
 
-require 'vues/Inscription.php';
+

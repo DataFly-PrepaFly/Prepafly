@@ -10,6 +10,22 @@ function InfosUser ($bdd, $mail)
 	return $InfosUser;
 }
 
+function InfosUserCal ($bdd, $nom, $prenom)
+{
+	$req=$bdd->prepare("SELECT * FROM utilisateur WHERE nom = ? AND prenom = ? AND type_utilisateur_id_type = p");
+	$req->execute(array($nom,$prenom));
+	$count = $req->rowCount();
+	return $count;
+}
+
+function SendEmail ($bdd, $nom, $prenom)
+{
+	$req=$bdd->prepare("SELECT mail FROM utilsateur WHERE nom = ? AND prenom = ?");
+	$req->execute(array($nom, $prenom));
+	$email_to= $req->fetch();
+	return $email_to;
+}
+
 function NomCompagnie ($bdd, $mail)
 {
     $req = $bdd->prepare("SELECT societe. nom FROM societe, utilisateur WHERE utilisateur. société_id_societe

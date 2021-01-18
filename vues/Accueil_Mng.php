@@ -26,7 +26,7 @@
             <input type="search" name="search" size="35"><a href="#" id="recherche">Rechercher</a>
         </div> 
 
-        <div class="num" id="deux"><a href="#">Programmer des tests à venir</a></div>
+        <div class="num" id="deux"><a href="Calendrier.php">Programmer des tests à venir</a></div>
 
         <div class="num" id="trois"><a href="#">Consulter l'ensemble des résultats</a></div><br><br>
     </div>

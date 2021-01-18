@@ -12,10 +12,9 @@
 
 <header>
     <?php 
-    include("vues/bandeau_prepafly.php"); 
-    include("vues/nav_simple.php"); 
+    require 'vues/bandeau_prepafly.php'; 
+    include 'vues/nav_simple.php'; 
     ?>
-
 </header>
 
 <body>
@@ -26,7 +25,7 @@
         <p>Si vous êtes intéressé et souhaitez être recontacté par nos équipes, il vous suffit de remplir ce formulaire.</p><br>
     </div>
     
-    <form action="traitement_inscri.php" method="post" enctype="multipart/form-data" id="form">
+    <form action="Inscription.php" method="post" enctype="multipart/form-data" id="form">
         <div id="formulaire">
             <div id="form_part1">
                 <div class="champs1">
@@ -43,11 +42,11 @@
                 </div>
                 <div class="champs1">
                     <label for="mail">Mail personnel : </label>
-                    <input type="mail" name="mail" size="50"><br><br>
+                    <input type="email" name="mail" size="50"><br><br>
                 </div>
                 <div class="champs1">
                     <label for="mailpro">Mail professionnel : </label><br>
-                    <input type="mail" name="mailpro" size="50"><br><br>
+                    <input type="email" name="mailpro" size="50"><br><br>
                 </div>
                 <div class="champs1">
                     <label for="num">Numéro de téléphone : </label>

@@ -15,7 +15,7 @@
     <?php 
     require 'vues/bandeau_profil.php';
     require 'vues/nav_simple.php';
-    
+
     require 'modele/connexion_bdd.php';
     require 'modele/req_infos_faq.php';
 
@@ -23,6 +23,8 @@
     ?>
 
     <body>
+
+    <script src="fonctions.js"></script>
 
     <h3><br>GESTION F.A.Q.</h3>
     <div id="">
@@ -73,6 +75,7 @@
                 </div>    
             </div>
         </div>
+    </div>
 
 <form method="POST" action="Modifier.php">
 <pre>   
