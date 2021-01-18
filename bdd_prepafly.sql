@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : Dim 17 jan. 2021 à 10:54
--- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
+-- Hôte : localhost
+-- Généré le : lun. 18 jan. 2021 à 15:30
+-- Version du serveur :  5.7.30
+-- Version de PHP : 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -27,9 +28,9 @@ SET time_zone = "+00:00";
 -- Structure de la table `cgu`
 --
 
-DROP TABLE IF EXISTS `cgu`;
-CREATE TABLE IF NOT EXISTS `cgu` (
+CREATE TABLE `cgu` (
   `id_article` int(11) NOT NULL,
+  `titre` varchar(100) NOT NULL,
   `article` longtext NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -37,9 +38,16 @@ CREATE TABLE IF NOT EXISTS `cgu` (
 -- Déchargement des données de la table `cgu`
 --
 
-INSERT INTO `cgu` (`id_article`, `article`) VALUES
-(1, 'DataFly exerce en qualité de sous-traitant à l’entreprise Infinite Measures. Domiciliée à Paris, DataFly fournit des sites web spécialisés dans les tests d’aptitudes pour divers domaines. Ici, le site web vise les compagnies aériennes, et est accessible par les pilotes des compagnies clientes et leurs managers, appartenant à ces mêmes compagnies.\r\n\r\nDataFly permet, sur son site web, de s\'entraîner, s’évaluer en tant que pilote; mais aussi d\'évaluer son équipe lorsque l’on est manager, à des exercices psychotechniques. Toute personne ayant les identifiants nécessaires à la connexion, préalablement fourni par le manager, possède un droit d’accès aux  tests proposés sur le site. \r\n\r\nVous pouvez acheter des Abonnements par le billet d’un contrat établi entre l’entreprise Infinite Measures et la compagnie aérienne, (ci-après dénommés « les Abonnements »). Cela permet de débloquer l\'accès à des sélections d\'exercices (aussi appelés « tests ») utilisables dans le site, pendant une période déterminée.\r\n\r\nL’utilisation du site est soumise aux présentes Conditions Générales et à la Politique de Confidentialité (ci-après dénommées les « Conditions Générales »). En accédant à notre site, vous prenez acte et reconnaissez avoir lu, compris et accepté les Conditions Générales de Vente. Si vous n’êtes pas d’accord avec ces conditions, veuillez ne pas utiliser notre site ou le quitter.'),
-(2, 'Durée :\r\nPendant toute la durée des Abonnements, vous êtes libres d\'utiliser le site internet ainsi que les tests autant de fois que vous le souhaitez.\r\n\r\nCompte :\r\nL\'utilisation du site requiert la création d\'un compte par la compagnie aérienne. Vos résultats sont donnés sur le site dans une page qui y est dédiée.\r\n\r\nContraintes d\'utilisations :\r\nL\'Utilisateur doit prendre note des restrictions d\'utilisation suivantes :\r\n- Vous ne pouvez créer qu\'un seul compte par personne.\r\n- Vous ne pouvez pas partager votre compte avec un autre Utilisateur, cela pourrait fausser les résultats.\r\n\r\nInformation : Nous avons pris ces mesures afin d\'endiguer l\'utilisation frauduleuse du programme (partage de comptes) ainsi que l\'abus de l\'offre de démonstration.\r\n\r\nRésultats :\r\nÀ la fin de chaque test, le site vous présentera le résultat sous forme de tableaux.\r\nCes résultats sont fournis à titre indicatif et permettent une visualisation du niveau du pilote par le manager.\r\n\r\nMises à jour obligatoires :\r\nDes mises à jour sont faites régulièrement afin d’améliorer l’expérience de l’utilisateur sur le site.\r\n\r\nCoûts d\'accès :\r\nTous les coûts d’accès aux tests (par exemple les frais d’accès à Internet ou les frais liés aux données mobiles) incombent à l’utilisateur.');
+INSERT INTO `cgu` (`id_article`, `titre`, `article`) VALUES
+(1, 'Article 1 : Utilisation des applications ?', 'Durée:\r\nPendant toute la durée des Abonnements, vous êtes libres d\'utiliser le site internet ainsi que les tests autant de fois que vous le souhaitez.\r\n\r\nCompte:\r\nL\'utilisation du site requiert la création d\'un compte par la compagnie aérienne. Vos résultats sont donnés sur le site dans une page qui y est dédiée.\r\n\r\nContraintes d\'utilisations:\r\nL\'Utilisateur doit prendre note des restrictions d\'utilisation suivantes :\r\n-Vous ne pouvez créer qu\'un seul compte par personne.\r\n-Vous ne pouvez pas partager votre compte avec un autre Utilisateur, cela pourrait fausser les résultats.\r\n\r\nInformation : Nous avons pris ces mesures afin d\'endiguer l\'utilisation frauduleuse du programme (partage de comptes) ainsi que l\'abus de l\'offre de démonstration.\r\n\r\nRésultats:\r\nÀ la fin de chaque test, le site vous présentera le résultat sous forme de tableaux.\r\nCes résultats sont fournis à titre indicatif et permettent une visualisation du niveau du pilote par le manager.\r\n\r\nMises à jour obligatoires:\r\nDes mises à jour sont faites régulièrement afin d’améliorer l’expérience de l’utilisateur sur le site.\r\n\r\nCoûts d\'accès:\r\nTous les coûts d’accès aux tests (par exemple les frais d’accès à Internet ou les frais liés aux données mobiles) incombent à l’utilisateur.'),
+(2, 'Article 2 : Qui sommes-nous ?', 'DataFly exerce en qualité de sous-traitant à l’entreprise Infinite Measures. Domiciliée à Paris,  fournit des sites web spécialisés dans les tests d’aptitudes pour divers domaines. Ici, le site web vise les compagnies aériennes, et est accessible par les pilotes des compagnies clientes et leurs managers, appartenant à ces mêmes compagnies.\r\n DataFly permet, sur son site web, de s\'entraîner, s’évaluer en tant que pilote; mais aussi d\'évaluer son équipe lorsque l’on est manager, à des exercices psychotechniques. Toute personne ayant les identifiants nécessaires à la connexion, préalablement fourni par le manager, possède un droit d’accès aux  tests proposés sur le site. \r\n           Vous pouvez acheter des Abonnements par le billet d’un contrat établi entre l’entreprise Infinite Measures et la compagnie aérienne, (ci-après dénommés « les Abonnements »). Cela permet de débloquer l\'accès à des sélections d\'exercices (aussi appelés « tests ») utilisables dans le site, pendant une période déterminée.\r\n            L’utilisation du site est soumise aux présentes Conditions Générales et à la Politique de Confidentialité (ci-après dénommées les « Conditions Générales »). En accédant à notre site, vous prenez acte et reconnaissez avoir lu, compris et accepté les Conditions Générales de Vente. Si vous n’êtes pas d’accord avec ces conditions, veuillez ne pas utiliser notre site ou le quitter.'),
+(3, 'Article 3 : Achat et abonnement', 'Prix\r\nLes prix des Abonnements sont affichés dans la Boutique.\r\n\r\nModalités de paiement\r\nLes moyens de paiement disponibles sont par Paypal, par virement bancaire SEPA ou par cheque. PayPal accepte également les paiements par carte bancaire.\r\n\r\nDélai de livraison\r\nNous ajoutons les abonnements sur votre compte immédiatement après réception de votre paiement.\r\nDans le cas d\'un paiement par virement bancaire, notez que le paiement peut mettre quelques instants grâce, maintenant virement instantanée ou 1 à 2 jours ouvrés pour des virement standard,  avant d\'être visible sur nos comptes bancaires. \r\n\r\nRemboursement\r\nComme l\'indique l\'Article L121-20-2 du Code de la Consommation alinéa 4, nous ne sommes pas en possibilité de vous proposer de délai de réflexion ou de rétradctation, dès lors qu\'au moins l\'une des test a été utilisée. Si, toutefois, vous n\'avez pas utilisé l\'une de nos test dans les 7 jours suivant le paiement, nous sommes en mesure de vous rembourser, sur demande de votre part, via le moyen de paiement utilisé lors de l\'achat. Ce remboursement aura lieu dans un délai de 7 jours ouvrés.\r\nVous êtes tenus d\'utiliser la période d\'essai gratuite afin de vous assurer de la pleine compatibilité des Applications avec votre matériel. Des problèmes d\'incompatibilité ne sauraient être un prétexte à un remboursement.'),
+(4, 'Article 4 : Offre de démonstration', 'Afin qu\'il n\'y ait aucune ambigüité sur le contenu du site, nous offrons la possibilité à chacun de nos Clients de tester gratuitement une partie de nos test, pendant une durée de 48 heures. Cette offre ne peut pas être renouvelée.'),
+(5, 'Article 5 : Limitation de responsabilité', 'Nous ne sommes aucunement affiliés à l\'ENAC ou à Air France, et nous ne pourrions être responsables d\'un changement dans le déroulement des tests d’aptitudes pour les pilotes, voire de la suppression de ces épreuves. \r\nNous prenons des mesures pour veiller à ce que le site soit libre de virus informatiques et autres programmes malicieux grâce aux pare-feux mis en place. Toutefois, compte tenu de la nature du réseau, nous ne pouvons pas nous engager sur ce point et vous conseillons de vous prémunir  d’un antivirus contre tous virus informatiques ou autres programmes malicieux qui pourraient être transmis à votre ordinateur, suite à votre utilisation du site.\r\nVous convenez que nous seront contraint de mettre le site hors ligne lorsque nous pensons cela nécessaire à des fins de maintenance ou de mis à jour du système.'),
+(6, 'Article 6 : Propriété intellectuelle', 'L’accès au site ne vous confère aucun droit de propriété intellectuelle relatif au site autre que celui de les utiliser conformément aux présentes Conditions Générales.\r\nVous ne pouvez, en aucun cas, reproduire, représenter, modifier, transmettre, publier, adapter, sur quelque support que ce soit, par quelque moyen que ce soit, ou exploiter de quelque manière que ce soit, tout ou partie du site sans autorisation. Toute exploitation, à quelque titre que ce soit, de tout ou partie du site pourra faire l’objet d’une poursuite en justice.'),
+(7, 'Article 7 : Litiges', 'Si nous constatons un manquement aux présentes Conditions Générales, nous enverrons un avertissement au client concerné par courrier électronique. En cas de récidive, le compte du client sera fermé, et aucun remboursement ne pourra se faire.\r\nTous les litiges auxquels les présentes pourraient donner lieu, concernant tant leur validité, leur interprétation, leur exécution, leur résiliation, leurs conséquences et leurs suites devront faire l’objet d’une communication préalable à « Infinite Measures » dans le but d’obtenir une solution à l’amiable. Ceux qui n’auraient pu être résolus de cette manière seront soumis aux tribunaux compétents dans les conditions de droit commun.'),
+(8, 'Article 8 : Acceptation', 'Vous reconnaissez avoir eu connaissance, préalablement à votre inscription au Site et à l\'achat de vos Abonnements, d’une manière lisible et compréhensible, des présentes Conditions Générales.\r\nEn utilisant le site ainsi que les tests qui le composent suite à un achat ou tout type d’abonnement adhère et accepte en pleine connaissance de cause les présentes Conditions Générales.\r\nLes Conditions Générales pouvant faire l’objet de modifications ultérieures, la version applicable à votre achat est celle en vigueur sur le site à la date où vous passez la commande. Nous vous demanderons de confirmer au moment de votre achat si vous acceptez la version la plus récente des présentes Conditions Générales. Si vous n’êtes pas d’accord avec les changements que nous apportons aux présentes Conditions Générales, vous devez immédiatement arrêter d’utiliser le site ainsi que nous le signaler.'),
+(9, 'Article 9 : Droit applicable', 'Les présentes Conditions Générales sont soumises au droit français, sans préjudice des dispositions impératives de la loi du pays du domicile du consommateur.');
 
 -- --------------------------------------------------------
 
@@ -47,12 +55,10 @@ INSERT INTO `cgu` (`id_article`, `article`) VALUES
 -- Structure de la table `faq`
 --
 
-DROP TABLE IF EXISTS `faq`;
-CREATE TABLE IF NOT EXISTS `faq` (
+CREATE TABLE `faq` (
   `id_question` int(11) NOT NULL,
   `question` varchar(5000) DEFAULT NULL,
-  `reponse` varchar(10000) DEFAULT NULL,
-  PRIMARY KEY (`id_question`)
+  `reponse` varchar(10000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -69,13 +75,10 @@ INSERT INTO `faq` (`id_question`, `question`, `reponse`) VALUES
 -- Structure de la table `mesure`
 --
 
-DROP TABLE IF EXISTS `mesure`;
-CREATE TABLE IF NOT EXISTS `mesure` (
+CREATE TABLE `mesure` (
   `id_mesure` int(11) NOT NULL,
   `valeur` decimal(10,0) DEFAULT NULL,
-  `Test_id_test` int(11) NOT NULL,
-  PRIMARY KEY (`id_mesure`,`Test_id_test`),
-  KEY `fk_Mesure_Test1_idx` (`Test_id_test`)
+  `Test_id_test` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -96,12 +99,10 @@ INSERT INTO `mesure` (`id_mesure`, `valeur`, `Test_id_test`) VALUES
 -- Structure de la table `societe`
 --
 
-DROP TABLE IF EXISTS `societe`;
-CREATE TABLE IF NOT EXISTS `societe` (
-  `id_societe` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id_societe`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+CREATE TABLE `societe` (
+  `id_societe` int(11) NOT NULL,
+  `nom` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `societe`
@@ -117,27 +118,23 @@ INSERT INTO `societe` (`id_societe`, `nom`) VALUES
 -- Structure de la table `test`
 --
 
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE IF NOT EXISTS `test` (
+CREATE TABLE `test` (
   `id_test` int(11) NOT NULL,
-  `date_test` datetime NOT NULL,
+  `date` datetime DEFAULT NULL,
   `resultat` varchar(20) DEFAULT NULL,
   `Type Test_id_type` varchar(50) NOT NULL,
-  `Utilisateur_nSS` int(11) NOT NULL,
-  PRIMARY KEY (`id_test`,`Type Test_id_type`,`Utilisateur_nSS`),
-  KEY `fk_Test_Type Test1_idx` (`Type Test_id_type`),
-  KEY `fk_Test_Utilisateur1_idx` (`Utilisateur_nSS`)
+  `Utilisateur_nSS` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `test`
 --
 
-INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `Type Test_id_type`, `Utilisateur_nSS`) VALUES
-(234567890, '2021-01-05 11:52:38', 'A', 'visuel', 135790),
-(345678901, '2021-01-12 16:12:38', 'C', 'regulier', 1245780),
-(456789012, '2020-12-09 13:46:38', 'A', 'auditif', 2356890),
-(1234567890, '2021-01-16 10:11:38', 'B', 'complet', 12345);
+INSERT INTO `test` (`id_test`, `date`, `resultat`, `Type Test_id_type`, `Utilisateur_nSS`) VALUES
+(234567890, NULL, 'A', 'visuel', 135790),
+(345678901, NULL, 'C', 'regulier', 1245780),
+(456789012, NULL, 'A', 'auditif', 2356890),
+(1234567890, NULL, 'B', 'complet', 12345);
 
 -- --------------------------------------------------------
 
@@ -145,10 +142,8 @@ INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `Type Test_id_type`, `Ut
 -- Structure de la table `type test`
 --
 
-DROP TABLE IF EXISTS `type test`;
-CREATE TABLE IF NOT EXISTS `type test` (
-  `id_type` varchar(50) NOT NULL,
-  PRIMARY KEY (`id_type`)
+CREATE TABLE `type test` (
+  `id_type` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -167,12 +162,9 @@ INSERT INTO `type test` (`id_type`) VALUES
 -- Structure de la table `type utilisateur`
 --
 
-DROP TABLE IF EXISTS `type utilisateur`;
-CREATE TABLE IF NOT EXISTS `type utilisateur` (
+CREATE TABLE `type utilisateur` (
   `id_type` varchar(2) NOT NULL,
-  `type` varchar(20) NOT NULL,
-  PRIMARY KEY (`id_type`),
-  UNIQUE KEY `id_type_UNIQUE` (`id_type`)
+  `type` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -190,8 +182,7 @@ INSERT INTO `type utilisateur` (`id_type`, `type`) VALUES
 -- Structure de la table `utilisateur`
 --
 
-DROP TABLE IF EXISTS `utilisateur`;
-CREATE TABLE IF NOT EXISTS `utilisateur` (
+CREATE TABLE `utilisateur` (
   `nSS` int(11) NOT NULL,
   `nom` varchar(45) NOT NULL,
   `prenom` varchar(45) NOT NULL,
@@ -203,10 +194,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `code_postal` int(5) NOT NULL,
   `mdp` varchar(60) NOT NULL,
   `type_utilisateur_id_type` varchar(2) NOT NULL,
-  `société_id_societe` int(11) NOT NULL,
-  PRIMARY KEY (`nSS`,`type_utilisateur_id_type`,`société_id_societe`),
-  KEY `fk_Utilisateur_Type Utilisateur1_idx` (`type_utilisateur_id_type`),
-  KEY `fk_utilisateur_société1_idx` (`société_id_societe`)
+  `société_id_societe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -220,6 +208,68 @@ INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `ma
 (135790, 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 0, '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
 (1245780, 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 0, '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
 (2356890, 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 0, '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `faq`
+--
+ALTER TABLE `faq`
+  ADD PRIMARY KEY (`id_question`);
+
+--
+-- Index pour la table `mesure`
+--
+ALTER TABLE `mesure`
+  ADD PRIMARY KEY (`id_mesure`,`Test_id_test`),
+  ADD KEY `fk_Mesure_Test1_idx` (`Test_id_test`);
+
+--
+-- Index pour la table `societe`
+--
+ALTER TABLE `societe`
+  ADD PRIMARY KEY (`id_societe`);
+
+--
+-- Index pour la table `test`
+--
+ALTER TABLE `test`
+  ADD PRIMARY KEY (`id_test`,`Type Test_id_type`,`Utilisateur_nSS`),
+  ADD KEY `fk_Test_Type Test1_idx` (`Type Test_id_type`),
+  ADD KEY `fk_Test_Utilisateur1_idx` (`Utilisateur_nSS`);
+
+--
+-- Index pour la table `type test`
+--
+ALTER TABLE `type test`
+  ADD PRIMARY KEY (`id_type`);
+
+--
+-- Index pour la table `type utilisateur`
+--
+ALTER TABLE `type utilisateur`
+  ADD PRIMARY KEY (`id_type`),
+  ADD UNIQUE KEY `id_type_UNIQUE` (`id_type`);
+
+--
+-- Index pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD PRIMARY KEY (`nSS`,`type_utilisateur_id_type`,`société_id_societe`),
+  ADD KEY `fk_Utilisateur_Type Utilisateur1_idx` (`type_utilisateur_id_type`),
+  ADD KEY `fk_utilisateur_société1_idx` (`société_id_societe`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `societe`
+--
+ALTER TABLE `societe`
+  MODIFY `id_societe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Contraintes pour les tables déchargées

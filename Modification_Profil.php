@@ -18,10 +18,8 @@ if((isset($_POST['mailpro']))
             ModifUser($bdd,$mail,$champ,$_POST[$champ]);
         }
 	}
-
 	header('Location : Profil.php');
 }
 else {
 	require 'vues/ModifUtilisateur.php';
-
 }
