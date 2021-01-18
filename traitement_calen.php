@@ -12,8 +12,7 @@ session_start();
     
     $_SESSION['message_calen']='';
 	
-	$from = "InfiniteMeasure@gmail.com";
-	$to = "$mailpilote";                   //Varariable pour l'envoi du mail, il faudra changer le mail 
+	$from = "InfiniteMeasure@gmail.com";                   //Varariable pour l'envoi du mail, il faudra changer le mail 
 	$sujet = "Test programmé";			   //plus tard et en fonction de l'entreprise
 	$message = "Vous avez un test programmé à la date du ".$jour."/".$mois."/".$annee.". Veuillez contacter votre manager pour plus d'informations";
 	$headers_mail ="From:". $from;
@@ -25,7 +24,7 @@ session_start();
 		$req=$bdd->prepare("SELECT mail FROM utilsateur WHERE nom = ? AND prenom = ?");
 		$req->execute(array($nom_pilote_calen, $prenom_pilote_calen));
 		$mailpilote= $req->fetch();
-		mail($to,$sujet,$message,$headers_mail);
+		mail($mailpilote,$sujet,$message,$headers_mail);
 		$_SESSION['message_calen']='Le mail a bien été envoyé';
 		header('Location : calendrier.php', true, 301);
 	}
