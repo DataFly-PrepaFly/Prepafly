@@ -83,7 +83,6 @@
             </div>
         </div>
         <div class="end">
-
             <?=$confirmation?>
 
             <a href="#" onclick="resetForm();" id="reinit" type="reset">Réinitialiser</a>

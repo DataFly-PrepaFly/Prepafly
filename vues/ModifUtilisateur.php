@@ -20,93 +20,48 @@
     ?>
 </header>
 
-<?php
-require 'modele/req_infos_user.php';
-?>
-
 <br><h3>MISE À JOUR DU PROFIL</h3>
 
 <div id="phrase">
-	<p>Vous pouvez ici mettre à jour vos informations personnelles en modifiant les champs concernés.</p><br>
+	<p>Vous pouvez ici mettre à jour vos informations personnelles en remplissant les champs à modifier.</p><br>
 </div>
 
-<form action="NewUser.php" method="post" id="form"> 
+<form onsubmit="return confirmation();" action="Modification_Profil.php" method="post" id="form"> 
 	<div id="formulaire">
-		<div id="form_part1">
-
-			<div class="champs1">
-				<label for="nom">Nom :</label>
-				<input type="text" id="nom" name="nom">
-				<br>
-			</div>
-
-			<div class="champs1">
-				<label for="prenom">Prénom :</label>
-				<input type="text" id="prenom" name="prenom">
-				<br>
-			</div>
-
-			<div class="champs1">
-				<label for="sexe">Sexe :</label>
-				<select>
-					<option value="homme">Homme</option>
-		            <option value="femme">Femme</option>
-		            <option value="non_precise">Non précisé</option>
-				</select>
-				<br>
-			</div>
-
-			<div class="champs1">
-				<label for="date_naissance">Date de naissance :</label>
-				<input type="Date" id="date_naissance" name="date_naissance">
-				<br>
-			</div>
-
-			<div class="champs1">
-				<label for="mailpro">Mail Professionnel :</label>
-				<input type="text" id="mailpro" name="mailpro" size="40">
-				<br>
-			</div>
-
-			<div class="champs1">
-				<label for="mailproconf">Confirmer le mail :</label>
-				<input type="text" id="mailproconf" name="mailproconf" size="40">
-				<br>
-			</div>
-
+		<div class="champs">
+			<label for="mailpro">Mail Professionnel :</label>
+			<input type="text" id="mailpro" name="mailpro" size="40">
+			<br>
 		</div>
 
-		<div id="form_part2">
-			<div class="champs2">
-				<label for="adresse">Adresse :</label>
-				<input type="text" id="adresse" name="adresse" size="40">
-				<br>
-			</div>
+		<div class="champs">
+			<label for="adresse">Adresse :</label>
+			<input type="text" id="adresse" name="adresse" size="40">
+			<br>
+		</div>
 
-			<div class="champs2">
-				<label for="ville">Ville :</label>
-				<input type="text" id="ville" name="ville" size="30">
-				<br>
-			</div>
+		<div class="champs">
+			<label for="ville">Ville :</label>
+			<input type="text" id="ville" name="ville" size="30">
+			<br>
+		</div>
 
-			<div class="champs2">
-				<label for="code_postal">Code Postal :</label>
-				<input type="text" id="code_postal" name="code_postal" size="15">
-				<br>
-			</div>
+		<div class="champs">
+			<label for="code_postal">Code Postal :</label>
+			<input type="text" id="code_postal" name="code_postal" size="10">
+			<br>
+		</div>
 
-			<div class="champs2">
-				<label for="societe">Société :</label>
-				<input type="text" id="societe" name="societe" size="30">
-				<br>
-			</div>
-
+		<div class="champs">
+			<label for="societe">Société :</label>
+			<input type="text" id="societe" name="societe" size="30">
+			<br>
 		</div>
 	</div>
 
 	<div class="end">
         <a href="#" onclick="resetForm();" id="reinit" type="reset">Réinitialiser</a>
-        <a href="#" id="valider" type="submit">Enregistrer</a><br>
+        <input id="valider" type="submit" value="Enregistrer"><br>
     </div>
 </form>
 
@@ -116,9 +71,16 @@ require 'modele/req_infos_user.php';
 </body>
 
 <script type="text/javascript">
+
     function resetForm() {
         document.getElementById("form").reset();
     }
+
+    function confirmation() {
+        var confirmation = confirm("Voulez-vous vraiment soumettre ces modifications ?");
+        return confirmation;
+    }
+
 </script>
 
 </html>

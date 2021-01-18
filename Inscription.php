@@ -26,12 +26,12 @@ if (isset($_POST['nom'],
 
 	$confirmation = 'Le mail a bien été envoyé';
 
+	$confirmation = 'Le mail a bien été envoyé';
 	require 'vues/Inscription.php';
 }
 
 else {
 	$confirmation = '';
-
 	require 'vues/Inscription.php';
 }
 

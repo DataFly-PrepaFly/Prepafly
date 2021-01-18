@@ -10,6 +10,7 @@ function InfosUser ($bdd, $mail)
 	return $InfosUser;
 }
 
+//récupère les informations à partir du nom et prenom
 function InfosUserCal ($bdd, $nom, $prenom)
 {
 	$req=$bdd->prepare("SELECT * FROM utilisateur WHERE nom = ? AND prenom = ? AND type_utilisateur_id_type = p");
@@ -18,6 +19,13 @@ function InfosUserCal ($bdd, $nom, $prenom)
 	return $count;
 }
 
+//modifie les informations de l'utilisateur selon son mail
+function ModifUser($bdd, $mail, $colonne, $champ){
+    $update = $bdd->prepare("UPDATE utilisateur SET ?=? WHERE mail=?");
+    $update->execute(array($colonne,$champ,$mail));
+}
+
+//recupère le mail à partir du nom et prenom
 function SendEmail ($bdd, $nom, $prenom)
 {
 	$req=$bdd->prepare("SELECT mail FROM utilsateur WHERE nom = ? AND prenom = ?");
@@ -25,6 +33,7 @@ function SendEmail ($bdd, $nom, $prenom)
 	$email_to= $req->fetch();
 	return $email_to;
 }
+
 
 function NomCompagnie ($bdd, $mail)
 {
@@ -34,6 +43,7 @@ function NomCompagnie ($bdd, $mail)
     $NomCompagnie = $req->fetch();
     return $NomCompagnie;
 }
+
 
 function SearchResults ($bdd, $recherche)
 {
@@ -45,6 +55,7 @@ function SearchResults ($bdd, $recherche)
 	return $req_result->fetchAll();
 }
 
+
 function Test ($bdd)
 {
 	$req = $bdd->prepare("SELECT * FROM test");
@@ -53,12 +64,13 @@ function Test ($bdd)
 	return $InfosUser;
 }
 
-
+/*
 function AllResults ($bdd)
 {
 	$req_result = $bdd->prepare("SELECT id_test, date_test, resultat, Type Test_id_type
 		FROM test /*JOIN utilisateur 
-		ON test. Utilisateur_nSS = utilisateur. nSS*/");
+		ON test. Utilisateur_nSS = utilisateur. nSS");
 	$req_result->execute(array());
 	return $req_result->fetchAll();
 }
+*/
