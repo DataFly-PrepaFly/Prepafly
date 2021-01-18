@@ -20,26 +20,39 @@
 
 <br><h3>RÉSULTATS</h3>
 <div class="texte">
-    <p>Entrez le nom du pilote dont vous souhaitez connaître le résultat. Validez sans entrer de nom si vous souhaitez afficher tous les résultats.</p>
+    <p>Choisissez ou entrez le nom du pilote dont vous souhaitez connaître le résultat.</p>
 </div>
 
 <form action="Resultats.php" method="POST" id="barre_recherche">
-    <input type="text" id="recherche" name="recherche">
+    <input list="utilisateurs" id="recherche" name="recherche">
+    <datalist id="utilisateurs">
+    	<option value="Liste complète">
+    	<?php
+    	foreach ($List as $row) {
+    		echo "<option value=\"" .$row['nom']. "\">";
+    	}
+    	?>
+    </datalist>
     <input type="submit" id="valider" value="Valider"><br><br>
 </form>
 
 <table id="tableau">
 	<tr id="titres">
-		<td>Nom du pilote</td>
-		<td>Date du test</td>
-		<td>Type de test</td>
-		<td>Durée du test</td>
-		<td>Résultat obtenu</td>
+		<th>Nom du pilote</th>
+		<th>Date du test</th>
+		<th>Type de test</th>
+		<!-- <th>Durée du test</th> -->
+		<th>Résultat obtenu</th>
 	</tr>
-	<tr>
-		
-	</tr>
-
+	<?php
+	foreach ($results as $row) {
+		echo "<tr>";
+		for ($i=0; $i<=3; $i++ ) {
+			echo "<td>".$row[$i]."</td>";
+		}
+		echo "</tr>";
+	}
+	?>
 </table><br>
 
 
