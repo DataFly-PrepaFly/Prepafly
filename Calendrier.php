@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST["nom"], $_POST["prenom"], $_POST["date"], $_POST['type_test_calen'])) {
+if (isset($_POST["nom"], $_POST["prenom"], $_POST["date_test"], $_POST['type_test_calen'])) {
 
 	require 'modele/connexion_bdd.php';
 	require 'modele/req_infos_user.php';
