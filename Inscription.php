@@ -7,8 +7,8 @@ if (isset($_POST['nom'],
 	$_POST['num'], 
 	$_POST['cpgn'], 
 	$_POST['fonction'], 
-	$_POST['demande'])) {
-
+	$_POST['demande']) AND ($_POST['cpgn']!=='Liste'))
+{
 	$nom = $_POST['nom'];
 	$prenom = $_POST['prenom'];
 	$date = $_POST['date'];

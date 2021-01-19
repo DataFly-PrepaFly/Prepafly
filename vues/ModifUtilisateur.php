@@ -29,8 +29,8 @@
 <form onsubmit="return confirmation();" action="Modification_Profil.php" method="post" id="form"> 
 	<div id="formulaire">
 		<div class="champs">
-			<label for="mailpro">Mail Professionnel :</label>
-			<input type="text" id="mailpro" name="mailpro" size="40">
+			<label for="mail">Mail Professionnel :</label>
+			<input type="email" id="mail" name="mail" size="40">
 			<br>
 		</div>
 
@@ -51,12 +51,12 @@
 			<input type="text" id="code_postal" name="code_postal" size="10">
 			<br>
 		</div>
-
+<!--
 		<div class="champs">
 			<label for="societe">Société :</label>
-			<input type="text" id="societe" name="societe" size="30">
+			<input type="text" id="societe" name="société_id_societe" size="30">
 			<br>
-		</div>
+		</div> -->
 	</div>
 
 	<div class="end">

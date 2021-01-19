@@ -46,7 +46,7 @@
                 </div>
                 <div class="champs1">
                     <label for="num">Numéro de téléphone : </label>
-                    <input type="text" name="num" size="20"><br><br>
+                    <input type="tel" name="num" size="20"><br><br>
                 </div>
             </div>
 
@@ -54,6 +54,7 @@
                 <div class="champs2">
                     <label for="cpgn">Compagnie aérienne : </label>
                     <select name="cpgn">
+                        <option value="defaut" selected>Liste</option>
                         <option value="airchina">Air China</option>
                         <option value="aircorse">Air Corsica</option>
                         <option value="airfrance">Air France</option>
@@ -85,8 +86,8 @@
         <div class="end">
             <?=$confirmation?>
 
-            <a href="#" onclick="resetForm();" id="reinit" type="reset">Réinitialiser</a>
-            <a href="#" id="valider" type="submit">Envoyer</a><br>
+            <a href="#" id="reinit" onclick="resetForm();" type="reset">Réinitialiser</a>
+            <input type="submit" is="valider" value="Envoyer la demande">
         </div>
         
     </form>
@@ -96,6 +97,14 @@
     function resetForm() {
         document.getElementById("form").reset();
     }
+
+    function confirmation() {
+        var confirmation = confirm("Voulez-vous vraiment envoyer cette demande ?");
+        return confirmation;
+    }
+
+    
+
 </script>
 
 <?php include("vues/footer.php"); ?>

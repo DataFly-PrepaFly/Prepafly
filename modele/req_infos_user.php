@@ -19,12 +19,18 @@ function NomCompagnie ($bdd, $mail)
     return $NomCompagnie;
 }
 
+function ModifUser($bdd, $mail, $colonne, $champ) 
+{
+	var_dump(array($colonne, $champ, $mail));
+	$update = $bdd->prepare('UPDATE utilisateur SET ? = ? WHERE mail = ?');
+	$update->execute(array($colonne, $champ, $mail));
+}
+
 function UserList ($bdd)
 {
 	$req = $bdd->prepare("SELECT nom FROM utilisateur WHERE type_utilisateur_id_type LIKE 'p' ");
 	$req->execute();
 	return $req->fetchAll();
-
 }
 
 function SearchResults ($bdd, $recherche)

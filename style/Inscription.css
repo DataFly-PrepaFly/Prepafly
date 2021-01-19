@@ -53,36 +53,50 @@ h3, p {
 }
 
 .end {
-    margin-bottom: 4rem;
-    text-align: center;
     width: 100%;
-}
-
-.end a {
-    text-decoration: none;
-    color: black;
-    border: 1px solid grey;
-    border-radius: 8px;
-    padding: 0.1rem 1rem;
-    padding-bottom: 0.2rem;
-    box-shadow: 0 0 15px rgb(0,0,0,0.20);
-}
-
-.end a:hover {
-    color: #4ea3fc;
-    border-color: #4ea3fc;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .end #reinit {
-    margin-right: 3rem;
+    margin-right: 5rem;
 }
+
+.end #valider {
+    margin-left: 5rem;
+}
+
+.end a, .end input[type=submit] {
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.30);
+}
+
+.end input[type=submit] {
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.end a:hover, .end input[type=submit]:hover {
+    color: #4ea3fc;
+    box-shadow: 0 0 10px #4ea3fc;
+}
+
 
 @media screen and (max-width: 1200px)
 {
     #formulaire {
         margin-left: 6rem;
     }
-
 }
 
 @media screen and (max-width: 950px)
@@ -110,6 +124,14 @@ h3, p {
     #formulaire #form_part1, #formulaire #form_part2 {
     text-align: center;
     width: 90%;
+    }
+
+    .end #reinit {
+        margin-right: 2rem;
+    }
+
+    .end #valider {
+        margin-left: 2rem;
     }
 
 }
