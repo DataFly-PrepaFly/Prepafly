@@ -30,7 +30,7 @@
             <div id="form_part1">
                 <div class="champs1">
                     <label for="nom">Nom : </label>
-                    <input type="text" id="nom" name="nom" required size="30"><br><br>
+                    <input type="text" onchange="this.value=this.value.toUpperCase()" id="nom" name="nom" required size="30"><br><br>
                 </div>
                 <div class="champs1">
                     <label for="prenom">Prénom : </label>
@@ -51,27 +51,10 @@
             </div>
 
             <div id="form_part2">
-                <div class="champs2">
-                    <label for="cpgn">Compagnie aérienne : </label>
-                    <select name="cpgn">
-                        <option value="defaut" selected>Liste</option>
-                        <option value="airchina">Air China</option>
-                        <option value="aircorse">Air Corsica</option>
-                        <option value="airfrance">Air France</option>
-                        <option value="american">American Airlines</option>
-                        <option value="easy">Easy Jet</option>
-                        <option value="emirates">Emirates</option>
-                        <option value="iberia">Iberia</option>
-                        <option value="klm">KLM</option>
-                        <option value="lufthansa">Lufthansa</option>
-                        <option value="ryanair">Ryanair</option>
-                        <option value="united">United</option>
-                    </select><br><br>
-                </div>
 
                 <div class="champs2">
-                    <label for="autre_cpgn">Autre : </label>
-                    <input type="text" name="autre_cpgn" size="30"><br><br>
+                    <label for="cpgn">Compagnie aérienne : </label>
+                    <input type="text" name="cpgn" size="25" id="cpgn" required><br><br>
                 </div>
                 <div class="champs2">
                     <label for="fonction">Fonction ou poste occupé : </label><br>
@@ -89,9 +72,9 @@
             <a href="#" id="reinit" onclick="resetForm();" type="reset">Réinitialiser</a>
             <input type="submit" is="valider" value="Envoyer la demande">
         </div>
-        
     </form>
 </section>
+
 
 <script type="text/javascript">
     function resetForm() {
@@ -103,7 +86,6 @@
         return confirmation;
     }
 
-    
 
 </script>
 

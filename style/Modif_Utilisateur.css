@@ -44,7 +44,7 @@ h3, p {
     background-color: white;
     text-decoration: none;
     color: black;
-    border: 1px solid grey;
+    border: none;
     border-radius: 8px;
     padding: 0.1rem 1rem;
     padding-bottom: 0.2rem;
@@ -53,7 +53,7 @@ h3, p {
 
 .end a:hover, .end input[type=submit]:hover {
     color: #4ea3fc;
-    border-color: #4ea3fc;
+    box-shadow: 0 0 10px #4ea3fc;
 }
 
 .end input[type=submit] {

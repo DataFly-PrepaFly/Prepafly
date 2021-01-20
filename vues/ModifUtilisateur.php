@@ -48,8 +48,8 @@
 
 		<div class="champs">
 			<label for="code_postal">Code Postal :</label>
-			<input type="text" id="code_postal" name="code_postal" size="10">
-			<br>
+			<input type="numer_format" maxlength="5" id="code_postal" name="code_postal" size="10">
+			<br><p id="msg_code"></p>
 		</div>
 <!--
 		<div class="champs">
@@ -80,6 +80,20 @@
         var confirmation = confirm("Voulez-vous vraiment soumettre ces modifications ?");
         return confirmation;
     }
+
+
+    function VerifCode() {
+        var champ = document.getElementById("code_postal");
+        var msg = document.getElementById("msg_code");
+        if (/[^0-9]/.test(champ.value)) {   //La regex renvoie true si un caractère autre qu'un chiffre est présent
+          msg.innerHTML = "Attention, il faut écrire 5 chiffres";
+          champ.focus();
+        }
+        else {
+          msg.innerHTML = "";
+        }
+    }
+
 
 </script>
 

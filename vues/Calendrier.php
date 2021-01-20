@@ -29,12 +29,12 @@ session_start();
 			<input type="text" id="prenom" name="prenom" required size="25"><br><br>
 
 			<label for="date"> Date :</label>
-			<input type="date" id="date" name="date_test" required><br><br>
+			<input type="date" id="date" name="date_test" required><br><br><br>
 
 			<label>
 	        <input type="radio" name="type_test_calen" value="Test Complet" checked="checked"/>
 	       		Test Complet
-	    	</label>
+	    	</label><br>
 			<label>
 	        	<input type="radio" name="type_test_calen" value="Test visuel"  />
 	        	Test Visuel
