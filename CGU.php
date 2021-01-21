@@ -17,7 +17,6 @@ session_start();
       <?php
       require 'modele/connexion_bdd.php';
       require 'modele/req_infos_cgu.php';
-      require 'modele/req_info_cgu.php';
 
       $info_cgu=InfosCGU($bdd);
       ?>
