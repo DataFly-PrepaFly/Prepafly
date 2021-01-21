@@ -26,8 +26,16 @@
 
     <script src="fonctions.js"></script>
 
-    <h3><br>GESTION F.A.Q.</h3>
+    <h3><br>GESTION DE LA F.A.Q.</h3><br>
 
+    <div id="choix">
+        <div id="ajout">
+            <a href="#">Ajouter une nouvelle question</a>
+        </div>
+        <div id="modif">
+            <a href="#">Modifier une question existante</a>
+        </div>
+    </div>
 
     <div id="faq">
         <div class="container">

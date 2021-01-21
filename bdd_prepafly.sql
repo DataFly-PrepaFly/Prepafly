@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 18 jan. 2021 à 17:50
+-- Généré le : jeu. 21 jan. 2021 à 18:39
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -128,7 +128,7 @@ INSERT INTO `societe` (`id_societe`, `nom`) VALUES
 DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
   `id_test` int(11) NOT NULL,
-  `date` datetime DEFAULT NULL,
+  `date_test` datetime DEFAULT NULL,
   `resultat` varchar(20) DEFAULT NULL,
   `test_id_type` varchar(50) NOT NULL,
   `Utilisateur_nSS` int(11) NOT NULL,
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `test` (
 -- Déchargement des données de la table `test`
 --
 
-INSERT INTO `test` (`id_test`, `date`, `resultat`, `test_id_type`, `Utilisateur_nSS`) VALUES
+INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `test_id_type`, `Utilisateur_nSS`) VALUES
 (234567890, '2021-01-04 18:47:48', 'A', 'visuel', 135790),
 (345678901, '2021-01-14 12:20:48', 'C', 'regulier', 1245780),
 (456789012, '2021-01-02 10:56:48', 'A', 'auditif', 2356890),
