@@ -46,15 +46,6 @@ session_start();
 	    <span class="lien"><br /><a href="#Article7"><?php echo $info_cgu[6][1];?></a> </span>
 	    <span class="lien"><br /><a href="#Article8"><?php echo $info_cgu[7][1];?></a> </span> 
 	    <span class="lien"><br /><a href="#Article9"><?php echo $info_cgu[8][1];?></a> </span> <br /><br /><br>
-		    <span class="lien"><a href="#Article1"><?php echo $info_cgu[0][1];?></a></span> 
-		    <span class="lien"><br /><a href="#Article2"><?php echo $info_cgu[1][1];?></a> </span> 
-		    <span class="lien"><br /><a href="#Article3"><?php echo $info_cgu[2][1];?></a> </span> 
-		    <span class="lien"><br /><a href="#Article4"><?php echo $info_cgu[3][1];?></a> </span> 
-		    <span class="lien"><br /><a href="#Article5"><?php echo $info_cgu[4][1];?></a> </span> 
-		    <span class="lien"><br /><a href="#Article6"><?php echo $info_cgu[5][1];?></a> </span> 
-		    <span class="lien"><br /><a href="#Article7"><?php echo $info_cgu[6][1];?></a> </span>
-		    <span class="lien"><br /><a href="#Article8"><?php echo $info_cgu[7][1];?></a> </span> 
-		    <span class="lien"><br /><a href="#Article9"><?php echo $info_cgu[8][1];?></a> </span> <br /><br /><br>
 
             <h2 id="Article1"><a href="#cgu"><em><?php echo $info_cgu[0][1];?></em></a></h2>
             <p><?php echo $info_cgu[0][2];?></p>
