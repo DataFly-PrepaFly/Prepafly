@@ -27,7 +27,9 @@
     <script src="fonctions.js"></script>
 
     <h3><br>GESTION F.A.Q.</h3>
-    <div id="">
+
+
+    <div id="faq">
         <div class="container">
             <div class="question">
                 <div class="visible" onclick="Reponse(1)">

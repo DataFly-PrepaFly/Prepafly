@@ -21,16 +21,13 @@ h3 {
 #end a {
     text-decoration: none;
     color: black;
-    border: 1px solid grey;
+    border: none;
     border-radius: 8px;
-    padding: 0.1rem 1rem;
-    padding-bottom: 0.2rem;
-    box-shadow: 0 0 15px rgb(0,0,0,0.10);
+    padding: 0.2rem 1rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
 }
 
 #end a:hover {
     color: #4ea3fc;
-    border-color: #4ea3fc;
-    box-shadow: 0 0 15px rgb(0,0,0,0.20);
-
+    box-shadow: 0 0 10px #4ea3fc;
 }

@@ -6,7 +6,6 @@ if (!(isset($_SESSION['mail']))) {
 }
 
 else {
-
 	$mail=$_SESSION['mail'];
 
 	require 'modele/connexion_bdd.php';

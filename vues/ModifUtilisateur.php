@@ -26,7 +26,7 @@
 	<p>Vous pouvez ici mettre à jour vos informations personnelles en remplissant les champs à modifier.</p><br>
 </div>
 
-<form onsubmit="return confirmation();" action="Modification_Profil.php" method="post" id="form"> 
+<form name="form" onsubmit="return confirmation();" action="Modification_Profil.php" method="post" id="form"> 
 	<div id="formulaire">
 		<div class="champs">
 			<label for="mail">Mail Professionnel :</label>
@@ -48,8 +48,7 @@
 
 		<div class="champs">
 			<label for="code_postal">Code Postal :</label>
-			<input type="numer_format" maxlength="5" id="code_postal" name="code_postal" size="10">
-			<br><p id="msg_code"></p>
+			<input onchange="return VerifCode()" type="numer_format" maxlength="5" id="code_postal" name="code_postal" size="10"><span id="msg_code" style="color: red"></span>
 		</div>
 <!--
 		<div class="champs">
@@ -67,34 +66,9 @@
 
 <?php include("vues/footer.php"); ?>
 
-
 </body>
 
-<script type="text/javascript">
-
-    function resetForm() {
-        document.getElementById("form").reset();
-    }
-
-    function confirmation() {
-        var confirmation = confirm("Voulez-vous vraiment soumettre ces modifications ?");
-        return confirmation;
-    }
-
-
-    function VerifCode() {
-        var champ = document.getElementById("code_postal");
-        var msg = document.getElementById("msg_code");
-        if (/[^0-9]/.test(champ.value)) {   //La regex renvoie true si un caractère autre qu'un chiffre est présent
-          msg.innerHTML = "Attention, il faut écrire 5 chiffres";
-          champ.focus();
-        }
-        else {
-          msg.innerHTML = "";
-        }
-    }
-
-
-</script>
+<!-- Appel aux fichier de fonctions JS -->
+<script type="text/javascript" src="fonctions.js" ></script>
 
 </html>
