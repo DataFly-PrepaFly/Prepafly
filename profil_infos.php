@@ -33,7 +33,7 @@
     </div>
 
     <div id="end">
-        <a href="Modification_Profil.php" id="valider" type="submit">Modifer mes informations</a><br>
+        <a href="Modification_Profil.php" id="valider" type="submit">Modifier mes informations</a><br>
     </div>
 
     <?php include("vues/footer.php"); ?>
