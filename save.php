@@ -1,3 +1,14 @@
+<div id="choix">
+        <div id="ajout">
+            <a href="#">Ajouter une nouvelle question</a>
+        </div>
+        <div id="modif">
+            <a href="#">Modifier une question existante</a>
+        </div>
+    </div>
+
+
+
     //fonction qui verifie que le champ est composé de chiffres uniquement
 function VerifCode(){
     var nbr=document.getElementById("code_postal").value;
@@ -6,6 +17,7 @@ function VerifCode(){
         msg.innerHTML=" Entrez des chiffres uniquement";
     }
     else {
+        if (msg.innerHTML = )
         msg.innerHTML="";
     }
 }
@@ -14,15 +26,3 @@ var code_postal = document.getElementById("code_postal");
 code_postal.onchange = function () {
     VerifCode();
     }
-
-
-//fonction pour réinitialiser le formulaire
-function resetForm() {
-        document.getElementById("form").reset();
-    }
-
-//fonction de popup pour confirmer la validation du formulaire
-function confirmation() {
-    var confirmation = confirm("Voulez-vous vraiment soumettre ces modifications ?");
-    return confirmation;
-}

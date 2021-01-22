@@ -48,7 +48,7 @@
 
 		<div class="champs">
 			<label for="code_postal">Code Postal :</label>
-			<input onchange="return VerifCode()" type="numer_format" maxlength="5" id="code_postal" name="code_postal" size="10"><span id="msg_code" style="color: red"></span>
+			<input type="numer_format" maxlength="5" id="code_postal" name="code_postal" size="10"><span id="msg_code" style="color: red"></span>
 		</div>
 <!--
 		<div class="champs">

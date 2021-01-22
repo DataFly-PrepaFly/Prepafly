@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,9 +23,9 @@
 
     <body>
 
-    <script src="fonctions.js"></script>
+    <script src="faq.js"></script>
 
-    <h3><br>GESTION DE LA F.A.Q.</h3><br>
+    <h3><br>GESTION F.A.Q.</h3>
 
     <div id="choix">
         <div id="ajout">
@@ -37,7 +36,7 @@
         </div>
     </div>
 
-    <div id="faq">
+    <div id="">
         <div class="container">
             <div class="question">
                 <div class="visible" onclick="Reponse(1)">
@@ -102,4 +101,3 @@ include("vues/footer.php");
 
 </body>
 </html>
-

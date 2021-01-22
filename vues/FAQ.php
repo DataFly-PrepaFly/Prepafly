@@ -26,7 +26,7 @@ require 'vues/nav_simple.php';
 ?>
 
 <body>
-    <script src="fonctions.js"></script>
+    <script src="faq.js"></script>
 
     <h3><br>F.A.Q.</h3>
 

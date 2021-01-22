@@ -66,6 +66,7 @@ h3 {
     display: inline-block;
     width: 100%;
     background-color: #ececec;
+    box-shadow: 0 0 15px rgb(0,0,0,0.2);
     border-radius: 8px;
     margin: 1rem 0;
     padding: 1rem;
