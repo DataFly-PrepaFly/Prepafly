@@ -48,6 +48,7 @@ $prenom=$infos['prenom'];
 $date_naissance=$infos['date_naissance'];
 $mdp=$infos['mdp'];
 $sexe = $infos['sexe'];
+$pays = $infos['pays'];
 
 //on attribue "non indiquée" à l'adresse si elle est vide
 if ( (empty($infos['adresse']) AND (empty($infos['code_postal'])) AND (empty($infos['ville']))) ) {

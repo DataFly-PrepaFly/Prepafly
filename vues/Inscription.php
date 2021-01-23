@@ -42,7 +42,12 @@
                 </div>
                 <div class="champs1">
                     <label for="mailpro">Mail professionnel : </label><br>
-                    <input type="email" name="mailpro" size="50"><br><br>
+                    <input type="email" name="mailpro" id='mailpro' size="50"><br><br>
+                </div>
+                <div class="champs1">
+                    <label for="mailproconf">Confirmer Mail professionnel : </label><br>
+                    <input onchange="VerifMail()" type="email" name="mailproconf" size="50"><span id="verifmail" style="color:red;">X</span>
+                    <br><br>
                 </div>
                 <div class="champs1">
                     <label for="num">Numéro de téléphone : </label>
@@ -86,6 +91,20 @@
         return confirmation;
     }
 
+
+    var mailpro = document.getElementById("mailpro");
+    var mailproconf = document.getElementById("mailproconf");
+
+    function VerifMail() {
+        if (mailpro.value==mailproconf.value && mailpro.value!=""){
+            verifmail.innerHTML="OK";
+            verifmail.style.color="green";
+        }
+        else {
+            verifmail.innerHTML="X";
+            verifmail.style.color="red";
+        }
+    }
 
 </script>
 

@@ -22,7 +22,7 @@
 
         <div class="num"><a href="Gestion_F.A.Q.php">Modifier la F.A.Q.</a></div>
         <div class="num"><a href="#">Modifier les C.G.U.</a></div>
-        <div class="num"><a href="#">Accéder à la liste des utilisateurs</a></div><br><br>
+        <div class="num"><a href="Liste_Utilisateurs.php">Accéder à la liste des utilisateurs</a></div><br><br>
     </div>
 
     <?php include("footer.php"); ?>

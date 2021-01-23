@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style/footer.css" />
 <meta charset="UTF-8"../>
 <head>
-    <title>PrepaFly - Résultats</title>
+    <title>PrepaFly - Utilisateurs</title>
 
     <?php 
     include("vues/bandeau_profil.php");
@@ -18,12 +18,13 @@
 
 <body>
 
-<br><h3>RÉSULTATS</h3>
+<br><h3>UTILISATEURS</h3><br>
+
 <div class="texte">
-    <p>Choisissez ou entrez le nom du pilote dont vous souhaitez connaître le résultat.</p>
+    <p>Choisissez ou entrez le nom de l'utilisateur dont vous souhaitez voir les informations.</p>
 </div>
 
-<form action="Resultats.php" method="POST" id="barre_recherche">
+<form action="Liste_Utilisateurs.php" method="POST" id="barre_recherche">
     <input list="utilisateurs" id="recherche" name="recherche">
     <datalist id="utilisateurs">
     	<option value="Liste complète">
@@ -38,12 +39,15 @@
 
 <table id="tableau">
 	<tr id="titres">
-		<th>Nom du pilote</th>
-		<th>Date du test</th>
-		<th>Type de test</th>
+		<th>Nom</th>
+		<th>Prénom</th>
+		<th>Ville</th>
 		<!-- <th>Durée du test</th> -->
-		<th>Résultat obtenu</th>
+		<th>Pays</th>
+		<th>Statut</th>
+		<th>Société</th>
 	</tr>
+
 	<?php
 	foreach ($results as $row) {
 		echo "<tr>";
@@ -61,4 +65,3 @@
 
 </body>
 </html>
-

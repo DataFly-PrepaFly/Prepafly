@@ -33,6 +33,11 @@
 			<input type="email" id="mail" name="mail" size="40">
 			<br>
 		</div>
+		<div class="champs">
+			<label for="mail">Confirmer Mail Professionnel :</label>
+			<input type="email" id="mailconf" name="mail" size="40"><span id="verifmail" style="color:red;"></span>
+			<br>
+		</div>
 
 		<div class="champs">
 			<label for="adresse">Adresse :</label>

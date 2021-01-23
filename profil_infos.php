@@ -27,6 +27,7 @@
         echo "<p><span>Date de naissance</span> : $date_naissance</p>";
         echo "<p><span>Adresse mail</span> : $mail</p>";
         echo "<p><span>Adresse</span> : $adresse</p>";
+        echo "<p><span>Pays</span> : $pays</p>";
         echo "<p><span>Société</span> : $societe</p>";
         echo "<p><span>Statut</span> : $statut</p>";
         ?>

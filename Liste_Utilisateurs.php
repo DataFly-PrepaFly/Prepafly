@@ -1,20 +1,21 @@
+
 <?php
 
 require 'modele/connexion_bdd.php';
 require 'modele/req_infos_user.php';
 
 //Liste déroulante
-$List = PilotsList($bdd);
+$List = GlobalList($bdd);
 
 //Choix de l'affichage dans le tableau
 if (isset($_POST['recherche']) and $_POST['recherche'] !=='Liste complète' and $_POST['recherche'] !=='') { 
 
     $user = $_POST['recherche'];
-    $results = SearchResultsOnePilot($bdd, $user);
+    $results = SearchUser($bdd, $user);
 }
 
 else { //sinon
-    $results = AllResultsPilots($bdd);
+    $results = AllUsers($bdd);
 }
 
-require 'vues/Resultats_Mng.php';
+require 'vues/Liste_Admin.php';
