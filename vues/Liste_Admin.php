@@ -52,7 +52,12 @@
 	foreach ($results as $row) {
 		echo "<tr>";
 		for ($i=0; $i<=5; $i++ ) {
-			echo "<td>".$row[$i]."</td>";
+			if($i==4) {
+				echo "<td>".$Liste_type_compte[$row[$i]]."</td>";	
+			}
+			else {
+				echo "<td>".$row[$i]."</td>";
+			}
 		}
 		echo "</tr>";
 	}

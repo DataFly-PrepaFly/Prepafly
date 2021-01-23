@@ -34,13 +34,13 @@ h3 {
 
 #tableau th, #tableau #titres td {
     padding: 8px;
-    border: 1px solid #5a5858;
+    border-bottom: 1px solid #5a5858;
     background-color: #DCDCDC;
     font-size: 1rem;
 }
 
 #tableau td {
-    border: 1px solid #5a5858;
+    border-bottom: 1px solid #5a5858;
     padding: 8px;
     background-color: white;
     font-size: 1rem;
