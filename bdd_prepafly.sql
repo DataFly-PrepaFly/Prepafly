@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 21 jan. 2021 à 18:39
+-- Généré le : sam. 23 jan. 2021 à 19:51
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -107,7 +107,7 @@ INSERT INTO `mesure` (`id_mesure`, `valeur`, `Test_id_test`) VALUES
 DROP TABLE IF EXISTS `societe`;
 CREATE TABLE IF NOT EXISTS `societe` (
   `id_societe` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) DEFAULT NULL,
+  `nom_societe` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_societe`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `societe` (
 -- Déchargement des données de la table `societe`
 --
 
-INSERT INTO `societe` (`id_societe`, `nom`) VALUES
+INSERT INTO `societe` (`id_societe`, `nom_societe`) VALUES
 (1, 'Infinite Measures'),
 (2, 'Air France');
 
@@ -151,20 +151,20 @@ INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `test_id_type`, `Utilisa
 -- --------------------------------------------------------
 
 --
--- Structure de la table `type test`
+-- Structure de la table `type_test`
 --
 
-DROP TABLE IF EXISTS `type test`;
-CREATE TABLE IF NOT EXISTS `type test` (
+DROP TABLE IF EXISTS `type_test`;
+CREATE TABLE IF NOT EXISTS `type_test` (
   `id_type` varchar(50) NOT NULL,
   PRIMARY KEY (`id_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `type test`
+-- Déchargement des données de la table `type_test`
 --
 
-INSERT INTO `type test` (`id_type`) VALUES
+INSERT INTO `type_test` (`id_type`) VALUES
 ('auditif'),
 ('complet'),
 ('regulier'),
@@ -173,11 +173,11 @@ INSERT INTO `type test` (`id_type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `type utilisateur`
+-- Structure de la table `type_utilisateur`
 --
 
-DROP TABLE IF EXISTS `type utilisateur`;
-CREATE TABLE IF NOT EXISTS `type utilisateur` (
+DROP TABLE IF EXISTS `type_utilisateur`;
+CREATE TABLE IF NOT EXISTS `type_utilisateur` (
   `id_type` varchar(2) NOT NULL,
   `type` varchar(20) NOT NULL,
   PRIMARY KEY (`id_type`),
@@ -185,10 +185,10 @@ CREATE TABLE IF NOT EXISTS `type utilisateur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `type utilisateur`
+-- Déchargement des données de la table `type_utilisateur`
 --
 
-INSERT INTO `type utilisateur` (`id_type`, `type`) VALUES
+INSERT INTO `type_utilisateur` (`id_type`, `type`) VALUES
 ('a', 'admin'),
 ('m', 'manager'),
 ('p', 'pilote');
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `mail` varchar(100) NOT NULL,
   `adresse` varchar(200) DEFAULT NULL,
   `ville` varchar(50) DEFAULT NULL,
-  `code_postal` int(5) NOT NULL,
+  `pays` varchar(25) NOT NULL,
   `mdp` varchar(60) NOT NULL,
   `type_utilisateur_id_type` varchar(2) NOT NULL,
   `société_id_societe` int(11) NOT NULL,
@@ -222,13 +222,15 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `mail`, `adresse`, `ville`, `code_postal`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
-(12345, 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 59420, '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
-(24680, 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', '10 rue du Dragon', 'Paris', 75000, '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
-(67890, 'MERAH', 'Nadir', '2000-12-22', 'Homme', 'nm@gmail.com', NULL, NULL, 0, '$2y$10$4qBPY.1Fw0qwpUkF.G5/ZOl6a8kd2D0kavuyvCWGQD6NKSoOT07fq', 'm', 2),
-(135790, 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 0, '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
-(1245780, 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 0, '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
-(2356890, 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 0, '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2);
+INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `mail`, `adresse`, `ville`, `pays`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
+(12345, 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 'France', '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
+(24680, 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', '10 rue du Dragon', 'Paris', 'France', '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
+(67890, 'MERAH', 'Nadir', '2000-12-22', 'Homme', 'nm@gmail.com', NULL, NULL, 'France', '$2y$10$4qBPY.1Fw0qwpUkF.G5/ZOl6a8kd2D0kavuyvCWGQD6NKSoOT07fq', 'm', 2),
+(135790, 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 'France', '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
+(1245780, 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 'France', '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
+(2356890, 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 'France', '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2),
+(18645613, 'DUBAR', 'Marc', NULL, 'Homme', 'md@gmail.com', NULL, 'Barcelone', 'Espagne', 'md123!', 'm', 2),
+(29461541, 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1);
 
 --
 -- Contraintes pour les tables déchargées
@@ -244,14 +246,14 @@ ALTER TABLE `mesure`
 -- Contraintes pour la table `test`
 --
 ALTER TABLE `test`
-  ADD CONSTRAINT `fk_Test_Type Test1` FOREIGN KEY (`test_id_type`) REFERENCES `type test` (`id_type`),
+  ADD CONSTRAINT `fk_Test_Type Test1` FOREIGN KEY (`test_id_type`) REFERENCES `type_test` (`id_type`),
   ADD CONSTRAINT `fk_Test_Utilisateur1` FOREIGN KEY (`Utilisateur_nSS`) REFERENCES `utilisateur` (`nSS`);
 
 --
 -- Contraintes pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD CONSTRAINT `fk_Utilisateur_Type Utilisateur1` FOREIGN KEY (`type_utilisateur_id_type`) REFERENCES `type utilisateur` (`id_type`),
+  ADD CONSTRAINT `fk_Utilisateur_Type Utilisateur1` FOREIGN KEY (`type_utilisateur_id_type`) REFERENCES `type_utilisateur` (`id_type`),
   ADD CONSTRAINT `fk_utilisateur_société1` FOREIGN KEY (`société_id_societe`) REFERENCES `societe` (`id_societe`);
 COMMIT;
 
