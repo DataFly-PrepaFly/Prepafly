@@ -30,7 +30,7 @@
     	<option value="Liste complète">
     	<?php
     	foreach ($List as $row) {
-    		echo "<option value=\" ".$row['nom']." ".$row['prenom']."\">";
+    		echo "<option value=\"" .$row['nom']. "\">";
     	}
     	?>
     </datalist>
@@ -46,6 +46,7 @@
 		<th>Pays</th>
 		<th>Statut</th>
 		<th>Société</th>
+		<th>Actions</th>
 	</tr>
 
 	<?php

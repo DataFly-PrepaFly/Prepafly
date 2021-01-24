@@ -35,7 +35,6 @@ function ModifUser($bdd, $mail, $colonne, $champ)
 
 
 
-
 //fonction qui récupère les nom et prenom de tous les utilisateurs
 function GlobalList ($bdd) 
 {
@@ -49,8 +48,7 @@ function AllUsers($bdd)
 {
 	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe FROM utilisateur 
 		JOIN type_utilisateur ON type_utilisateur.id_type = utilisateur.type_utilisateur_id_type
-		JOIN societe ON societe.id_societe = utilisateur.société_id_societe
-		ORDER BY nom ASC");
+		JOIN societe ON societe.id_societe = utilisateur.société_id_societe");
 	$req->execute();
 	return $req->fetchAll();
 }
@@ -62,8 +60,7 @@ function SearchUser($bdd, $recherche)
 	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe FROM utilisateur 
 		JOIN type_utilisateur ON type_utilisateur.id_type = utilisateur.type_utilisateur_id_type
 		JOIN societe ON societe.id_societe = utilisateur.société_id_societe	
-		WHERE nom LIKE ? 
-		ORDER BY nom ASC");
+		WHERE nom LIKE ?");
 	$req->execute(array($recherche));
 	return $req->fetchAll();
 }

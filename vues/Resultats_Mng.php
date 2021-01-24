@@ -44,6 +44,7 @@
 		<!-- <th>Durée du test</th> -->
 		<th>Résultat obtenu</th>
 	</tr>
+
 	<?php
 	foreach ($results as $row) {
 		echo "<tr>";
@@ -55,10 +56,7 @@
 	?>
 </table><br><br>
 
-
 <?php include("vues/footer.php"); ?>
-
 
 </body>
 </html>
-

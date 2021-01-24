@@ -26,17 +26,21 @@ h3 {
     text-align: center;
     margin: auto;
     color: black;
-    border: 1px solid #5a5858;
     border-collapse: collapse;
-    width: 60%;
+    width: 80%;
     table-layout:fixed;
 }
 
 #tableau th, #tableau #titres td {
     padding: 8px;
     border-bottom: 1px solid #5a5858;
+    box-shadow: 0 0 10px rgb(0,0,0,0.2);
     background-color: #DCDCDC;
     font-size: 1rem;
+}
+
+#tableau th {
+    border: none;
 }
 
 #tableau td {
@@ -55,6 +59,10 @@ form input {
     margin-top: 0.5rem;
     padding: 0.2rem 1rem;
     padding-bottom: 0.2rem;
+}
+
+input[type=list] {
+    display: none;
 }
 
 input[type=submit] {
