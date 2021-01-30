@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 23 jan. 2021 à 19:51
+-- Généré le : sam. 30 jan. 2021 à 19:51
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `societe` (
   `id_societe` int(11) NOT NULL AUTO_INCREMENT,
   `nom_societe` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_societe`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `societe`
@@ -117,7 +117,8 @@ CREATE TABLE IF NOT EXISTS `societe` (
 
 INSERT INTO `societe` (`id_societe`, `nom_societe`) VALUES
 (1, 'Infinite Measures'),
-(2, 'Air France');
+(2, 'Air France'),
+(3, 'United');
 
 -- --------------------------------------------------------
 
@@ -230,7 +231,8 @@ INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `ma
 (1245780, 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 'France', '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
 (2356890, 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 'France', '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2),
 (18645613, 'DUBAR', 'Marc', NULL, 'Homme', 'md@gmail.com', NULL, 'Barcelone', 'Espagne', 'md123!', 'm', 2),
-(29461541, 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1);
+(29461541, 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1),
+(97146914, 'Lontrac', 'Thierry', NULL, 'Homme', 'tl@gmail.com', NULL, 'Londres', 'Angleterre', 'tl123!', 'p', 3);
 
 --
 -- Contraintes pour les tables déchargées

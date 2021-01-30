@@ -1,7 +1,7 @@
  
     //fonction qui verifie que le champ est composé de chiffres uniquement
-function VerifCode(){
-    var nbr=document.getElementById("code_postal").value;
+function VerifNss(){
+    var nbr=document.getElementById("nss").value;
     var msg = document.getElementById("msg_code");
     if (isNaN(nbr)){
         msg.innerHTML=" Entrez des chiffres uniquement";
@@ -11,10 +11,11 @@ function VerifCode(){
     }
 }
 
-var code_postal = document.getElementById("code_postal");
-code_postal.onchange = function () {
-    VerifCode();
+var nss = document.getElementById("nss");
+nss.onchange = function () {
+    VerifNss();
     }
+
 
 function VerifMail() {
     var mail = document.getElementById("mail");
