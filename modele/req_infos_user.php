@@ -11,15 +11,17 @@ function InfosUser ($bdd, $mail)
 }
 
 
+
 //fonction qui récupère la société à partir du mail de l'utilisateur
 function NomCompagnie ($bdd, $mail)
 {
-    $req = $bdd->prepare("SELECT societe.nom FROM societe, utilisateur WHERE utilisateur.société_id_societe
+    $req = $bdd->prepare("SELECT societe.nom_societe FROM societe, utilisateur WHERE utilisateur.société_id_societe
 = societe.id_societe AND utilisateur.mail = ? ");
     $req->execute(array($mail));
     $NomCompagnie = $req->fetch();
     return $NomCompagnie;
 }
+
 
 
 //fonction qui modifie les informations de l'utilisateur dans la bdd
@@ -44,6 +46,7 @@ function GlobalList ($bdd)
 }
 
 
+
 function AllUsers($bdd)
 {
 	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe FROM utilisateur 
@@ -52,6 +55,7 @@ function AllUsers($bdd)
 	$req->execute();
 	return $req->fetchAll();
 }
+
 
 
 //fonction qui récupère les données de tous les utilisateurs
@@ -79,6 +83,7 @@ function PilotsList ($bdd)
 }
 
 
+
 //fonction qui récupère les données de la table test pour tous les pilotes
 function AllResultsPilots ($bdd)
 {
@@ -88,6 +93,7 @@ function AllResultsPilots ($bdd)
 	$req_result->execute();
 	return $req_result->fetchAll();
 }
+
 
 
 //fonction qui récupère les données de la table test pour un utilisateur donné
@@ -101,3 +107,23 @@ function SearchResultsOnePilot ($bdd, $recherche)
 }
 
 
+
+function NewUser ($bdd, $mdp, $nss, $nom, $prenom, $date_naissance, $sexe, $mail, $adresse, $ville, $pays, $type, $societe)
+{
+	$mdp = password_hash($mdp, PASSWORD_BCRYPT);
+	$req = $bdd->prepare("INSERT INTO utilisateur (nSS, 'nom', 'prenom', date_naissance, 'sexe', 'mail', 'adresse', 'ville', 'pays', type_utilisateur_id_type, société_id_societe) 
+		VALUES (:nss, :nom, :prenom, :date_naissance, :sexe, :mail, :adresse, :ville, :pays, :type, :societe) ");
+	$req->execute(array(
+		'nss' => $nss,
+		'nom' => $nom,
+		'prenom' => $prenom, 
+		'date_naissance' => $date_naissance,
+		'sexe' => $sexe,
+		'mail' => $mail, 
+		'adresse' => $adresse,
+		'ville' => $ville,
+		'pays' => $pays,
+		'type' => $type,
+		'societe' => $societe
+	));
+}

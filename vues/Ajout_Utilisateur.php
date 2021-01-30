@@ -3,33 +3,32 @@
 <html>
 
 <head>
-<title>PrepaFly</title> 
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style/GestionUtilisateurs.css" />
+<link rel="stylesheet" href="style/AjoutUtilisateur.css" />
 <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
 <link rel="stylesheet" href="style/nav_simple.css" />
 <link rel="stylesheet" href="style/footer.css" />
-
+<title>PrepaFly - Ajout Utilisateur</title>
 </head>
 
 <body>
 
 <header>
     <?php 
-    include("vues/bandeau_prepafly.php");
+    include("vues/bandeau_profil.php");
     include("vues/nav_simple.php"); 
     ?>
 </header>
 
 	<br><h3>AJOUT D'UN UTILISATEUR</h3><br>
 
-		<form action="NewUser.php" method="post" id="form"> 
+		<form action="NewUser.php" onsubmit="return confirmation();" method="post" id="form"> 
 			<div id="formulaire">
 				<div id="form_part1">
 
 					<div class="champs1">
 						<label for="nom">Nom :</label>
-						<input type="text" id="nom" name="nom">
+						<input type="text" id="nom" name="nom" onchange="this.value=this.value.toUpperCase()">
 						<br>
 					</div>
 
@@ -56,14 +55,14 @@
 					</div>
 
 					<div class="champs1">
-						<label for="mailpro">Mail Professionnel :</label>
-						<input type="text" id="mailpro" name="mailpro" size="40">
+						<label for="mail">Mail professionnel :</label>
+						<input type="email" id="mail" name="mail" size="40">
 						<br>
 					</div>
 
 					<div class="champs1">
-						<label for="mailproconf">Confirmer le mail :</label>
-						<input type="text" id="mailproconf" name="mailproconf" size="40">
+						<label for="mailconf">Confirmer le mail :</label>
+						<input onchange="VerifMail()"type="email" id="mailconf" name="mailconf" size="40"><span id="verifmail" style="color:red;"></span>
 						<br>
 					</div>
 
@@ -83,8 +82,8 @@
 					</div>
 
 					<div class="champs2">
-						<label for="code_postal">Code Postal :</label>
-						<input type="text" id="code_postal" name="code_postal" size="15">
+						<label for="pays">Pays :</label>
+						<input type="text" id="pays" name="pays" size="20">
 						<br>
 					</div>
 
@@ -124,5 +123,8 @@
         document.getElementById("form").reset();
     }
 </script>
+
+<script type="text/javascript" src="fonctions.js" ></script>
+
 
 </html>

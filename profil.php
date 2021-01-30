@@ -9,7 +9,7 @@ require 'modele/req_infos_user.php';
 $mail=$_SESSION['mail'];
 
 $infos= InfosUser($bdd, $mail);
-$societe=NomCompagnie($bdd, $mail)['nom'];
+$societe=NomCompagnie($bdd, $mail)['nom_societe'];
 
 $type = $infos['type_utilisateur_id_type'];
 

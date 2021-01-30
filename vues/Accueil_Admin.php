@@ -29,7 +29,7 @@
         <div id="liste_users" style="display: none;">
             <div id="choix_users">
                 <div id="modif"><a href="Liste_Utilisateurs.php">Modifier la liste des utilisateurs</a></div>
-                <div id="ajout"><a href="Test_Auditif.php">Ajouter un nouvel utilisateur</a></div>
+                <div id="ajout"><a href="Ajout_Utilisateur.php">Ajouter un nouvel utilisateur</a></div>
             </div>
         </div>
     </div>

@@ -48,12 +48,12 @@
 		</div>
 
 		<div class="champs">
-			<label for="mail">Mail Professionnel :</label>
+			<label for="mail">Mail professionnel :</label>
 			<input type="email" id="mail" name="mail" size="40">
 			<br>
 		</div>
 		<div class="champs">
-			<label for="mail">Confirmer Mail Professionnel :</label>
+			<label for="mail">Confirmer le mail :</label>
 			<input type="email" id="mailconf" name="mail" size="40"><span id="verifmail" style="color:red;"></span>
 			<br>
 		</div>
