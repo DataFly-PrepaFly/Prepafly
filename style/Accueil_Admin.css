@@ -1,0 +1,27 @@
+#liste_users {
+	width: 50%;
+}
+
+#choix_users {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+#choix_users div {
+	box-shadow: 0 0 8px #4ea3fc;
+    border-radius: 10px;
+    width: 14rem;
+    padding: 0.3rem 0.8rem;
+    text-align: center;
+}
+
+#ajout {
+	margin-left: 1rem;
+}
+
+#modif {
+	margin-right: 1rem;
+}

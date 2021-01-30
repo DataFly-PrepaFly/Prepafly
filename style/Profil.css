@@ -24,10 +24,10 @@ h3 {
     border: none;
     border-radius: 8px;
     padding: 0.2rem 1rem;
-    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+    box-shadow: 0 0 10px rgb(0,0,0,0.20);
 }
 
 #end a:hover {
     color: #4ea3fc;
-    box-shadow: 0 0 10px #4ea3fc;
+    box-shadow: 0 0 8px #4ea3fc;
 }

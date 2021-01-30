@@ -28,6 +28,25 @@
 
 <form name="form" onsubmit="return confirmation();" action="Modification_Profil.php" method="post" id="form"> 
 	<div id="formulaire">
+
+		<div class="champs">
+			<label for="nom">Nom :</label>
+			<input type="text" id="nom" name="nom" size="25">
+			<br>
+		</div>
+
+		<div class="champs">
+			<label for="prenom">Prénom :</label>
+			<input type="text" id="prenom" name="prenom" size="25">
+			<br>
+		</div>
+
+		<div class="champs">
+			<label for="date_naissance">Date de naissance :</label>
+			<input type="date" id="date_naissance" name="date_naissance" size="25">
+			<br>
+		</div>
+
 		<div class="champs">
 			<label for="mail">Mail Professionnel :</label>
 			<input type="email" id="mail" name="mail" size="40">
@@ -52,8 +71,9 @@
 		</div>
 
 		<div class="champs">
-			<label for="code_postal">Code Postal :</label>
-			<input type="numer_format" maxlength="5" id="code_postal" name="code_postal" size="10"><span id="msg_code" style="color: red"></span>
+			<label for="pays">Pays :</label>
+			<input type="text" id="pays" name="pays" size="30">
+			<br>
 		</div>
 <!--
 		<div class="champs">

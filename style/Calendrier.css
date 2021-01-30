@@ -3,8 +3,10 @@ h3 {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 	font-size: 1rem;
-	text-align: center;
 	margin-bottom: 3rem;
 }
 
@@ -15,6 +17,15 @@ form input {
     border: none;
     border-radius: 6px;
     margin-top: 0.5rem;
+}
+
+.ligne, #type_tests {
+    margin: 0.5rem 0;
+}
+
+#type_tests {
+    display: flex;
+    flex-direction: column;
 }
 
 form #send {
@@ -33,3 +44,4 @@ form #send:hover {
 	color: #4ea3fc;
     box-shadow: 0 0 15px #4ea3fc;
 } 
+

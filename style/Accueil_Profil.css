@@ -1,6 +1,4 @@
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 body {
@@ -11,10 +9,6 @@ body {
     margin-top: 3rem;
     margin-bottom: 3rem;
     text-align: center;
-}
-
-#listes_tests {
-    width: 20%;
 }
 
 #ligne1, #ligne2 {

@@ -42,7 +42,7 @@ foreach ($variables_bis as $nom_donnee_bis) {
     }
 }
 
-//on récupère les valeurs des attributs issues de la bdd
+//on récupère les valeurs issues de la bdd
 $nom=$infos['nom'];
 $prenom=$infos['prenom'];
 $date_naissance=$infos['date_naissance'];
@@ -51,13 +51,12 @@ $sexe = $infos['sexe'];
 $pays = $infos['pays'];
 
 //on attribue "non indiquée" à l'adresse si elle est vide
-if ( (empty($infos['adresse']) AND (empty($infos['code_postal'])) AND (empty($infos['ville']))) ) {
+if ( (empty($infos['adresse']) AND (empty($infos['ville']))) ) {
     $adresse = "Non indiquée";
 }
 else {
-    $adresse = $infos['adresse'] .', '. $infos['code_postal'] .' '. $infos['ville'];
+    $adresse = $infos['adresse'] .', '. $infos['ville'];
 }
-
 
 require 'profil_infos.php';
 

@@ -51,7 +51,7 @@ h3, p {
     box-shadow: 0 0 15px rgb(0,0,0,0.20);
 }
 
-.end a:hover, .end input[type=submit]:hover {
+.end input[type=submit]:hover {
     color: #4ea3fc;
     box-shadow: 0 0 10px #4ea3fc;
 }
@@ -64,6 +64,10 @@ h3, p {
 
 .end #reinit {
     margin-right: 3rem;
+}
+
+.end #reinit:hover {
+    color: #4ea3fc;
 }
 
 @media screen and (max-width: 1200px)

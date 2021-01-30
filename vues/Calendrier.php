@@ -22,32 +22,31 @@ session_start();
 		
 		<form action ="Calendrier.php" method="POST">
 			
-			<label for="nom">Nom du Pilote : </label>
-			<input type="text" id="nom" name="nom" required size="25"><br>
 
-			<label for="prenom">Prénom du Pilote : </label>
-			<input type="text" id="prenom" name="prenom" required size="25"><br><br>
+			<div class="ligne">
+				<label for="date"> Date du test :</label>
+				<input type="date" id="date" name="date_test" required>
+			</div>
 
-			<label for="date"> Date :</label>
-			<input type="date" id="date" name="date_test" required><br><br><br>
+			<div id="type_tests">
+				<label>
+		        <input type="radio" name="type_test_calen" value="Test Complet" checked="checked"/>
+		       		Test Complet
+		    	</label>
+				<label>
+		        	<input type="radio" name="type_test_calen" value="Test visuel"  />
+		        	Test Visuel
+		    	</label>
+		    	<label>
+		        <input type="radio" name="type_test_calen" value="Test auditif" />
+		        	Test Auditif
+		    	</label>
 
-			<label>
-	        <input type="radio" name="type_test_calen" value="Test Complet" checked="checked"/>
-	       		Test Complet
-	    	</label><br>
-			<label>
-	        	<input type="radio" name="type_test_calen" value="Test visuel"  />
-	        	Test Visuel
-	    	</label>
-	    	<label>
-	        <input type="radio" name="type_test_calen" value="Test auditif" />
-	        	Test Auditif
-	    	</label>
-
-	    	<label>
-	        <input type="radio" name="type_test_calen" />
-	        	Test Régulier
-	    	</label><br><br><br>
+		    	<label>
+		        <input type="radio" name="type_test_calen" />
+		        	Test Régulier
+		    	</label><br>
+		    </div>
 
 	    	<?php 
 			echo $message_erreur;

@@ -8,7 +8,6 @@ $List = GlobalList($bdd);
 $Liste_type_compte = array('pilote'=>'Pilote', 'manager'=>'Manager', 'admin'=>'Administrateur');
 //Choix de l'affichage dans le tableau
 if (isset($_POST['recherche']) and $_POST['recherche'] !=='Liste complète' and $_POST['recherche'] !=='') { 
-
     $user = $_POST['recherche'];
     $results = SearchUser($bdd, $user);
 }
