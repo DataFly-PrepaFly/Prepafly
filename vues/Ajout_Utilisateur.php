@@ -47,9 +47,9 @@
 					<div class="champs1">
 						<label for="sexe" required>Sexe :</label>
 						<select>
-							<option value="homme">Homme</option>
-				            <option value="femme">Femme</option>
-				            <option value="non_precise">Non précisé</option>
+							<option value="homme" name="Homme">Homme</option>
+				            <option value="femme" name="Femme">Femme</option>
+				            <option value="non_precise" name="Non précisé">Non précisé</option>
 						</select>
 						<br>
 					</div>
