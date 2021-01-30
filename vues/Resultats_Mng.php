@@ -34,6 +34,30 @@
     	?>
     </datalist>
     <input type="submit" id="valider" value="Valider"><br><br>
+
+    Ou faites une recherche par filtre :<br>
+
+    <!--<label for="date">Date (aaaa-mm-jj) :</label>
+    <input type="text" id="date" name="date" maxlength="10" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"><br>-->
+
+    <label for="type">Type de test :</label>
+    <input list="test" id="type" name="type">
+    <datalist id="test">
+    	<option value="complet">
+    	<option value="regulier">
+    	<option value="auditif">
+    	<option value="visuel">
+    </datalist><br>
+
+    <label for="note">Résultats :</label>
+    <input list="n" id="note" name="note">
+    <datalist id="n">
+    	<option value="A">
+    	<option value="B">
+    	<option value="C">
+    </datalist><br>
+
+    <input type="submit" id="valider" value="Valider"><br><br>
 </form>
 
 <table id="tableau">

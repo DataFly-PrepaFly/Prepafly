@@ -33,8 +33,42 @@
     		echo "<option value=\"" .$row['nom']. "\">";
     	}
     	?>
-    </datalist>
+    </datalist> 
+	<input type="submit" id="valider" value="Valider"><br><br>
+
+    Ou faites une recherche par filtres :<br>
+
+    <label for="role">Statut :</label>
+    <input list="statut" id="role" name="role">
+    <datalist id="statut">
+    	<option value="pilote">
+    	<option value="manager">
+    	<option value="admin">
+    </datalist><br>
+
+    <label for="societe">Société :</label>
+    <input list="soc" id="societe" name="societe">
+    <datalist id="soc">
+    	<?php
+    	foreach ($SocList as $row) {
+    		echo "<option value=\"" .$row[0]. "\">";
+    	}
+    	?>
+    </datalist><br>
+
+    <label for="pays">Pays :</label>
+    <input list="p" id="pays" name="pays">
+    <datalist id="p">
+    	<?php
+    	foreach ($PaysList as $row) {
+    		echo "<option value=\"" .$row[0]. "\">";
+    	}
+    	?>
+    </datalist><br>
+    
     <input type="submit" id="valider" value="Valider"><br><br>
+
+<br><br>
 </form>
 
 <table id="tableau">
