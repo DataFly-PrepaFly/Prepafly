@@ -1,8 +1,11 @@
 
 <?php
+
 require 'modele/connexion_bdd.php';
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Pour voir les erreurs SQL
 require 'modele/req_infos_user.php';
 require 'modele/req_new_user.php';
+
 
 if (isset($_POST['nss'], 
 	$_POST['nom'], 
@@ -19,7 +22,7 @@ if (isset($_POST['nss'],
 	$_POST['statut'])) 
 {
 
-	if ((!(empty($_POST['nss'])))
+	if ( (!(empty($_POST['nss'])))
 	AND (!(empty($_POST['nom'])))
 	AND (!(empty($_POST['prenom'])))
 	AND (!(empty($_POST['sexe'])))
@@ -30,7 +33,7 @@ if (isset($_POST['nss'],
 	AND (!(empty($_POST['ville'])))
 	AND (!(empty($_POST['pays'])))
 	AND (!(empty($_POST['societe'])))
-	AND (!(empty($_POST['statut'])))) 
+	AND (!(empty($_POST['statut']))) ) 
 	{
 
 		$nss = $_POST['nss'];
@@ -46,30 +49,21 @@ if (isset($_POST['nss'],
 		$societe = $_POST['societe'];
 		$statut = $_POST['statut'];
 
-		switch ($statut) {
-        case 'pilote':
-            $statut = 'p';
-            break;
-        case 'admin':
-            $statut = 'a';
-            break;
-        case 'manager':
-            $statut = 'm';
-            break;
-    	}
-
-    	$existing_compagny = ExistingCompagny($bdd, $societe);
-    	if ($existing_compagny == true) {
-    		$societe = IdExistingCompagny($bdd, $societe);
+    	$test_existing_compagny = IdExistingCompagny($bdd, $societe);
+    	if ($test_existing_compagny == false) {
+    		$id_societe = NewCompagny ($bdd, $societe);
     	}
 
     	else {
-    		NewCompagny ($bdd, $societe);
+    		$id_societe = $test_existing_compagny;
     	}
 
-    	NewUser($bdd, $mdp, $nss, $nom, $prenom, $date_naissance, $sexe, $mail, $adresse, $ville, $pays, $type, $societe);
+    	NewUser($bdd, $mdp, $nss, $nom, $prenom, $date_naissance, $sexe, $mail, $adresse, $ville, $pays, $statut, $id_societe);
 	}
 }
 
-require 'vues/Ajout_Utilisateur.php';
+else {
+	require 'vues/Ajout_Utilisateur.php';
+}
+
 

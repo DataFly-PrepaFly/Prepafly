@@ -1,0 +1,43 @@
+#allrecherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#recherche {
+    width: 45%;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+#recherche input {
+    margin-top: 0.8rem;
+}
+
+#recherche input[type=submit] {
+    margin-top: 0;
+}
+
+#filtres {
+    width: 40%;
+    margin-top: 1rem;
+}
+
+#filtres input {
+    margin-bottom: 0.8rem;
+}
+
+#filtres p {
+    margin-bottom: 1.5rem;
+}
+
+#filtres input[type=submit] {
+    margin-top: 0.4rem;
+}
+
+#cases_filtres {
+    text-align: left;
+    margin-left: 3rem;
+
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" href="style/Resultat.css" />
+<link rel="stylesheet" href="style/Resultats_Mng.css" />
 <link rel="stylesheet" href="style/Inscription.css" />
 <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
 <link rel="stylesheet" href="style/nav_simple.css" />

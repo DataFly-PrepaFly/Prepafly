@@ -45,11 +45,11 @@
 					</div>
 
 					<div class="champs1">
-						<label for="sexe" required>Sexe :</label>
-						<select>
-							<option value="homme" name="Homme">Homme</option>
-				            <option value="femme" name="Femme">Femme</option>
-				            <option value="non_precise" name="Non précisé">Non précisé</option>
+						<label for="sexe" name="sexe">Sexe :</label>
+						<select name="sexe" required>
+							<option value="Homme">Homme</option>
+				            <option value="Femme">Femme</option>
+				            <option value="Non Précisé">Non précisé</option>
 						</select>
 						<br>
 					</div>
@@ -82,13 +82,13 @@
 				<div id="form_part2">
 					<div class="champs2">
 						<label for="mail">Mail professionnel :</label>
-						<input type="email" id="mail" name="mail" size="40" required>
+						<input onchange="VerifMail()" type="email" id="mail" name="mail" size="40" required>
 						<br>
 					</div>
 
 					<div class="champs2">
 						<label for="mailconf">Confirmer le mail :</label>
-						<input onchange="VerifMail()"type="email" id="mailconf" name="mailconf" size="40" required><span id="verifmail" style="color:red;"></span>
+						<input onchange="VerifMail()" type="email" id="mailconf" name="mailconf" size="40" required><span id="verifmail" style="color:red;"></span>
 						<br>
 					</div>
 
@@ -105,11 +105,11 @@
 					</div>
 
 					<div class="champs2">
-						<label for="statut" name="statut"required>Statut :</label>
-						<select>
-							<option value="pilote" name="pilote">Pilote</option>
-				            <option value="manager" name="manager">Manager</option>
-				            <option value="admin" name="admin">Administrateur</option>
+						<label for="statut" name="statut">Statut :</label>
+						<select name="statut" required>
+							<option value="p">Pilote</option>
+				            <option value="m">Manager</option>
+				            <option value="a">Administrateur</option>
 						</select>
 						<br><br>
 					</div>

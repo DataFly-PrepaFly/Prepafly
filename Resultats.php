@@ -22,10 +22,9 @@ elseif (isset($_POST['recherche']) and $_POST['recherche'] !=='Liste complète' 
 	if (isset($_POST['type']) and $_POST['type']!==''){
 		$type = $_POST['type'];
 		$Query .= " WHERE test_id_type ='$type'";
-		}
-	
 	}
-	if (isset($_POST['note']) and $_POST['note']!==''){
+
+	elseif (isset($_POST['note']) and $_POST['note']!==''){
 		$note = $_POST['note'];
 
 		if($_POST['type']!=='') {
@@ -34,8 +33,8 @@ elseif (isset($_POST['recherche']) and $_POST['recherche'] !=='Liste complète' 
 		else {
 			$Query .= " WHERE resultat ='$note'";
 		}
-	
 	}
+
 	$Query = $bdd->prepare($Query);
 	$Query->execute();
 	$results = $Query->fetchall();
