@@ -17,7 +17,13 @@
     include("vues/nav_simple.php"); 
     ?>
 
-    <br><h3>PROFIL</h3><br>
+    <h3>PROFIL</h3>
+
+    <?php 
+    if (isset($_SESSION['message_modif'])) {
+        echo("<h4>".$_SESSION['message_modif']."</h4>"); 
+        }
+    ?>
 
     <div id="infos_profil">
         <?php 

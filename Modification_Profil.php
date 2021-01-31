@@ -3,25 +3,27 @@ session_start();
 
 $mail = $_SESSION['mail'];
 
-if((isset($_POST['mail']))
-	OR (isset($_POST['adresse']))
- 	OR (isset($_POST['ville']))
- 	OR (isset($_POST['code_postal'])))
- 	{
- 	require 'modele/connexion_bdd.php';
+require 'modele/req_infos_user.php';
+require 'modele/connexion_bdd.php';
 
- 	$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Pour voir les erreurs SQL
 
-	require 'modele/req_infos_user.php';
 
-	$NomChamps = array('mail','adresse','ville','code_postal');
+if((isset($_POST['mail']))) {
+
+	$NomChamps = array('nom', 'prenom', 'date_naissance', 'mail', 'adresse', 'ville', 'pays');
+
 	foreach ($NomChamps as $champ) {
-        if (!(empty($_POST[$champ]))) {
-            ModifUser($bdd,$mail,$champ,$_POST[$champ]);
-        }
+		if (!(empty($_POST[$champ]))) {
+			ModifUser($bdd,$mail,$champ,$_POST[$champ]);
+ 	    }
 	}
-	header('Location : Profil.php');
+
+	$_SESSION['message_modif'] = "Votre profil a bien été mis à jour.";
+
+	header('Location: Profil.php');
 }
+
 else {
 	require 'vues/ModifUtilisateur.php';
 }

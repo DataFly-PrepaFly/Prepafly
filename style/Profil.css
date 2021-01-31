@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
-h3 {
-	text-align: center;
+h3, h4{
+    text-align: center;
 }
+
+h3 {
+    margin: 3rem 0;
+}
+
+h4 {
+    margin: 2rem 0;
+    font-weight: normal;
+}
+
 
 #infos_profil {
 	margin-left: 25rem;

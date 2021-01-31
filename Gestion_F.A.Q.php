@@ -35,9 +35,7 @@
             <a href="#">Modifier une question existante</a>
         </div>
     </div>
-
-    <h3>F.A.Q. actuelle :</h3>
-
+    
     <div id="">
         <div class="container">
             <div class="question">

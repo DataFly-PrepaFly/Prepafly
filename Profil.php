@@ -28,6 +28,7 @@ switch ($type) {
 
 //on attribue "non indiqué" à nom, prénom ou sexe s'ils sont vides 
 $variables = array('nom', 'prenom', 'sexe');
+
 foreach ($variables as $nom_donnee) {
     if (empty($infos[$nom_donnee])) {
         $infos[$nom_donnee] = "Non indiqué";
@@ -59,5 +60,8 @@ else {
 }
 
 require 'profil_infos.php';
+if (isset($_SESSION['message_modif'])) {
+    unset($_SESSION['message_modif']); 
+}
 
 ?>

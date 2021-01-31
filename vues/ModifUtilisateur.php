@@ -23,7 +23,7 @@
 <br><h3>MISE À JOUR DU PROFIL</h3>
 
 <div id="phrase">
-	<p>Vous pouvez ici mettre à jour vos informations personnelles en remplissant les champs à modifier.</p><br>
+	<p>Remplacez uniquement les champs que vous souhaitez modifier.</p><br>
 </div>
 
 <form name="form" onsubmit="return confirmation();" action="Modification_Profil.php" method="post" id="form"> 

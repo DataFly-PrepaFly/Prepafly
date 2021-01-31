@@ -14,7 +14,7 @@ function InfosUser ($bdd, $mail)
 //fonction qui récupère la société à partir du mail de l'utilisateur
 function NomCompagnie ($bdd, $mail)
 {
-    $req = $bdd->prepare("SELECT societe.nom FROM societe, utilisateur WHERE utilisateur.société_id_societe
+    $req = $bdd->prepare("SELECT societe.nom_societe FROM societe, utilisateur WHERE utilisateur.société_id_societe
 = societe.id_societe AND utilisateur.mail = ? ");
     $req->execute(array($mail));
     $NomCompagnie = $req->fetch();
@@ -24,10 +24,38 @@ function NomCompagnie ($bdd, $mail)
 
 //fonction qui modifie les informations de l'utilisateur dans la bdd
 function ModifUser($bdd, $mail, $colonne, $champ) 
-{
-	var_dump(array($colonne, $champ, $mail));
-	$req = $bdd->prepare('UPDATE utilisateur SET ? = ? WHERE mail = ?');
-	$req->execute(array($colonne, $champ, $mail));
+{  
+	switch ($colonne) {
+		case 'nom':
+			$req = $bdd->prepare('UPDATE utilisateur SET nom = ? WHERE mail = ?');
+			break;
+		
+		case 'prenom':
+			$req = $bdd->prepare('UPDATE utilisateur SET prenom = ? WHERE mail = ?');
+			break;
+
+		case 'date_naissance':
+			$req = $bdd->prepare('UPDATE utilisateur SET date_naissance = ? WHERE mail = ?');
+			break;
+
+		case 'mail':
+			$req = $bdd->prepare('UPDATE utilisateur SET mail = ? WHERE mail = ?');
+			break;
+
+		case 'adresse':
+			$req = $bdd->prepare('UPDATE utilisateur SET adresse = ? WHERE mail = ?');
+			break;
+
+		case 'ville':
+			$req = $bdd->prepare('UPDATE utilisateur SET ville = ? WHERE mail = ?');
+			break;
+
+		case 'pays':
+			$req = $bdd->prepare('UPDATE utilisateur SET pays = ? WHERE mail = ?');
+			break;
+	}
+	
+	$req->execute(array($champ, $mail));
 }
 
 
