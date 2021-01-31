@@ -58,6 +58,22 @@ elseif (isset($_POST['recherche']) and $_POST['recherche'] !=='Liste complète' 
 else { //si on ne fait pas de recherche, ou qu'on demande la liste complète
     $results = AllUsers($bdd);
 }
+//suppression utilisateur
+
+for ($j=1; $j <= count($results) ; $j++) { 
+	if (isset($_POST[$j])) {
+		$idsuppr = $j;
+		var_dump($idsuppr);
+		$NomSuppr = $results[$idsuppr]['nom'];
+		$PrenomSuppr = $results[$idsuppr]['prenom'];
+		var_dump($NomSuppr);
+		var_dump($PrenomSuppr);
+		$req = $bdd->prepare("DELETE FROM utilisateur WHERE nom = \"$NomSuppr\" AND prenom = \"$PrenomSuppr\"");
+		$req->execute();
+		var_dump($req);
+	}
+}
+
 
 require 'vues/Liste_Admin.php';
 

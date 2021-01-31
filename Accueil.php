@@ -13,6 +13,7 @@ else {
 
 	$type_compte=InfosUser($bdd, $mail)['type_utilisateur_id_type'];
 	$prenom=InfosUser($bdd, $mail)['prenom'];
+    $List = PilotsList($bdd);
 
     switch ($type_compte) {
         case 'p':
