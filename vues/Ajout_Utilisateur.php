@@ -13,14 +13,22 @@
 
 <body>
 
-<header>
-    <?php 
-    include("vues/bandeau_profil.php");
-    include("vues/nav_simple.php"); 
-    ?>
-</header>
+	<header>
+	    <?php 
+	    include("vues/bandeau_profil.php");
+	    include("vues/nav_simple.php"); 
+	    ?>
+	</header>
 
-	<br><h3>AJOUT D'UN UTILISATEUR</h3><br>
+	<section>
+		
+		<h3>AJOUT D'UN UTILISATEUR</h3>
+
+		<?php 
+			if (isset($_SESSION['message_ajout'])) {
+				echo("<h4>".$_SESSION['message_ajout']."</h4>"); 
+			}
+		?>
 
 		<form action="Ajout_Utilisateur.php" method="post" id="form"> 
 			<div id="formulaire">
@@ -122,7 +130,7 @@
         		<input id="valider" type="submit" value="Enregistrer"><br>
             </div>
 		</form>
-	</div>
+	</section>
 
 <?php include("vues/footer.php"); ?>
 

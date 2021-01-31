@@ -116,3 +116,8 @@ function SearchResultsOnePilot ($bdd, $recherche)
 }
 
 
+function SuppUser ($bdd, $mail)
+{
+	$req = $bdd->prepare("DELETE FROM utilisateur WHERE mail = ?");
+	$req->execute(array());
+}
