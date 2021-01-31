@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 30 jan. 2021 à 19:51
+-- Généré le : Dim 31 jan. 2021 à 16:22
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `cgu` (
   `id_article` int(11) NOT NULL,
   `titre` varchar(100) NOT NULL,
   `article` longtext NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `cgu`
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `societe` (
   `id_societe` int(11) NOT NULL AUTO_INCREMENT,
   `nom_societe` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_societe`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `societe`
@@ -118,7 +118,9 @@ CREATE TABLE IF NOT EXISTS `societe` (
 INSERT INTO `societe` (`id_societe`, `nom_societe`) VALUES
 (1, 'Infinite Measures'),
 (2, 'Air France'),
-(3, 'United');
+(3, 'United'),
+(4, 'Air Italia'),
+(5, 'Air Bretagne');
 
 -- --------------------------------------------------------
 
@@ -132,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `test` (
   `date_test` datetime DEFAULT NULL,
   `resultat` varchar(20) DEFAULT NULL,
   `test_id_type` varchar(50) NOT NULL,
-  `Utilisateur_nSS` int(11) NOT NULL,
+  `Utilisateur_nSS` varchar(20) NOT NULL,
   PRIMARY KEY (`id_test`,`test_id_type`,`Utilisateur_nSS`),
   KEY `fk_Test_Type Test1_idx` (`test_id_type`),
   KEY `fk_Test_Utilisateur1_idx` (`Utilisateur_nSS`)
@@ -143,11 +145,11 @@ CREATE TABLE IF NOT EXISTS `test` (
 --
 
 INSERT INTO `test` (`id_test`, `date_test`, `resultat`, `test_id_type`, `Utilisateur_nSS`) VALUES
-(234567890, '2021-01-04 18:47:48', 'A', 'visuel', 135790),
-(345678901, '2021-01-14 12:20:48', 'C', 'regulier', 1245780),
-(456789012, '2021-01-02 10:56:48', 'A', 'auditif', 2356890),
-(526284919, '2021-01-07 15:27:53', 'B', 'complet', 1245780),
-(1234567890, '2020-12-15 16:47:48', 'B', 'complet', 12345);
+(234567890, '2021-01-04 18:47:48', 'A', 'visuel', '135790'),
+(345678901, '2021-01-14 12:20:48', 'C', 'regulier', '1245780'),
+(456789012, '2021-01-02 10:56:48', 'A', 'auditif', '2356890'),
+(526284919, '2021-01-07 15:27:53', 'B', 'complet', '1245780'),
+(1234567890, '2020-12-15 16:47:48', 'B', 'complet', '12345');
 
 -- --------------------------------------------------------
 
@@ -202,16 +204,16 @@ INSERT INTO `type_utilisateur` (`id_type`, `type`) VALUES
 
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `nSS` int(11) NOT NULL,
+  `nSS` varchar(20) NOT NULL,
   `nom` varchar(45) NOT NULL,
   `prenom` varchar(45) NOT NULL,
   `date_naissance` date DEFAULT NULL,
-  `sexe` varchar(10) DEFAULT NULL,
+  `sexe` varchar(20) DEFAULT NULL,
   `mail` varchar(100) NOT NULL,
   `adresse` varchar(200) DEFAULT NULL,
   `ville` varchar(50) DEFAULT NULL,
   `pays` varchar(25) NOT NULL,
-  `mdp` varchar(60) NOT NULL,
+  `mdp` varchar(255) NOT NULL,
   `type_utilisateur_id_type` varchar(2) NOT NULL,
   `société_id_societe` int(11) NOT NULL,
   PRIMARY KEY (`nSS`,`type_utilisateur_id_type`,`société_id_societe`),
@@ -224,15 +226,25 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `mail`, `adresse`, `ville`, `pays`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
-(12345, 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 'France', '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
-(24680, 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', '10 rue du Dragon', 'Paris', 'France', '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
-(67890, 'MERAH', 'Nadir', '2000-12-22', 'Homme', 'nm@gmail.com', NULL, NULL, 'France', '$2y$10$4qBPY.1Fw0qwpUkF.G5/ZOl6a8kd2D0kavuyvCWGQD6NKSoOT07fq', 'm', 2),
-(135790, 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 'France', '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
-(1245780, 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 'France', '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
-(2356890, 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 'France', '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2),
-(18645613, 'DUBAR', 'Marc', NULL, 'Homme', 'md@gmail.com', NULL, 'Barcelone', 'Espagne', 'md123!', 'm', 2),
-(29461541, 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1),
-(97146914, 'Lontrac', 'Thierry', NULL, 'Homme', 'tl@gmail.com', NULL, 'Londres', 'Angleterre', 'tl123!', 'p', 3);
+('12345', 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 'France', '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
+('12345456563', 'MEROEZ', 'Frez', '2021-01-29', 'Femme', 'fsd@dfsf.fr', '546 fd', 'FS', 'fds', '$2y$10$ijyFio5Pl7hOFYETM1oyu.MYtKQ4EOJTRXJ7nRHqy7RuQNiVMm1MO', 'p', 2),
+('1245780', 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 'France', '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
+('135790', 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 'France', '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
+('18645613', 'DUBAR', 'Marc', NULL, 'Homme', 'md@gmail.com', NULL, 'Barcelone', 'Espagne', 'md123!', 'm', 2),
+('2356890', 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 'France', '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2),
+('24680', 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', '10 rue du Dragon', 'Paris', 'France', '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
+('29461541', 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1),
+('32454455555', 'LOREZACDC', 'Lou', '2021-01-07', 'Femme', 'loulou@gmail.com', '3 Patio des Clairières', 'Toulouse sur Seine', 'France', '$2y$10$PwsW3A1atkISCtx7AaJu5.JAj6joDHkm6vzBmS2m4gKklh4hZ3nCa', 'm', 4),
+('3333333', 'FSDGFS', 'gsf', '2021-01-09', 'Femme', 'gssf@fds.fr', 'gfds', 'fsdf', 'gfs', '$2y$10$rRz26SZ833UgSzo.JqmuqOK2xJjpiGIJ23u1FpP0iaub0WUiT3XDe', 'p', 2),
+('432433', 'FDSGSG', 'gfsdx', '2021-01-15', 'Femme', 'fsd@fdh.fr', 'rzgfr', 'gfsdg', 'fgsgs', '$2y$10$iPu5aCqrqLIKj/IeRpLnHu6NcBzxJrqc.WzNcl1vNgFHUrXQ5kYMG', 'p', 2),
+('4362356365', 'DFGSFG', 'fds', '2021-01-31', 'Non Précisé', 'fssf@fds.fr', '5463', 'fsd', 'gfds', '$2y$10$r5gt44xpH3JjFdiXB.5QMuTzaCeG3ENPN9St0KB5OCG2rYhQ56MWm', 'm', 5),
+('453523', 'GFRE', 'gfs', '2021-01-01', 'Homme', 'tf@gmail.com', 'gfsd', 'gsdf', 'gsfd', '$2y$10$gUG4xg5DMB3LOjQyqmBaWOlb6GtwFK55pCx8xsqkJ/Kqi3cIT.sXG', 'p', 2),
+('543523', 'FDS', 'fdqs', '2021-01-02', 'Homme', 'fsd@frqef.fr', 'fqd', 'fdqs', 'dsq', '$2y$10$RlhTiv7OY.6JZSAOxmp8iOskFVL6IMKR5tY0gCIwx36l5u9eianx2', 'p', 2),
+('54565463', 'POMERA', 'Luyrte', '1984-01-07', 'Non Précisé', 'gfdsaz@gfs.fr', '543 passage du lion', 'Berlin', 'Allemagne', '$2y$10$uJ1Qm/rqiByE.QvpeMfxJ./Ro4HtlfzVmFxiXGcsCKiUbuxsPtdHm', 'm', 4),
+('55555', 'TRZET', 'Locre', '2021-01-29', 'Femme', 'vfe@dsq.fr', '56E fdf', 'LOREAq', 'Ser', '$2y$10$J9xxva3pVQBqA9b4yz/Idenev.Mzsp621KYHIr6EwOTsdk4Oy2eAO', 'p', 2),
+('565365635', 'FQDGSF', 'gfsd', '2020-12-31', 'Femme', 'tatiana.fallouh@gmail.com', 'gfsdg', 'fdsg', 'Belgique', '$2y$10$qiaz7J7bpRwd3KdzAby10OAxcgqr7E3JtRUgnYv3jzh5EwKflA9Z2', 'm', 2),
+('67890', 'MERAH', 'Nadir', '2000-12-22', 'Homme', 'nm@gmail.com', NULL, NULL, 'France', '$2y$10$4qBPY.1Fw0qwpUkF.G5/ZOl6a8kd2D0kavuyvCWGQD6NKSoOT07fq', 'm', 2),
+('97146914', 'LONTRAC', 'Thierry', NULL, 'Homme', 'tl@gmail.com', NULL, 'Londres', 'Angleterre', 'tl123!', 'p', 3);
 
 --
 -- Contraintes pour les tables déchargées
