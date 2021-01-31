@@ -16,21 +16,22 @@ if (isset($_POST['nss'],
 	$_POST['ville'],
 	$_POST['pays'],
 	$_POST['societe'],
-	$_POST['statut'])) {
+	$_POST['statut'])) 
+{
 
-	if (!(empty($_POST['nss'], 
-	$_POST['nom'], 
-	$_POST['prenom'], 
-	$_POST['sexe'], 
-	$_POST['date_naissance'],
-	$_POST['mail'],
-	$_POST['mailconf'],
-	$_POST['mdp'],
-	$_POST['adresse'],
-	$_POST['ville'],
-	$_POST['pays'],
-	$_POST['societe'],
-	$_POST['statut']))) {
+	if ((!(empty($_POST['nss'])))
+	AND (!(empty($_POST['nom'])))
+	AND (!(empty($_POST['prenom'])))
+	AND (!(empty($_POST['sexe'])))
+	AND (!(empty($_POST['date_naissance'])))
+	AND (!(empty($_POST['mail'])))
+	AND (!(empty($_POST['mailconf'])))
+	AND (!(empty($_POST['mdp'])))
+	AND (!(empty($_POST['ville'])))
+	AND (!(empty($_POST['pays'])))
+	AND (!(empty($_POST['societe'])))
+	AND (!(empty($_POST['statut'])))) 
+	{
 
 		$nss = $_POST['nss'];
 		$nom = $_POST['nom'];
@@ -62,8 +63,11 @@ if (isset($_POST['nss'],
     		$societe = IdExistingCompagny($bdd, $societe);
     	}
 
+    	else {
+    		NewCompagny ($bdd, $societe);
     	}
 
+    	NewUser($bdd, $mdp, $nss, $nom, $prenom, $date_naissance, $sexe, $mail, $adresse, $ville, $pays, $type, $societe);
 	}
 }
 

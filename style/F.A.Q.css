@@ -20,19 +20,33 @@ h3 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
 }   
 
 #choix #ajout a, #choix #modif a {
     letter-spacing: 1px;
     color: black;
+    font-size: 1.1rem;
     text-decoration: none;
     background-color: white;
     box-shadow: 0 0 15px rgb(0,0,0,0.2);
-    padding: 0.2rem 1rem;
+    padding: 0.3rem 1rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     margin-top: 0.5rem;
+}
+
+#choix #ajout a:hover, #choix #modif a:hover {
+    color: #4ea3fc;
+}
+
+#choix #ajout {
+    margin-right: 1.5rem;
+}
+
+#choix #modif {
+    margin-left: 1.5rem;
 }
 
 .container {
@@ -42,6 +56,7 @@ h3 {
     width : 75%;
     margin : auto;
     padding : 1rem;
+    padding-top: 0.5rem;
 }
         
 /*logo + et - */
@@ -66,7 +81,7 @@ h3 {
     display: inline-block;
     width: 100%;
     background-color: #ececec;
-    box-shadow: 0 0 15px rgb(0,0,0,0.2);
+    box-shadow: 0 0 10px rgb(0,0,0,0.2);
     border-radius: 8px;
     margin: 1rem 0;
     padding: 1rem;
@@ -93,10 +108,3 @@ h3 {
     margin: 1.5rem;
     margin-top: 0.2rem;
 }
-
-
-
-
-
-
-

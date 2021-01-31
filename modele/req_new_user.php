@@ -1,12 +1,11 @@
 
 <?php
 
-
 function NewUser ($bdd, $mdp, $nss, $nom, $prenom, $date_naissance, $sexe, $mail, $adresse, $ville, $pays, $type, $societe)
 {
 	$mdp = password_hash($mdp, PASSWORD_BCRYPT);
-	$req = $bdd->prepare("INSERT INTO utilisateur (nSS, 'nom', 'prenom', date_naissance, 'sexe', 'mail', 'adresse', 'ville', 'pays', type_utilisateur_id_type, société_id_societe) 
-		VALUES (:nss, :nom, :prenom, :date_naissance, :sexe, :mail, :adresse, :ville, :pays, :type, :societe) ");
+	$req = $bdd->prepare("INSERT INTO utilisateur (nSS, 'nom', 'prenom', date_naissance, 'sexe', 'mail', 'adresse', 'ville', 'pays', 'mdp', type_utilisateur_id_type, société_id_societe) 
+		VALUES (:nss, :nom, :prenom, :date_naissance, :sexe, :mail, :adresse, :ville, :pays, :mdp, :type, :societe) ");
 	$req->execute(array(
 		'nss' => $nss,
 		'nom' => $nom,
@@ -17,6 +16,7 @@ function NewUser ($bdd, $mdp, $nss, $nom, $prenom, $date_naissance, $sexe, $mail
 		'adresse' => $adresse,
 		'ville' => $ville,
 		'pays' => $pays,
+		'mdp' => $mdp,
 		'type' => $type,
 		'societe' => $societe
 	));
@@ -48,5 +48,6 @@ function IdExistingCompagny ($bdd, $societe)
 
 function NewCompagny ($bdd, $societe) 
 {
-	
+	$req = $bdd->prepare("INSERT INTO societe ('nom_societe') VALUES ? ");
+	$req->execute(array($societe));
 }

@@ -25,7 +25,7 @@
 
     <script src="faq.js"></script>
 
-    <h3><br>GESTION F.A.Q.</h3>
+    <h3><br>GESTION F.A.Q.</h3><br>
 
     <div id="choix">
         <div id="ajout">
@@ -35,6 +35,8 @@
             <a href="#">Modifier une question existante</a>
         </div>
     </div>
+
+    <h3>F.A.Q. actuelle :</h3>
 
     <div id="">
         <div class="container">
