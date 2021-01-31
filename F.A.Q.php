@@ -4,7 +4,8 @@
 require ("modele/connexion_bdd.php");
 require ("modele/req_infos_faq.php");
 
-$infos=InfosFAQ($bdd);
+$FAQ=RecupererFAQ($bdd);
+$Modif = false;
 
 require ("vues/FAQ.php");
 ?>

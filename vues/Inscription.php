@@ -83,7 +83,7 @@
             <?=$confirmation?>
 
             <a href="#" id="reinit" onclick="resetForm();" type="reset">Réinitialiser</a>
-            <input type="submit" is="valider" value="Envoyer la demande">
+            <input type="submit" id="valider" value="Envoyer la demande">
         </div>
     </form>
 </section>

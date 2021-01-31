@@ -20,7 +20,6 @@
     ?>
 
     <div class="choix">
-
         <div class="num"><a href="Gestion_F.A.Q.php">Modifier la F.A.Q.</a></div>
         <div class="num"><a href="#">Modifier les C.G.U.</a></div>
 
@@ -36,18 +35,17 @@
 
     <?php include("footer.php"); ?>
 
-
-<script type="text/javascript">
-/*Fonction de déroulement sur clic*/
-    function OptionsUsers() {
-        var x = document.getElementById("liste_users");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else { 
-            x.style.display = "none";
-        }
-    }  
-</script>
+    <script type="text/javascript">
+    /*Fonction de déroulement sur clic*/
+        function OptionsUsers() {
+            var x = document.getElementById("liste_users");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else { 
+                x.style.display = "none";
+            }
+        }  
+    </script>
 
 </body>
 </html>
