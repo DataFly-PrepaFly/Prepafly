@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-h3 {
+h3, h4 {
     text-align: center;
 }
 
@@ -59,7 +59,7 @@ h3 {
     padding-top: 0.5rem;
 }
         
-/*logo + et - */
+/*logo + */
 .container img {
     height: 2rem;
     position: absolute;

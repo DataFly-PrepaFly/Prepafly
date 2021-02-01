@@ -32,7 +32,8 @@ function ModifQuestion ($bdd, $question, $reponse, $id)
 }
 
 
-function SuppQuestion ($bdd, $question, $reponse, $id)
+function SuppQuestion ($bdd, $id)
 {
-
+	$req = $bdd->prepare("DELETE FROM faq WHERE id_question = ? ");
+	$req->execute(array($id));
 }

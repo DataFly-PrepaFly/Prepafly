@@ -25,7 +25,7 @@
         <p>Si vous êtes intéressé et souhaitez être recontacté par nos équipes, il vous suffit de remplir ce formulaire.</p><br>
     </div>
     
-    <form action="Inscription.php" method="post" enctype="multipart/form-data" id="form">
+    <form action="Inscription.php" onsubmit="return confirmation();" method="post" enctype="multipart/form-data" id="form">
         <div id="formulaire">
             <div id="form_part1">
 

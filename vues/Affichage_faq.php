@@ -7,12 +7,17 @@ foreach ($FAQ as $element_faq) {
 ?>
     <div class="question">
         <div class="visible" onclick="Reponse(<?=$idq;?>)">
-            <a href="#"><?=$question;?><img class="deroulant" src="images/icons8_plus.png"></a>
+            <a><?=$question;?><img class="deroulant" src="images/icons8_plus.png"></a>
         </div>
         <div id="deroulant<?=$idq;?>" class="reponse" style="display: none;">
             <p><?=$reponse?></p>
+
             <?php if($Modif == true) {?>
-            <a href="Modification_FAQ?idquestion=<?=$idq;?>">Modifier</a>
+
+            <a href="Modification_FAQ.php?idquestion=<?=$idq;?>">Modifier</a>
+
+            <a href="controleurs/Suppression_FAQ.php?idquestion=<?=$idq;?>" onclick="return confirm('Voulez-vous vraiment supprimer cette question ?');">Supprimer</a>
+
             <?php  }?>
         </div>
     </div>

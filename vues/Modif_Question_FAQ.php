@@ -49,5 +49,6 @@
 	        var confirmation = confirm("Voulez-vous vraiment enregistrer cette nouvelle question ?");
 	        return confirmation;
 	    }
+        
 	</script>
 </html>
