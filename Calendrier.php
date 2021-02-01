@@ -2,10 +2,10 @@
 
 require 'modele/connexion_bdd.php';
 require 'modele/req_infos_user.php';
+$List = PilotsList($bdd);
 
 if (isset($_POST["nom"], $_POST["prenom"], $_POST["date_test"], $_POST['type_test_calen'])) {
 
-  $List = PilotsList($bdd);
 
 	$message_erreur = '';
 
