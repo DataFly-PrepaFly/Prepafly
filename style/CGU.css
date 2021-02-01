@@ -22,9 +22,44 @@ body {
 	font-weight: bold; 
 } 
 
-h3 {
+h3, h4 {
 	text-align: center;
 	color: black;
+}
+
+
+#choix {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}   
+
+#choix #ajout a, #choix #modif a {
+    letter-spacing: 1px;
+    color: black;
+    font-size: 1.1rem;
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(0,0,0,0.2);
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+#choix #ajout a:hover, #choix #modif a:hover {
+    color: #4ea3fc;
+}
+
+#choix #ajout {
+    margin-right: 1.5rem;
+}
+
+#choix #modif {
+    margin-left: 1.5rem;
 }
 
 .lien, h4 {
@@ -47,5 +82,8 @@ h2
 	color: black;
 }
 
-
+.Article a {
+	display:inline-block;
+	margin-right: 1rem;
+}
 

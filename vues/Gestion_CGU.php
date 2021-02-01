@@ -2,12 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style/F.A.Q.css" />
+    <link rel="stylesheet" href="style/CGU.css" />
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
     <link rel="stylesheet" href="style/bandeau_profil.css"/>
     <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />
-    <title>PrepaFly - Gestion de la F.A.Q.</title>
+    <title>PrepaFly - Gestion des GCU</title>
 </head>
 
     
@@ -18,26 +18,25 @@
     require 'vues/nav_simple.php';
     ?>
 
-    <h3><br>GESTION F.A.Q.</h3><br>
+    <h3><br>GESTION CGU</h3><br>
 
     <?php 
-    if (isset($_SESSION['message_faq'])) {
-        echo("<h4>".$_SESSION['message_faq']."</h4>"); 
+    if (isset($_SESSION['message_cgu'])) {
+        echo("<h4>".$_SESSION['message_cgu']."</h4>"); 
     }
     ?>
 
     <div id="choix">
         <div id="ajout">
-            <a href="Ajout_FAQ.php">Ajouter une nouvelle question</a>
+            <a href="Ajout_CGU.php">Ajouter un nouvel article</a>
         </div>
     </div>
 
-    <div class="container">
-        <?php include("vues/Affichage_faq.php"); ?>
+    <div class="all">
+        <?php include("vues/Affichage_cgu.php"); ?>
     </div>
 
     <?php include("vues/footer.php"); ?>
-    <script src="faq.js"></script>
     
 </body>
 </html>

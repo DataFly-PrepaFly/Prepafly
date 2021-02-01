@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
         <link rel="stylesheet" href="style/nav_simple.css" />
         <link rel="stylesheet" href="style/footer.css" />
-        <title>PrepaFly - Ajout F.A.Q.</title>
+        <title>PrepaFly - Modification CGU</title>
 
     </head>
 <body>
@@ -15,18 +15,19 @@
     require 'vues/nav_simple.php';
     ?>
 
-	<h3><br>AJOUT D'UNE QUESTION</h3><br>
+	<h3><br>MODIFICATION D'UN ARTICLE</h3><br>
 
-	<form action="Ajout_FAQ.php" method="post" id="form">
+	<form action="Modification_CGU.php" method="post" id="form">
 		<div id="bloc">
-			<div id="question">
-				<label for="question">Question : </label><br>
-                <input type="text" id="question" name="question" required size="100"><br><br>
+			<div id="titre">
+				<label for="modif_titre">Titre : </label><br>
+                <input type="hidden" id="idarticle" name="idarticle" value="<?=$ida;?>">
+                <input type="text" id="modif_titre" name="modif_titre" required size="100" value="<?=$titre;?>"><br><br>
             </div>
 
             <div id="rep">
-            	<label for="reponse">Réponse : </label><br>
-            	<textarea name="reponse" id="reponse"></textarea><br>
+            	<label for="modif_article">Article : </label><br>
+            	<textarea name="modif_article" id="modif_article"><?=$article;?></textarea><br>
             </div>
         </div>
 
@@ -48,5 +49,6 @@
 	        var confirmation = confirm("Voulez-vous vraiment enregistrer cette nouvelle question ?");
 	        return confirmation;
 	    }
+        
 	</script>
 </html>

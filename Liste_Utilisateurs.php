@@ -1,7 +1,10 @@
-<?php
+<?php 
+session_start(); 
 
 require 'modele/connexion_bdd.php';
 require 'modele/req_infos_user.php';
+require 'modele/req_admin.php';
+
 
 //Liste d'utilisateurs
 $List = GlobalList($bdd);
@@ -55,25 +58,12 @@ elseif (isset($_POST['recherche']) and $_POST['recherche'] !=='Liste complète' 
 	$results = $Query->fetchall();
 }
 
-else { //si on ne fait pas de recherche, ou qu'on demande la liste complète
+else { //pas de recherche ou liste complète
     $results = AllUsers($bdd);
 }
-//suppression utilisateur
-
-for ($j=1; $j <= count($results) ; $j++) { 
-	if (isset($_POST[$j])) {
-		$idsuppr = $j;
-		var_dump($idsuppr);
-		$NomSuppr = $results[$idsuppr]['nom'];
-		$PrenomSuppr = $results[$idsuppr]['prenom'];
-		var_dump($NomSuppr);
-		var_dump($PrenomSuppr);
-		$req = $bdd->prepare("DELETE FROM utilisateur WHERE nom = \"$NomSuppr\" AND prenom = \"$PrenomSuppr\"");
-		$req->execute();
-		var_dump($req);
-	}
-}
-
 
 require 'vues/Liste_Admin.php';
 
+if (isset($_SESSION['message_supp'])) {
+    unset($_SESSION['message_supp']); 
+}

@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-right: 8rem;
+    margin-left: 8rem;
 }
 
 #recherche {
@@ -38,6 +40,6 @@
 
 #cases_filtres {
     text-align: left;
-    margin-left: 3rem;
+    margin-left: 4rem;
 
 }

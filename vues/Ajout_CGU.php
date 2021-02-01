@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
         <link rel="stylesheet" href="style/nav_simple.css" />
         <link rel="stylesheet" href="style/footer.css" />
-        <title>PrepaFly - Ajout F.A.Q.</title>
+        <title>PrepaFly - Ajout CGU</title>
 
     </head>
 <body>
@@ -15,18 +15,18 @@
     require 'vues/nav_simple.php';
     ?>
 
-	<h3><br>AJOUT D'UNE QUESTION</h3><br>
+	<h3><br>AJOUT D'UN ARTICLE</h3><br>
 
-	<form action="Ajout_FAQ.php" method="post" id="form">
+	<form action="Ajout_CGU.php" method="post" id="form">
 		<div id="bloc">
-			<div id="question">
-				<label for="question">Question : </label><br>
-                <input type="text" id="question" name="question" required size="100"><br><br>
+			<div id="titre">
+				<label for="titre">Titre : </label><br>
+                <input type="text" id="titre" name="titre" required size="100" value="Article ? : "><br><br>
             </div>
 
-            <div id="rep">
-            	<label for="reponse">Réponse : </label><br>
-            	<textarea name="reponse" id="reponse"></textarea><br>
+            <div id="article">
+            	<label for="article">Article : </label><br>
+            	<textarea name="article" id="article"></textarea><br>
             </div>
         </div>
 

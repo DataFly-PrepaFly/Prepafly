@@ -50,7 +50,7 @@ h3 {
     font-size: 1rem;
 }
 
-form {
+form #barre_recherche {
     margin-left: 12rem;
     margin-right: 12rem;
 }
@@ -63,6 +63,10 @@ form input {
     border-radius: 6px;
     padding: 0.2rem 1rem;
     padding-bottom: 0.2rem;
+}
+
+#filtres_ssp input {
+    margin-bottom: 0.8rem;
 }
 
 input[type=list] {

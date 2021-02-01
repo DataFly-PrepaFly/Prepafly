@@ -74,7 +74,7 @@ function GlobalList ($bdd)
 
 function AllUsers($bdd)
 {
-	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe FROM utilisateur 
+	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe, nSS FROM utilisateur 
 		JOIN type_utilisateur ON type_utilisateur.id_type = utilisateur.type_utilisateur_id_type
 		JOIN societe ON societe.id_societe = utilisateur.société_id_societe");
 	$req->execute();
@@ -85,7 +85,7 @@ function AllUsers($bdd)
 //fonction qui récupère les données de tous les utilisateurs
 function SearchUser($bdd, $recherche)
 {
-	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe FROM utilisateur 
+	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe, nSS FROM utilisateur 
 		JOIN type_utilisateur ON type_utilisateur.id_type = utilisateur.type_utilisateur_id_type
 		JOIN societe ON societe.id_societe = utilisateur.société_id_societe	
 		WHERE nom LIKE ?");
@@ -141,11 +141,4 @@ function SearchResultsOnePilot ($bdd, $recherche)
 		ON test.Utilisateur_nSS = utilisateur.nSS WHERE nom = ?");
 	$req_result->execute(array($recherche));
 	return $req_result->fetchAll();
-}
-
-
-function SuppUser ($bdd, $mail)
-{
-	$req = $bdd->prepare("DELETE FROM utilisateur WHERE mail = ?");
-	$req->execute(array());
 }

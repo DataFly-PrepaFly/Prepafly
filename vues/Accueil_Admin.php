@@ -21,7 +21,7 @@
 
     <div class="choix">
         <div class="num"><a href="Gestion_F.A.Q.php">Modifier la F.A.Q.</a></div>
-        <div class="num"><a href="#">Modifier les C.G.U.</a></div>
+        <div class="num"><a href="Gestion_CGU.php">Modifier les C.G.U.</a></div>
 
         <div class="num" id="clic_liste_users" onclick="OptionsUsers()"><a href="#">Accéder à la liste des utilisateurs</a></div>
 
