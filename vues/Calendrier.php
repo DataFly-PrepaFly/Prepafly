@@ -20,9 +20,7 @@ session_start();
 	<br><h3>PROGRAMMER UN TEST</h3><br>
 	<section class="formulaire">
 		
-		<form action ="send.php" method="POST">
-			<div>
-			<label for="recherche">Nom :</label>
+		<form action ="send.php" method="POST">		
 			<input list="utilisateurs" id="recherche" name="recherche">
     		<datalist id="utilisateurs">
     		<?php
@@ -39,20 +37,20 @@ session_start();
 
 			<div id="type_tests">
 				<label>
-		        <input type="radio" name="type_test_calen" value="Test Complet" checked="checked"/>
+		        <input type="radio" name="type_test" value="Test Complet" checked="checked"/>
 		       		Test Complet
 		    	</label>
 				<label>
-		        	<input type="radio" name="type_test_calen" value="Test visuel"  />
+		        	<input type="radio" name="type_test" value="Test Visuel"  />
 		        	Test Visuel
 		    	</label>
 		    	<label>
-		        <input type="radio" name="type_test_calen" value="Test auditif" />
+		        <input type="radio" name="type_test" value="Test Auditif" />
 		        	Test Auditif
 		    	</label>
 
 		    	<label>
-		        <input type="radio" name="type_test_calen" />
+		        <input type="radio" name="type_test" value="Test Régulier"/>
 		        	Test Régulier
 		    	</label><br>
 		    </div>

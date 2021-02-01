@@ -54,13 +54,11 @@ function ModifUser($bdd, $mail, $colonne, $champ)
 			$req = $bdd->prepare('UPDATE utilisateur SET pays = ? WHERE mail = ?');
 			break;
 	}
-	
 	$req->execute(array($champ, $mail));
 }
 
 
 //--------------------------------------------------------//
-
 
 
 //fonction qui récupère les nom et prenom de tous les utilisateurs
@@ -109,14 +107,14 @@ function ListePays ($bdd)
 	return $req->fetchAll();
 }
 
-//--------------------------------------------------------//
 
+//--------------------------------------------------------//
 
 
 //fonction qui récupère le nom des utilisateurs de type pilotes
 function PilotsList ($bdd)
 {
-	$req = $bdd->prepare("SELECT nom FROM utilisateur WHERE type_utilisateur_id_type LIKE 'p' ");
+	$req = $bdd->prepare("SELECT nom, prenom FROM utilisateur WHERE type_utilisateur_id_type LIKE 'p' ");
 	$req->execute();
 	return $req->fetchAll();
 }

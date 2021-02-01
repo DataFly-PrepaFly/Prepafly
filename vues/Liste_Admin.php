@@ -32,7 +32,7 @@
 </div>
 
 <form action="Liste_Utilisateurs.php" method="POST" id="barre_recherche">
-    <input list="utilisateurs" id="recherche" name="recherche" size="20">
+    <input list="utilisateurs" id="recherche" name="recherche">
     <datalist id="utilisateurs">
     	<option value="Liste complète">
     	<?php
@@ -104,7 +104,7 @@
                 echo "<td>".$row[$i]."</td>";
             }
         }
-    echo "<td><a href='controleurs/Suppression_User.php?idsuppr=".$row[6]."' onclick='return confirm('Voulez-vous vraiment supprimer cet utilisateur ?');'>Supprimer</a></td>";
+    echo "<td><a href='controleurs/Suppression_User.php?idsuppr=".$row[6]."' class=\"bouton_supp\" onclick='return confirm('Voulez-vous vraiment supprimer cet utilisateur ?');'>Supprimer</a></td>";
         echo "</tr>";
     }
     ?>

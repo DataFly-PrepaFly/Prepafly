@@ -13,7 +13,7 @@ $Liste_type_compte = array('pilote'=>'Pilote', 'manager'=>'Manager', 'admin'=>'A
 //Variables liées aux filtres
 $SocList = ListeSociete($bdd);
 $PaysList = ListePays($bdd);
-$Query = "SELECT nom, prenom, ville, pays, type, nom_societe FROM utilisateur 
+$Query = "SELECT nom, prenom, ville, pays, type, nom_societe, nSS FROM utilisateur 
 		JOIN type_utilisateur ON type_utilisateur.id_type = utilisateur.type_utilisateur_id_type
 		JOIN societe ON societe.id_societe = utilisateur.société_id_societe";
 

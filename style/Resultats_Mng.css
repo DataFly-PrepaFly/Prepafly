@@ -43,3 +43,18 @@
     margin-left: 4rem;
 
 }
+
+.bouton_supp {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.bouton_supp:hover {
+    color: #4ea3fc;
+}

@@ -12,7 +12,7 @@ $alert = '';
 
 if(isset($_POST['nom'])){
   $nom = $_POST['nom'];
-  $emailenvoi = $_POST['email'];
+  //$emailenvoi = $_POST['email'];
   $subject = $_POST['prenom'];
   //$message = $_POST['message'];
 
@@ -29,7 +29,7 @@ if(isset($_POST['nom'])){
     $mail->Port = 587;
 
     $mail->setFrom('prepafly@gmail.com'); // Gmail address which you used as SMTP server
-    $mail->addAddress($emailenvoi); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+    $mail->addAddress('tatiana.fallouh@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
 
     $mail->isHTML(true);
     $mail->Subject = $subject;
