@@ -75,12 +75,6 @@
 			<input type="text" id="pays" name="pays" size="30">
 			<br>
 		</div>
-<!--
-		<div class="champs">
-			<label for="societe">Société :</label>
-			<input type="text" id="societe" name="société_id_societe" size="30">
-			<br>
-		</div> -->
 	</div>
 
 	<div class="end">
@@ -92,8 +86,7 @@
 <?php include("vues/footer.php"); ?>
 
 </body>
-
-<!-- Appel aux fichier de fonctions JS -->
+<!-- Appel au fichier de fonctions JS -->
 <script type="text/javascript" src="fonctions.js" ></script>
 
 </html>

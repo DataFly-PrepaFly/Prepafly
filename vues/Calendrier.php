@@ -18,10 +18,16 @@ session_start();
 	?>
 
 	<br><h3>PROGRAMMER UN TEST</h3><br>
+	<?php 
+    if (isset($_SESSION['message_test'])) {
+        echo("<h4>".$_SESSION['message_test']."</h4>"); 
+    }
+    ?>
 	<section class="formulaire">
 		
-		<form action ="send.php" method="POST">		
-			<input list="utilisateurs" id="recherche" name="recherche">
+		<form action ="Calendrier.php" method="POST">
+			<label for="nom">Nom du pilote :</label>		
+			<input list="utilisateurs" id="recherche" name="recherche" required>
     		<datalist id="utilisateurs">
     		<?php
     		foreach ($List as $row) {
@@ -32,7 +38,7 @@ session_start();
 
 			<div class="ligne">
 				<label for="date"> Date du test :</label>
-				<input type="date" id="date" name="date_test" required>
+				<input type="date" id="date" name="date" required>
 			</div>
 
 			<div id="type_tests">
@@ -54,10 +60,6 @@ session_start();
 		        	Test Régulier
 		    	</label><br>
 		    </div>
-
-	    	<?php 
-			echo $message_erreur;
-			?>
 
 			<input type="submit" id="send" value="Envoyer"><br>
 		</form>

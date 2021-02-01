@@ -11,6 +11,16 @@ function InfosUser ($bdd, $mail)
 }
 
 
+
+function MailFromName ($bdd, $nom, $prenom)
+{
+	$req = $bdd->prepare("SELECT mail FROM utilisateur WHERE nom = ? AND prenom = ?");
+	$req->execute(array($nom, $prenom));
+	return $req->fetchAll();
+}
+
+
+
 //fonction qui récupère la société à partir du mail de l'utilisateur
 function NomCompagnie ($bdd, $mail)
 {
@@ -58,7 +68,11 @@ function ModifUser($bdd, $mail, $colonne, $champ)
 }
 
 
+
+
 //--------------------------------------------------------//
+
+
 
 
 //fonction qui récupère les nom et prenom de tous les utilisateurs
@@ -70,6 +84,7 @@ function GlobalList ($bdd)
 }
 
 
+
 function AllUsers($bdd)
 {
 	$req = $bdd->prepare("SELECT nom, prenom, ville, pays, type, nom_societe, nSS FROM utilisateur 
@@ -78,6 +93,7 @@ function AllUsers($bdd)
 	$req->execute();
 	return $req->fetchAll();
 }
+
 
 
 //fonction qui récupère les données de tous les utilisateurs
@@ -91,6 +107,8 @@ function SearchUser($bdd, $recherche)
 	return $req->fetchAll();
 }
 
+
+
 //fonction qui récupère la liste de toutes les sociétés
 function ListeSociete ($bdd)
 {
@@ -98,6 +116,8 @@ function ListeSociete ($bdd)
 	$req->execute();
 	return $req->fetchAll();
 }
+
+
 
 //fonction qui récupère la liste de tous les pays
 function ListePays ($bdd)
@@ -120,6 +140,7 @@ function PilotsList ($bdd)
 }
 
 
+
 //fonction qui récupère les données de la table test pour tous les pilotes
 function AllResultsPilots ($bdd)
 {
@@ -129,6 +150,7 @@ function AllResultsPilots ($bdd)
 	$req_result->execute();
 	return $req_result->fetchAll();
 }
+
 
 
 //fonction qui récupère les données de la table test pour un utilisateur donné

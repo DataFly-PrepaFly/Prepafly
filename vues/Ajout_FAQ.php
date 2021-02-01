@@ -39,14 +39,15 @@
     </form>
 </body>
 
-	<script type="text/javascript">
-	    function resetForm() {
-	        document.getElementById("form").reset();
-	    }
+<script type="text/javascript">
+    function resetForm() {
+        document.getElementById("form").reset();
+    }
 
-	    function confirmation() {
-	        var confirmation = confirm("Voulez-vous vraiment enregistrer cette nouvelle question ?");
-	        return confirmation;
-	    }
-	</script>
+    function confirmation() {
+        var confirmation = confirm("Voulez-vous vraiment enregistrer cette nouvelle question ?");
+        return confirmation;
+    }
+</script>
+
 </html>

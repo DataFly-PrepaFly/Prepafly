@@ -5,10 +5,7 @@
     <link rel="stylesheet" href="style/bandeau_prepafly.css"/>
     <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />
-<head>
 <title>PrepaFly - Inscription</title>
-
-</head>
 
 <header>
     <?php 
@@ -18,14 +15,13 @@
 </header>
 
 <body>
-
 <section>
     <br><h3>INSCRIPTION</h3>
     <div class="texte">
         <p>Si vous êtes intéressé et souhaitez être recontacté par nos équipes, il vous suffit de remplir ce formulaire.</p><br>
     </div>
     
-    <form action="Inscription.php" onsubmit="return confirmation();" method="post" enctype="multipart/form-data" id="form">
+    <form action="Inscription.php" onsubmit="return confirmation();" method="post" id="form">
         <div id="formulaire">
             <div id="form_part1">
 
@@ -51,7 +47,7 @@
 
                 <div class="champs1">
                     <label for="mailproconf">Confirmer le mail : </label><br>
-                    <input onchange="VerifMail()" type="email" name="mailproconf" size="50"><span id="verifmail" style="color:red;">X</span>
+                    <input type="email" name="mailproconf" size="50"><span id="verifmail" style="color:red;">X</span>
                     <br><br>
                 </div>
 
@@ -59,7 +55,6 @@
                     <label for="num">Numéro de téléphone : </label>
                     <input type="tel" name="num" size="20"><br><br>
                 </div>
-
             </div>
 
             <div id="form_part2">
@@ -80,9 +75,7 @@
             </div>
         </div>
         <div class="end">
-            <?=$confirmation?>
-
-            <a href="#" id="reinit" onclick="resetForm();" type="reset">Réinitialiser</a>
+            <a id="reinit" onclick="resetForm();" type="reset">Réinitialiser</a>
             <input type="submit" id="valider" value="Envoyer la demande">
         </div>
     </form>
@@ -99,11 +92,11 @@
         return confirmation;
     }
 
-
-    var mailpro = document.getElementById("mailpro");
-    var mailproconf = document.getElementById("mailproconf");
-
     function VerifMail() {
+        var mailpro = document.getElementById("mailpro");
+        var mailproconf = document.getElementById("mailproconf");
+        var verifmail = document.getElementById("verifmail");
+
         if (mailpro.value==mailproconf.value && mailpro.value!=""){
             verifmail.innerHTML="OK";
             verifmail.style.color="green";
@@ -112,6 +105,11 @@
             verifmail.innerHTML="X";
             verifmail.style.color="red";
         }
+    }
+
+    var mailconf = document.getElementById("mailconf");
+    mailconf.onchange = function () {
+    VerifMail();
     }
 
 </script>
