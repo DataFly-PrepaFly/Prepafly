@@ -23,8 +23,18 @@
         <div class="num" id="un" onclick="Barre()"><a href="#">Rechercher un pilote et ses informations</a></div>
 
         <div id="barre" style="display: none;">
-            <input type="search" name="search" size="35"><a href="#" id="recherche">Rechercher</a>
-        </div> 
+            <form action="Recherche_Profil_Mng.php" method="post" autocomplete="off">
+            <input list="utilisateurs" id="recherche" name="recherche"oninput="document.getElementById('utilisateurs').style.display='inline'">
+            <datalist id="utilisateurs" >
+                <?php
+                foreach ($List as $row) {
+                    echo "<option value=\"" .$row['nom']. "\">";
+                }
+                ?>
+            </datalist>
+            <input type="submit" id="valider" value="Valider"><br><br>
+            </form>
+        </div>
 
         <div class="num" id="deux"><a href="Calendrier.php">Programmer des tests à venir</a></div>
 
