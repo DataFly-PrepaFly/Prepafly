@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 31 jan. 2021 à 16:22
+-- Généré le : lun. 01 fév. 2021 à 18:17
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -29,17 +29,19 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `cgu`;
 CREATE TABLE IF NOT EXISTS `cgu` (
-  `id_article` int(11) NOT NULL,
+  `id_article` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(100) NOT NULL,
-  `article` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `article` longtext NOT NULL,
+  PRIMARY KEY (`id_article`),
+  UNIQUE KEY `id_article` (`id_article`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `cgu`
 --
 
 INSERT INTO `cgu` (`id_article`, `titre`, `article`) VALUES
-(1, 'Article 1 : Utilisation des applications ?', 'Durée:\r\nPendant toute la durée des Abonnements, vous êtes libres d\'utiliser le site internet ainsi que les tests autant de fois que vous le souhaitez.\r\n\r\nCompte:\r\nL\'utilisation du site requiert la création d\'un compte par la compagnie aérienne. Vos résultats sont donnés sur le site dans une page qui y est dédiée.\r\n\r\nContraintes d\'utilisations:\r\nL\'Utilisateur doit prendre note des restrictions d\'utilisation suivantes :\r\n-Vous ne pouvez créer qu\'un seul compte par personne.\r\n-Vous ne pouvez pas partager votre compte avec un autre Utilisateur, cela pourrait fausser les résultats.\r\n\r\nInformation : Nous avons pris ces mesures afin d\'endiguer l\'utilisation frauduleuse du programme (partage de comptes) ainsi que l\'abus de l\'offre de démonstration.\r\n\r\nRésultats:\r\nÀ la fin de chaque test, le site vous présentera le résultat sous forme de tableaux.\r\nCes résultats sont fournis à titre indicatif et permettent une visualisation du niveau du pilote par le manager.\r\n\r\nMises à jour obligatoires:\r\nDes mises à jour sont faites régulièrement afin d’améliorer l’expérience de l’utilisateur sur le site.\r\n\r\nCoûts d\'accès:\r\nTous les coûts d’accès aux tests (par exemple les frais d’accès à Internet ou les frais liés aux données mobiles) incombent à l’utilisateur.'),
+(1, 'Article 1 : Utilisation des applications', 'Durée:\r\nPendant toute la durée des Abonnements, vous êtes libres d\'utiliser le site internet ainsi que les tests autant de fois que vous le souhaitez.\r\n\r\nCompte:\r\nL\'utilisation du site requiert la création d\'un compte par la compagnie aérienne. Vos résultats sont donnés sur le site dans une page qui y est dédiée.\r\n\r\nContraintes d\'utilisations:\r\nL\'Utilisateur doit prendre note des restrictions d\'utilisation suivantes :\r\n-Vous ne pouvez créer qu\'un seul compte par personne.\r\n-Vous ne pouvez pas partager votre compte avec un autre Utilisateur, cela pourrait fausser les résultats.\r\n\r\nInformation : Nous avons pris ces mesures afin d\'endiguer l\'utilisation frauduleuse du programme (partage de comptes) ainsi que l\'abus de l\'offre de démonstration.\r\n\r\nRésultats:\r\nÀ la fin de chaque test, le site vous présentera le résultat sous forme de tableaux.\r\nCes résultats sont fournis à titre indicatif et permettent une visualisation du niveau du pilote par le manager.\r\n\r\nMises à jour obligatoires:\r\nDes mises à jour sont faites régulièrement afin d’améliorer l’expérience de l’utilisateur sur le site.\r\n\r\nCoûts d\'accès:\r\nTous les coûts d’accès aux tests (par exemple les frais d’accès à Internet ou les frais liés aux données mobiles) incombent à l’utilisateur.'),
 (2, 'Article 2 : Qui sommes-nous ?', 'DataFly exerce en qualité de sous-traitant à l’entreprise Infinite Measures. Domiciliée à Paris,  fournit des sites web spécialisés dans les tests d’aptitudes pour divers domaines. Ici, le site web vise les compagnies aériennes, et est accessible par les pilotes des compagnies clientes et leurs managers, appartenant à ces mêmes compagnies.\r\n DataFly permet, sur son site web, de s\'entraîner, s’évaluer en tant que pilote; mais aussi d\'évaluer son équipe lorsque l’on est manager, à des exercices psychotechniques. Toute personne ayant les identifiants nécessaires à la connexion, préalablement fourni par le manager, possède un droit d’accès aux  tests proposés sur le site. \r\n           Vous pouvez acheter des Abonnements par le billet d’un contrat établi entre l’entreprise Infinite Measures et la compagnie aérienne, (ci-après dénommés « les Abonnements »). Cela permet de débloquer l\'accès à des sélections d\'exercices (aussi appelés « tests ») utilisables dans le site, pendant une période déterminée.\r\n            L’utilisation du site est soumise aux présentes Conditions Générales et à la Politique de Confidentialité (ci-après dénommées les « Conditions Générales »). En accédant à notre site, vous prenez acte et reconnaissez avoir lu, compris et accepté les Conditions Générales de Vente. Si vous n’êtes pas d’accord avec ces conditions, veuillez ne pas utiliser notre site ou le quitter.'),
 (3, 'Article 3 : Achat et abonnement', 'Prix\r\nLes prix des Abonnements sont affichés dans la Boutique.\r\n\r\nModalités de paiement\r\nLes moyens de paiement disponibles sont par Paypal, par virement bancaire SEPA ou par cheque. PayPal accepte également les paiements par carte bancaire.\r\n\r\nDélai de livraison\r\nNous ajoutons les abonnements sur votre compte immédiatement après réception de votre paiement.\r\nDans le cas d\'un paiement par virement bancaire, notez que le paiement peut mettre quelques instants grâce, maintenant virement instantanée ou 1 à 2 jours ouvrés pour des virement standard,  avant d\'être visible sur nos comptes bancaires. \r\n\r\nRemboursement\r\nComme l\'indique l\'Article L121-20-2 du Code de la Consommation alinéa 4, nous ne sommes pas en possibilité de vous proposer de délai de réflexion ou de rétradctation, dès lors qu\'au moins l\'une des test a été utilisée. Si, toutefois, vous n\'avez pas utilisé l\'une de nos test dans les 7 jours suivant le paiement, nous sommes en mesure de vous rembourser, sur demande de votre part, via le moyen de paiement utilisé lors de l\'achat. Ce remboursement aura lieu dans un délai de 7 jours ouvrés.\r\nVous êtes tenus d\'utiliser la période d\'essai gratuite afin de vous assurer de la pleine compatibilité des Applications avec votre matériel. Des problèmes d\'incompatibilité ne sauraient être un prétexte à un remboursement.'),
 (4, 'Article 4 : Offre de démonstration', 'Afin qu\'il n\'y ait aucune ambigüité sur le contenu du site, nous offrons la possibilité à chacun de nos Clients de tester gratuitement une partie de nos test, pendant une durée de 48 heures. Cette offre ne peut pas être renouvelée.'),
@@ -57,19 +59,20 @@ INSERT INTO `cgu` (`id_article`, `titre`, `article`) VALUES
 
 DROP TABLE IF EXISTS `faq`;
 CREATE TABLE IF NOT EXISTS `faq` (
-  `id_question` int(11) NOT NULL,
+  `id_question` int(11) NOT NULL AUTO_INCREMENT,
   `question` varchar(5000) DEFAULT NULL,
   `reponse` varchar(10000) DEFAULT NULL,
   PRIMARY KEY (`id_question`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `faq`
 --
 
 INSERT INTO `faq` (`id_question`, `question`, `reponse`) VALUES
-(1, 'Comment récupérer un mot de passe oublié ?', 'Pour obtenir un nouveau mot de passe, il vous suffit d\'aller sur l\'onglet \"S\'identifier\" et de cliquer sur \"Mot de passe oublié\". Nous serons alors en mesure de vous envoyer par mail un nouveau mot de passe.'),
-(2, 'Question 2', 'Réponse 2');
+(1, 'Comment récupérer un mot de passe oublié ?', 'Pour obtenir un nouveau mot de passe, il vous suffit d\'aller sur l\'onglet \"S\'identifier\" et de cliquer sur \"Mot de passe oublié\". \r\nNous serons alors en mesure de vous envoyer par mail un nouveau mot de passe.'),
+(2, 'Question 2 ?', 'Réponse 2'),
+(3, 'Question 3 ?', 'Réponse 3');
 
 -- --------------------------------------------------------
 
@@ -226,24 +229,16 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `mail`, `adresse`, `ville`, `pays`, `mdp`, `type_utilisateur_id_type`, `société_id_societe`) VALUES
+('09876543222', 'MERAH', 'Nadir', '2021-02-10', 'Homme', 'nm@gmail.com', '', 'Paris', 'France', '$2y$10$t2ntrbUVRwsb6sBxMbGt9eZm.8kzNtPIr.OvRLlSF90Ybv7v7wxm2', 'm', 2),
 ('12345', 'FALLOUH', 'Tatiana', '2000-05-12', 'Femme', 'tf@gmail.com', '110 rue Vauban', 'Mouvaux', 'France', '$2y$10$A2KMukEO4AqOAHkCc1TEfumC37LMB.aJ943ZoekX.ehXRr5zYs19y', 'p', 2),
-('12345456563', 'MEROEZ', 'Frez', '2021-01-29', 'Femme', 'fsd@dfsf.fr', '546 fd', 'FS', 'fds', '$2y$10$ijyFio5Pl7hOFYETM1oyu.MYtKQ4EOJTRXJ7nRHqy7RuQNiVMm1MO', 'p', 2),
 ('1245780', 'DUBOIS', 'Paul', NULL, '', 'pd@gmail.com', NULL, NULL, 'France', '$2y$10$48uFwMqSz3I6vGEcoGRmnOcA76VEKITWQjl5r2fN81DC81NRy/zj2', 'p', 2),
 ('135790', 'LU', 'Yihong', NULL, 'Homme', 'yl@gmail.com', NULL, NULL, 'France', '$2y$10$wpd8luvFZgULAsZUQ1.jW.oZ3PCkD/ZPTlATPyBZqVLLABprDrqvu', 'p', 2),
 ('18645613', 'DUBAR', 'Marc', NULL, 'Homme', 'md@gmail.com', NULL, 'Barcelone', 'Espagne', 'md123!', 'm', 2),
 ('2356890', 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 'France', '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2),
-('24680', 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', '10 rue du Dragon', 'Paris', 'France', '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
+('24680', 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', 'aodihda', 'ouadb', 'France', '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
 ('29461541', 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1),
-('32454455555', 'LOREZACDC', 'Lou', '2021-01-07', 'Femme', 'loulou@gmail.com', '3 Patio des Clairières', 'Toulouse sur Seine', 'France', '$2y$10$PwsW3A1atkISCtx7AaJu5.JAj6joDHkm6vzBmS2m4gKklh4hZ3nCa', 'm', 4),
 ('3333333', 'FSDGFS', 'gsf', '2021-01-09', 'Femme', 'gssf@fds.fr', 'gfds', 'fsdf', 'gfs', '$2y$10$rRz26SZ833UgSzo.JqmuqOK2xJjpiGIJ23u1FpP0iaub0WUiT3XDe', 'p', 2),
-('432433', 'FDSGSG', 'gfsdx', '2021-01-15', 'Femme', 'fsd@fdh.fr', 'rzgfr', 'gfsdg', 'fgsgs', '$2y$10$iPu5aCqrqLIKj/IeRpLnHu6NcBzxJrqc.WzNcl1vNgFHUrXQ5kYMG', 'p', 2),
-('4362356365', 'DFGSFG', 'fds', '2021-01-31', 'Non Précisé', 'fssf@fds.fr', '5463', 'fsd', 'gfds', '$2y$10$r5gt44xpH3JjFdiXB.5QMuTzaCeG3ENPN9St0KB5OCG2rYhQ56MWm', 'm', 5),
-('453523', 'GFRE', 'gfs', '2021-01-01', 'Homme', 'tf@gmail.com', 'gfsd', 'gsdf', 'gsfd', '$2y$10$gUG4xg5DMB3LOjQyqmBaWOlb6GtwFK55pCx8xsqkJ/Kqi3cIT.sXG', 'p', 2),
-('543523', 'FDS', 'fdqs', '2021-01-02', 'Homme', 'fsd@frqef.fr', 'fqd', 'fdqs', 'dsq', '$2y$10$RlhTiv7OY.6JZSAOxmp8iOskFVL6IMKR5tY0gCIwx36l5u9eianx2', 'p', 2),
-('54565463', 'POMERA', 'Luyrte', '1984-01-07', 'Non Précisé', 'gfdsaz@gfs.fr', '543 passage du lion', 'Berlin', 'Allemagne', '$2y$10$uJ1Qm/rqiByE.QvpeMfxJ./Ro4HtlfzVmFxiXGcsCKiUbuxsPtdHm', 'm', 4),
 ('55555', 'TRZET', 'Locre', '2021-01-29', 'Femme', 'vfe@dsq.fr', '56E fdf', 'LOREAq', 'Ser', '$2y$10$J9xxva3pVQBqA9b4yz/Idenev.Mzsp621KYHIr6EwOTsdk4Oy2eAO', 'p', 2),
-('565365635', 'FQDGSF', 'gfsd', '2020-12-31', 'Femme', 'tatiana.fallouh@gmail.com', 'gfsdg', 'fdsg', 'Belgique', '$2y$10$qiaz7J7bpRwd3KdzAby10OAxcgqr7E3JtRUgnYv3jzh5EwKflA9Z2', 'm', 2),
-('67890', 'MERAH', 'Nadir', '2000-12-22', 'Homme', 'nm@gmail.com', NULL, NULL, 'France', '$2y$10$4qBPY.1Fw0qwpUkF.G5/ZOl6a8kd2D0kavuyvCWGQD6NKSoOT07fq', 'm', 2),
 ('97146914', 'LONTRAC', 'Thierry', NULL, 'Homme', 'tl@gmail.com', NULL, 'Londres', 'Angleterre', 'tl123!', 'p', 3);
 
 --
