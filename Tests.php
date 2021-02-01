@@ -16,10 +16,10 @@
     <?php 
     //on vérifie s'il existe une session ou non
     if (!(isset($_SESSION['mail']))) {
-        require 'vues/bandeau_prepafly.php';
+        require 'vues/bandeau_profil.php';
     }
     else {
-        require 'vues/bandeau_profil.php';
+        require 'vues/bandeau_prepafly.php';
     }
 
     include("vues/nav_simple.php");
@@ -27,6 +27,8 @@
 </header>
 
 <body>
+
+    <br><h3>TESTS</h3>
 
     <div id="texte">
         <p>Découvrez ici les quatre catégories de tests que nous proposons, avec leurs objectifs respectifs !</p>

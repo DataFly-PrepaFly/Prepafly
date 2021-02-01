@@ -99,6 +99,10 @@ h3, h4 {
     vertical-align: middle;
 }
 
+.question .visible a {
+    cursor: pointer;
+}
+
 #deroulant1 p, #deroulant2 p, 
 #deroulant3 p, #deroulant4 p, #deroulant5 p{
     width: 95%;

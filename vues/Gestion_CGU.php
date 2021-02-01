@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/bandeau_profil.css"/>
     <link rel="stylesheet" href="style/nav_simple.css" />
     <link rel="stylesheet" href="style/footer.css" />
-    <title>PrepaFly - Gestion des GCU</title>
+    <title>PrepaFly - Gestion des C.G.U.</title>
 </head>
 
     
@@ -18,7 +18,7 @@
     require 'vues/nav_simple.php';
     ?>
 
-    <h3><br>GESTION CGU</h3><br>
+    <h3><br>GESTION C.G.U.</h3><br>
 
     <?php 
     if (isset($_SESSION['message_cgu'])) {

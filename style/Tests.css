@@ -1,4 +1,7 @@
-﻿
+﻿h3 {
+	text-align: center;
+}
+
 #texte p, .blocs_haut p, .blocs_bas p {
 	color: black;
 }

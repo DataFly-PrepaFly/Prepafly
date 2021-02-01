@@ -11,31 +11,32 @@ $mail = new PHPMailer(true);
 $alert = '';
 
 if(isset($_POST['nom'])){
-  $name = $_POST['nom'];
-  //$email = $_POST['email'];
+  $nom = $_POST['nom'];
+  $emailenvoi = $_POST['email'];
   $subject = $_POST['prenom'];
   //$message = $_POST['message'];
 
   try{
     $mail->CharSet ="UTF-8";
     $mail->SMTPDebug = 0;
-    $mail->isSMTP();
+    $mail->IsSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'dataflydatafly@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = '123DataFly456!'; // Gmail address Password
+    $mail->SMTPSecure = 'tls';
+    $mail->Username = 'prepafly@gmail.com'; // Gmail address which you want to use as SMTP server
+    $mail->Password = 'prepafly123'; // Gmail address Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = '587';
+    $mail->Port = 587;
 
-    $mail->setFrom('dataflydatafly@gmail.com'); // Gmail address which you used as SMTP server
-    $mail->addAddress('tatiana.fallouh@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+    $mail->setFrom('prepafly@gmail.com'); // Gmail address which you used as SMTP server
+    $mail->addAddress($emailenvoi); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
 
     $mail->isHTML(true);
     $mail->Subject = $subject;
-    $mail->Body = "<h3>Nom : ". $name ."</h3>";
+    $mail->Body = "<h3>Nom : ". $nom ."</h3>";
 
     $mail->send();
-    header('Location: ../Accueil.php');
+    header('Location: Accueil.php');
   } 
   catch (Exception $e){
     $alert = '<div class="alert-error">

@@ -18,6 +18,10 @@
     text-align: center;
 }
 
+.choix a {
+    cursor: pointer;
+}
+
 #ajout {
 	margin-left: 1rem;
 }
