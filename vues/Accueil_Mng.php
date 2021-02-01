@@ -24,7 +24,7 @@
 
         <div id="barre" style="display: none;">
             <form action="Recherche_Profil_Mng.php" method="post" autocomplete="off">
-            <input list="utilisateurs" id="recherche" name="recherche"oninput="document.getElementById('utilisateurs').style.display='inline'">
+            <input list="utilisateurs" id="recherche" name="recherche">
             <datalist id="utilisateurs" >
                 <?php
                 foreach ($List as $row) {
