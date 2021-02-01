@@ -22,11 +22,15 @@ session_start();
 		
 		<form action ="send.php" method="POST">
 			<div>
-				<label for="nom">Nom</label>
-				<input type="text" name="nom"></input>
-
-				<label for="prenom">Prenom</label>
-				<input type="text" name="prenom"></input>
+			<label for="recherche">Nom :</label>
+			<input list="utilisateurs" id="recherche" name="recherche">
+    		<datalist id="utilisateurs">
+    		<?php
+    		foreach ($List as $row) {
+    			echo "<option value=\"" .$row['nom']." ".$row['prenom']. "\">";
+    		}
+    		?>
+    		</datalist>
 
 			<div class="ligne">
 				<label for="date"> Date du test :</label>
