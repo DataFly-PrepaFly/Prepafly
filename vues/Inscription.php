@@ -54,7 +54,8 @@
 
                 <div class="champs1">
                     <label for="mailproconf">Confirmer le mail : </label><br>
-                    <input type="email" name="mailproconf" size="50"><span id="verifmail" style="color:red;">X</span>
+                    <input type="email" name="mailproconf" size="50">
+                    <!--<span id="verifmail" style="color:red;">X</span>-->
                     <br><br>
                 </div>
 
@@ -98,7 +99,7 @@
         var confirmation = confirm("Voulez-vous vraiment envoyer cette demande ?");
         return confirmation;
     }
-
+/*
     function VerifMail() {
         var mailpro = document.getElementById("mailpro");
         var mailproconf = document.getElementById("mailproconf");
@@ -117,7 +118,7 @@
     var mailconf = document.getElementById("mailconf");
     mailconf.onchange = function () {
     VerifMail();
-    }
+    }*/
 
 </script>
 
