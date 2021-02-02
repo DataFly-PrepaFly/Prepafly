@@ -16,12 +16,12 @@ foreach ($CGU as $element_cgu) {
   
   if($Modif == true) {
 
-    $titreHTML = '<h2 class="Article" id="Article'.$ida.'"><a href="#cgu"><em>'.$titre.'</em>'; 
+    $titreHTML = '<h2 id="Article'.$ida.'"><a href="#cgu"><em>'.$titre.'</em></a>'; 
 
-    $titreHTML .= '<a href="Modification_CGU.php?idarticle='.$ida.'">(Modifier)</a>';
+    $titreHTML .= '<span class="Boutons"><a href="Modification_CGU.php?idarticle='.$ida.'">Modifier</a>';
 
-    $titreHTML .= '<a href="controleurs/Suppression_CGU.php?idarticle='.$ida.'" onclick="return confirm(\'Voulez-vous vraiment supprimer cet article ?\');">(Supprimer)</a>';
-    $titreHTML.='</a></h2>';
+    $titreHTML .= '<a class="Article" href="controleurs/Suppression_CGU.php?idarticle='.$ida.'" onclick="return confirm(\'Voulez-vous vraiment supprimer cet article ?\');">Supprimer</a>';
+    $titreHTML.='</span></h2>';
   }       
   else {
     $titreHTML = '<h2 class="Article" id="Article'.$ida.'"><a href="#cgu"><em>'.$titre.'</em></a></h2>';

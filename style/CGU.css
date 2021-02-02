@@ -1,7 +1,5 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-
 
 body {
 	margin: 0;
@@ -81,9 +79,25 @@ h2
 #lien {
 	color: black;
 }
+.Boutons {
+    margin-left: 3rem;
+}
 
-.Article a {
+.Boutons a {
 	display:inline-block;
 	margin-right: 1rem;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.1rem 1rem;
+    padding-bottom: 0.2rem;
+    box-shadow: 0 0 15px rgb(0,0,0,0.20);
+}
+
+.Boutons a:hover {
+    color: #4ea3fc;
+}
 }
 
