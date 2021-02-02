@@ -26,7 +26,7 @@
                 </li>
             </ul>
             <ul class="centre">
-                <li> © Infinite Measures 2020 – Tous droits réservés </li>
+                <li> © Infinite Measures 2021 – Tous droits réservés </li>
             </ul>
             <ul class="droite">
                 <li> <a href="CGU.php">C.G.U.</a></li>

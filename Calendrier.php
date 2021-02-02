@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //utilisation de phpmailer :
 use PHPMailer\PHPMailer\PHPMailer;
@@ -36,12 +37,12 @@ if (isset($_POST["recherche"], $_POST["date"], $_POST['type_test'])) {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = 'tls';
-    $mail->Username = 'datafly.prepafly@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = '123prepafly@'; // Gmail address Password
+    $mail->Username = 'prepafly.datafly@gmail.com'; // Gmail address which you want to use as SMTP server
+    $mail->Password = '&&&!'; // Gmail address Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    $mail->setFrom('datafly.prepafly@gmail.com'); // Gmail address which you used as SMTP server
+    $mail->setFrom('prepafly.datafly@gmail.com'); // Gmail address which you used as SMTP server
     $mail->addAddress('tatiana.fallouh@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
 
     $mail->isHTML(true);
@@ -49,6 +50,9 @@ if (isset($_POST["recherche"], $_POST["date"], $_POST['type_test'])) {
     $mail->Body = $message;
 
     $mail->send();
+
+    $_SESSION['message_calendrier'] = "Le mail a bien été envoyé.";
+
     header('Location: Calendrier.php');
   } 
 
@@ -58,9 +62,12 @@ if (isset($_POST["recherche"], $_POST["date"], $_POST['type_test'])) {
               </div>';
                echo($alert);
   }
-
 }
 
 else {
   require 'vues/Calendrier.php';
+
+  if (isset($_SESSION['message_calendrier'])) {
+    unset($_SESSION['message_calendrier']); 
+  }
 }

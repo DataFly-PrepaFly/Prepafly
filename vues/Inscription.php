@@ -17,6 +17,13 @@
 <body>
 <section>
     <br><h3>INSCRIPTION</h3>
+
+    <?php 
+    if (isset($_SESSION['message_inscri'])) {
+        echo("<h4>".$_SESSION['message_inscri']."</h4><br>"); 
+    }
+    ?>
+
     <div class="texte">
         <p>Si vous êtes intéressé et souhaitez être recontacté par nos équipes, il vous suffit de remplir ce formulaire.</p><br>
     </div>

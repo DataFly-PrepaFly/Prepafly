@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <meta charset="UTF-8">
@@ -19,8 +17,8 @@ session_start();
 
 	<br><h3>PROGRAMMER UN TEST</h3><br>
 	<?php 
-    if (isset($_SESSION['message_test'])) {
-        echo("<h4>".$_SESSION['message_test']."</h4>"); 
+    if (isset($_SESSION['message_calendrier'])) {
+        echo("<h4>".$_SESSION['message_calendrier']."</h4><br>"); 
     }
     ?>
 	<section class="formulaire">

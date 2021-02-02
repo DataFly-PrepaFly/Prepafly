@@ -35,12 +35,12 @@ if (isset($_POST['nom'], $_POST['prenom'], $_POST['date'], $_POST['mailpro'], $_
 			$mail->Host = 'smtp.gmail.com';
 			$mail->SMTPAuth = true;
 			$mail->SMTPSecure = 'tls';
-			$mail->Username = 'testarisq@gmail.com'; // Gmail address which you want to use as SMTP server
-			$mail->Password = 'Testarisq1234'; // Gmail address Password
+			$mail->Username = 'prepafly.datafly@gmail.com'; // Gmail address which you want to use as SMTP server
+			$mail->Password = '&&&'; // Gmail address Password
 			$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 			$mail->Port = 587;
 
-			$mail->setFrom('testarisq@gmail.com'); // Gmail address which you used as SMTP server
+			$mail->setFrom('prepafly.datafly@gmail.com'); // Gmail address which you used as SMTP server
 			$mail->addAddress($mailpro); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
 
 			$mail->isHTML(true);
@@ -48,7 +48,10 @@ if (isset($_POST['nom'], $_POST['prenom'], $_POST['date'], $_POST['mailpro'], $_
 			$mail->Body = $message;
 
 			$mail->send();
-			header('Location: Accueil.php');
+
+			$_SESSION['message_inscri'] = "Le mail de demande a bien été envoyé.";
+
+			header('Location: Inscription.php');
 		} 
 
 		catch (Exception $e){
@@ -66,5 +69,9 @@ if (isset($_POST['nom'], $_POST['prenom'], $_POST['date'], $_POST['mailpro'], $_
 
 else {
 	require 'vues/Inscription.php';
+
+	if (isset($_SESSION['message_inscri'])) {
+    unset($_SESSION['message_inscri']); 
+	}
 }
 
