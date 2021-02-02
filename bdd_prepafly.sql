@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 01 fév. 2021 à 18:17
+-- Généré le : mar. 02 fév. 2021 à 01:37
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -237,8 +237,6 @@ INSERT INTO `utilisateur` (`nSS`, `nom`, `prenom`, `date_naissance`, `sexe`, `ma
 ('2356890', 'ARMAND', 'Jean', NULL, '', 'ja@gmail.com', NULL, NULL, 'France', '$2y$10$jN4yQDRig2eGI.JO4hV16OP/2nXudg6oD5v9HKp6FRXpmDFtaF4vu', 'p', 2),
 ('24680', 'GUESSOUM', 'Sérine', NULL, 'Femme', 'sg@gmail.com', 'aodihda', 'ouadb', 'France', '$2y$10$N4BWqXR9eee4j7SJvbnT4OBmOnuCIHkodCX6ZhRWgiOB7D1cLJTDO', 'a', 1),
 ('29461541', 'KRETTLY', 'Garance', NULL, 'Femme', 'gk@gmail.com', NULL, 'Londres', 'Angleterre', 'gk123!', 'a', 1),
-('3333333', 'FSDGFS', 'gsf', '2021-01-09', 'Femme', 'gssf@fds.fr', 'gfds', 'fsdf', 'gfs', '$2y$10$rRz26SZ833UgSzo.JqmuqOK2xJjpiGIJ23u1FpP0iaub0WUiT3XDe', 'p', 2),
-('55555', 'TRZET', 'Locre', '2021-01-29', 'Femme', 'vfe@dsq.fr', '56E fdf', 'LOREAq', 'Ser', '$2y$10$J9xxva3pVQBqA9b4yz/Idenev.Mzsp621KYHIr6EwOTsdk4Oy2eAO', 'p', 2),
 ('97146914', 'LONTRAC', 'Thierry', NULL, 'Homme', 'tl@gmail.com', NULL, 'Londres', 'Angleterre', 'tl123!', 'p', 3);
 
 --
