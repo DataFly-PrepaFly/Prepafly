@@ -4,7 +4,6 @@ require 'modele/connexion_bdd.php';
 require 'modele/req_infos_user.php';
 $List = PilotsList($bdd);
 
-var_dump($_POST);
 
 if (isset($_POST["recherche"], $_POST["date"], $_POST['type_test'])) {
 

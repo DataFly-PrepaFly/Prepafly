@@ -10,13 +10,15 @@ foreach ($FAQ as $element_faq) {
             <a><?=$question;?><img class="deroulant" src="images/icons8_plus.png"></a>
         </div>
         <div id="deroulant<?=$idq;?>" class="reponse" style="display: none;">
-            <p><?=$reponse?></p>
+            <p><?=$reponse?></p><br>
 
             <?php if($Modif == true) {?>
+            <span class="boutons_faq"><a id="supp_faq"href="controleurs/Suppression_FAQ.php?idquestion=<?=$idq;?>" onclick="return confirm('Voulez-vous vraiment supprimer cette question ?');">Supprimer</a>
 
-            <a href="Modification_FAQ.php?idquestion=<?=$idq;?>">Modifier</a>
+            <a class="boutons_faq" id="modif_faq" href="Modification_FAQ.php?idquestion=<?=$idq;?>">Modifier</a>
 
-            <a href="controleurs/Suppression_FAQ.php?idquestion=<?=$idq;?>" onclick="return confirm('Voulez-vous vraiment supprimer cette question ?');">Supprimer</a>
+            
+            </span><br>
 
             <?php  }?>
         </div>
