@@ -22,7 +22,7 @@
 
         <div class="num"><a href="Resultat.php">Consulter les derniers résultats obtenus</a></div>
 
-        <div class="num" id="clic_tests" onclick="ListeTests()"><a href="#">Faire des tests d'entraînement</a></div><br><br>
+        <div class="num" id="clic_tests" onclick="ListeTests()"><a>Faire des tests d'entraînement</a></div><br><br>
         <div id="liste_tests" style="display: none;">
             <div id="ligne1">
                 <div id="visuel"><a href="Test_Visuel.php">Test Visuel</a></div>

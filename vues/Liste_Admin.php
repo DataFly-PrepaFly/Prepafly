@@ -32,7 +32,7 @@
 </div>
 
 <form action="Liste_Utilisateurs.php" method="POST" id="barre_recherche">
-    <input list="utilisateurs" id="recherche" name="recherche">
+    <input list="utilisateurs" id="recherche" name="recherche" style="width: 12rem;">
     <datalist id="utilisateurs">
     	<option value="Liste complète">
     	<?php
